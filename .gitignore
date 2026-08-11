@@ -1,0 +1,9 @@
+.DS_Store
+site/node_modules/
+site/dist/
+site/implementation-*.png
+site/reference-desktop-*.png
+site/reference-desktop-source.png
+site/qa-comparison-*.png
+design-options/*
+!design-options/wonderelian-option-1.png

@@ -1,0 +1,60 @@
+# WonderElian Design QA
+
+- Source visual truth: `/Users/yongyuan/Documents/WonderElian/design-options/wonderelian-option-1.png`
+- Normalized source: `/Users/yongyuan/Documents/WonderElian/site/reference-desktop-1440.png`
+- Final implementation screenshot: `/Users/yongyuan/Documents/WonderElian/site/implementation-desktop-final.png`
+- Mobile implementation screenshot: `/Users/yongyuan/Documents/WonderElian/site/implementation-mobile-final.png`
+- Final comparison: `/Users/yongyuan/Documents/WonderElian/site/qa-comparison-final.png`
+- Desktop viewport: `1440 x 1024` CSS px, device scale factor `1`
+- Mobile viewport: `390 x 844` CSS px, device scale factor `1`
+- Source pixels: `1487 x 1058`, normalized to `1440 x 1024`
+- Implementation pixels: `1440 x 1024`
+- State: initial homepage at `/`, navigation closed, no hover state
+
+## Full-view comparison evidence
+
+The source and final browser-rendered implementation were placed side by side at the same `1440 x 1024` dimensions in `qa-comparison-final.png`. The comparison confirms the same header height, left-aligned bilingual hero, two-line display title, restrained gold rules, right-side watercolor current, hero-to-project transition, and three-column “此刻” band.
+
+## Focused-region evidence
+
+No separate focused crop was required. The equal-pixel full-view comparison preserves readable hero typography, CTA spacing, project headings, fine divider lines, and watercolor edges. The hero and “此刻” band occupy most of the 1024px frame and can be judged directly without downsampling.
+
+## Required fidelity surfaces
+
+- Fonts and typography: Cormorant Garamond is bundled locally for the high-contrast English display type; Chinese uses the platform Songti stack. Weight, line height, wrapping, and hierarchy match the selected concept closely.
+- Spacing and layout rhythm: the 106px header, 640px hero, left 60px desktop inset, CTA rules, and three equal project columns align with the source proportions. The mobile layout becomes a single column without horizontal overflow.
+- Colors and visual tokens: warm ivory, deep teal, restrained amber, muted lavender, and blush are mapped to reusable CSS tokens with accessible foreground contrast.
+- Image quality and asset fidelity: the watercolor current is a dedicated `1600 x 1200` raster asset generated for the hero, not CSS art or a placeholder. It is sharp, softly blended, and clipped at the hero boundary.
+- Copy and content: the selected bilingual identity lines, navigation labels, CTA, and project names are present. Supporting descriptions use final product-oriented copy rather than placeholder text.
+
+## Interaction and browser evidence
+
+- The primary CTA changes the URL to `#now` and positions the `#now` section at the top of the viewport.
+- At `390px`, the menu opens with `aria-expanded="true"`, exposes World / Works / Notes / About, and closes after a navigation choice.
+- Desktop and mobile document width equals viewport width; no horizontal overflow was detected.
+- Browser console warnings/errors checked: none.
+
+## Comparison history
+
+1. First render: the display face was too heavy, the title sat low, and the watercolor did not extend far enough into the composition.
+   - Fixes: bundled Cormorant Garamond, regenerated a dedicated watercolor asset, adjusted title scale and hero image placement.
+   - Post-fix evidence: `qa-comparison-v1.png`.
+2. Second comparison: the captured implementation inherited a hash-scroll state, so the header was not normalized for comparison.
+   - Fixes: navigated to the root URL, reset the viewport state, and recaptured at `1440 x 1024`.
+   - Post-fix evidence: `qa-comparison-v3.png`.
+3. Third comparison: the hero was slightly too tall and the title/image proportions still drifted from the source.
+   - Fixes: reduced the hero to 640px, retuned title size and vertical placement, enlarged and clipped the watercolor current.
+   - Post-fix evidence: `qa-comparison-final.png`.
+
+## Findings
+
+No actionable P0, P1, or P2 visual differences remain.
+
+## Follow-up polish
+
+- P3: the live Cormorant word shapes differ subtly from the generated mock’s fictional display face.
+- P3: watercolor pigment distribution is independently generated, so individual brush edges cannot match pixel-for-pixel.
+
+## Final result
+
+final result: passed
