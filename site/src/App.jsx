@@ -213,7 +213,7 @@ const copy = {
   },
 };
 
-const supportCodeUrl = "https://wendao.wonderelian.com/assets/wendao/support-wechat-appreciation-code.png";
+const supportCodeUrl = `${import.meta.env.BASE_URL}assets/support-wechat-appreciation-code.png`;
 
 function Wordmark({ label }) {
   return (
