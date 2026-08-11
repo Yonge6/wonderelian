@@ -68,3 +68,14 @@ final result: passed
 - Verified the five rendered labels and URLs, responsive menu visibility, and zero page-level console warnings/errors.
 
 Expansion result: passed
+
+## Bilingual drawer expansion — 2026-08-11
+
+- Added a persistent Chinese / English switch in both the site header and the right-side drawer. The document language, page title, navigation, five projects, worldview copy, about copy, footer, drawer, and support dialog all update together.
+- Added the Wendao-inspired drawer content requested for WonderElian: night-reading mode, About WonderElian, Contact Elian, and Support the journey.
+- Reused the current Wendao contact address and WeChat appreciation code; the appreciation image loaded successfully at its natural `588 x 588` resolution.
+- Desktop interaction QA at `1440 x 1100`: language switching, drawer open/close, body scroll lock, night theme, support dialog, email target, and About anchor all passed.
+- Mobile interaction QA at `390 x 844`: the drawer fills the viewport, all four utility rows fit without clipping, the support dialog remains within the viewport, and document width remains `390px` with no horizontal overflow.
+- Accessibility QA: menu state uses `aria-expanded`, night mode uses a checked switch role, and both drawer and support surfaces expose modal dialog semantics and localized labels.
+
+Bilingual drawer result: passed
