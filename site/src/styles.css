@@ -482,22 +482,6 @@ button {
   font: 400 17px/1.9 var(--serif);
 }
 
-.human-design-note {
-  padding: 112px max(48px, calc((100% - 1320px) / 2));
-}
-
-.human-design-note h2 {
-  margin: 0;
-  font: 400 clamp(52px, 6vw, 88px) / 1 var(--serif);
-}
-
-.human-design-note > p:last-child {
-  max-width: 650px;
-  margin: 28px 0 0;
-  color: var(--ink-soft);
-  font: 400 18px/1.8 var(--serif);
-}
-
 .site-footer {
   padding: 54px max(48px, calc((100% - 1320px) / 2));
   display: grid;
@@ -879,8 +863,7 @@ button {
 
   .now-section,
   .worlds-section,
-  .about-section,
-  .human-design-note {
+  .about-section {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -1008,8 +991,7 @@ button {
   }
 
   .worlds-section,
-  .about-section,
-  .human-design-note {
+  .about-section {
     padding-top: 88px;
     padding-bottom: 88px;
   }

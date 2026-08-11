@@ -134,9 +134,6 @@ const copy = {
       "我喜欢把复杂、抽象或冰冷的事物，重新组织成清楚、美、有感觉、让人愿意接近的东西。",
       "有时它是一台工业机器，有时是一段古老文字，有时是一张关于人的图。WonderElian 不是职业名称，而是这些探索共同生长的地方。",
     ],
-    mapKicker: "A QUIET INNER MAP",
-    mapTitle: "Human Design",
-    mapCopy: "不是用来定义自己，而是多一种方式观察身体的回应、能量与选择。",
     footerLine: "用设计理解世界，也理解自己。",
     backToTop: "回到开始",
     drawerKicker: "永歌的好奇世界",
@@ -186,9 +183,6 @@ const copy = {
       "I like reorganizing complex, abstract, or cold things into something clear, beautiful, and human—something people want to come closer to.",
       "Sometimes it is an industrial machine, sometimes an ancient text, sometimes a map of a person. WonderElian is not a job title. It is where all these explorations grow together.",
     ],
-    mapKicker: "A QUIET INNER MAP",
-    mapTitle: "Human Design",
-    mapCopy: "Not a way to define yourself, but another lens for noticing the body's responses, energy, and choices.",
     footerLine: "Using design to understand the world—and myself.",
     backToTop: "Back to the beginning",
     drawerKicker: "Elian's world of curiosity",
@@ -392,11 +386,6 @@ export function App() {
           </div>
         </section>
 
-        <section className="human-design-note" id="human-design" aria-labelledby="human-design-title">
-          <p className="eyebrow">{c.mapKicker}</p>
-          <h2 id="human-design-title">{c.mapTitle}</h2>
-          <p>{c.mapCopy}</p>
-        </section>
       </main>
 
       <footer className="site-footer">
