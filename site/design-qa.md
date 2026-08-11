@@ -79,3 +79,15 @@ Expansion result: passed
 - Accessibility QA: menu state uses `aria-expanded`, night mode uses a checked switch role, and both drawer and support surfaces expose modal dialog semantics and localized labels.
 
 Bilingual drawer result: passed
+
+## Wendao-aligned drawer refinement — 2026-08-11
+
+- Removed the standalone “A Quiet Inner Map / Human Design” section so the About section now flows directly into the footer.
+- Replaced the About homepage jump with an in-drawer WonderElian introduction followed by the original four-part life philosophy structure.
+- Expanded Contact into the Wendao-style channel list and added the existing WeChat Channels QR view.
+- Expanded Support into the Wendao-style copy, QR recognition guidance, standalone-code link, complete-poster link, and closing reassurance.
+- Updated the browser title to `WONDER ELIAN — Designing things. Exploring life.` and retained `向内认识自己，向外如水而行。` as the spiritual core.
+- Adopted Wendao’s bundled Noto Serif SC and Noto Sans SC Chinese typography while retaining Cormorant Garamond for the English display title.
+- Mobile QA at `390 x 844`: fixed header remains at `top: 0` after scrolling; the drawer is `362px` wide and begins at `x: 28px`, leaving a visible strip of the homepage; all drawer views remain free of horizontal overflow.
+
+Wendao-aligned refinement result: passed
