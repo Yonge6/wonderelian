@@ -81,7 +81,7 @@ export function App() {
         <section className="hero" id="world" aria-labelledby="hero-title">
           <img
             className="hero-current"
-            src="/assets/watercolor-current.png"
+            src={`${import.meta.env.BASE_URL}assets/watercolor-current.png`}
             alt=""
             aria-hidden="true"
           />
