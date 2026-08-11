@@ -3,22 +3,39 @@ import { ArrowRight, List, X } from "@phosphor-icons/react";
 
 const projects = [
   {
-    title: "虾子曰",
-    english: "Xiazi Daily",
-    description: "把每日复杂的世界新闻，转译成清楚、有观点、有画面的双语内容。",
+    number: "01",
+    title: "虾子曰 昨日世界",
+    english: "Yesterday's World",
+    description: "把昨天的世界热点，转译成清楚、有观点、有画面的双语内容。",
     href: "https://xiazishuo.com",
   },
   {
+    number: "02",
+    title: "艺术风格图鉴",
+    english: "Style Atlas",
+    description: "从图像、脉络与细节出发，发现艺术风格背后的视觉语言。",
+    href: "https://style-atlas.wonderelian.com",
+  },
+  {
+    number: "03",
+    title: "认识自己",
+    english: "Human Design",
+    description: "理解能量与选择，寻找更接近自己、也更适合自己的生活节奏。",
+    href: "https://human-design.wonderelian.com",
+  },
+  {
+    number: "04",
     title: "三慢问道",
     english: "Wendao",
     description: "慢下来，读一章《道德经》，也读一读此刻的自己。",
     href: "https://wendao.wonderelian.com",
   },
   {
-    title: "Human Design",
-    english: "Inner map",
-    description: "理解能量与选择，寻找更接近自己的生活节奏。",
-    href: "#human-design",
+    number: "05",
+    title: "一休冥想",
+    english: "Yixiu Meditation",
+    description: "先照顾身体与呼吸，让情绪安顿下来，再继续前行。",
+    href: "https://yixiu.wonderelian.com",
   },
 ];
 
@@ -117,6 +134,7 @@ export function App() {
                   target={external ? "_blank" : undefined}
                   rel={external ? "noreferrer" : undefined}
                 >
+                  <span className="project-number" aria-hidden="true">{project.number}</span>
                   <div>
                     <p className="project-kicker">{project.english}</p>
                     <h2>{project.title}</h2>

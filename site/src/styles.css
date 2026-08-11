@@ -226,12 +226,12 @@ a {
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .project-entry {
-  min-height: 232px;
-  padding: 42px 38px 34px 6px;
+  min-height: 252px;
+  padding: 42px 56px 34px 6px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -239,9 +239,30 @@ a {
   text-decoration: none;
 }
 
-.project-entry + .project-entry {
+.project-entry:nth-child(-n + 3) {
+  grid-column: span 2;
+}
+
+.project-entry:nth-child(n + 4) {
+  grid-column: span 3;
+  min-height: 224px;
+  border-top: 1px solid rgba(183, 122, 27, 0.22);
+}
+
+.project-entry:nth-child(2),
+.project-entry:nth-child(3),
+.project-entry:nth-child(5) {
   padding-left: 46px;
   border-left: 1px solid rgba(183, 122, 27, 0.22);
+}
+
+.project-number {
+  position: absolute;
+  top: 43px;
+  right: 12px;
+  color: var(--amber);
+  font: 500 10px/1 var(--sans);
+  letter-spacing: 0.12em;
 }
 
 .project-kicker {
@@ -483,11 +504,22 @@ a {
   }
 
   .project-entry,
-  .project-entry + .project-entry {
+  .project-entry:nth-child(-n + 3),
+  .project-entry:nth-child(n + 4),
+  .project-entry:nth-child(2),
+  .project-entry:nth-child(3),
+  .project-entry:nth-child(5) {
+    grid-column: auto;
     min-height: 0;
-    padding: 34px 4px 30px;
+    padding: 34px 42px 30px 4px;
     border-left: 0;
+    border-top: 0;
     border-bottom: 1px solid rgba(183, 122, 27, 0.22);
+  }
+
+  .project-number {
+    top: 38px;
+    right: 4px;
   }
 
   .project-kicker {

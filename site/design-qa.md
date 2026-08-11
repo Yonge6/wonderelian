@@ -58,3 +58,13 @@ No actionable P0, P1, or P2 visual differences remain.
 ## Final result
 
 final result: passed
+
+## Five-work expansion — 2026-08-11
+
+- Expanded the “此刻” section from three to five linked case studies in the user-specified order.
+- Desktop QA at `1440px`: first row uses three equal editorial columns; second row uses two equal columns; all titles and descriptions remain readable with no collisions.
+- Mobile QA at `390 x 844`: five entries become a single column, each link is `342px` wide, and document width remains `390px` with no horizontal overflow.
+- Verified all five public destinations return HTTP `200` before publication.
+- Verified the five rendered labels and URLs, responsive menu visibility, and zero page-level console warnings/errors.
+
+Expansion result: passed
