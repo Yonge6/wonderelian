@@ -118,11 +118,6 @@ const worlds = [
 
 const contacts = [
   {
-    href: "https://wonderelian.com/",
-    label: { zh: "WonderElian", en: "WonderElian" },
-    value: { zh: "wonderelian.com", en: "wonderelian.com" },
-  },
-  {
     href: "mailto:hustyy986@gmail.com",
     label: { zh: "邮箱", en: "Email" },
     value: { zh: "hustyy986@gmail.com", en: "hustyy986@gmail.com" },
@@ -196,8 +191,8 @@ const copy = {
     drawerNote: "阅读、停留与分享，本身也是一种同行。",
     aboutPanelHeadline: "WonderElian",
     aboutPanelIntro: [
-      "这里可以同时存在品牌设计、AI 创作实验、古老文字、人类图、插画角色、文章、摄影与生活。",
-      "这些看似不同的探索，底层都来自同一件事：把复杂、抽象或冰冷的事物，重新组织成清楚、美、有感觉、让人愿意接近的东西。",
+      "这里同时存在品牌设计、AI 创作实验、古老文字、人类图、插画角色、文章、摄影与生活。",
+      "这些看似不同的探索，底层都来自同一件事：把复杂、抽象或冰冷的事物，重新组织成清楚、美、有品味、让人愿意接近的东西。",
     ],
     aboutMethod: "设计 × 理解 × 转译 × 创造",
     lifeKicker: "我们的生命观",
