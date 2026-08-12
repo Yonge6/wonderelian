@@ -18,40 +18,25 @@ import {
 const projects = [
   {
     number: "01",
-    href: "https://xiazishuo.com",
-    image: "assets/project-xiazi-image2.webp",
+    href: "https://yixiu.wonderelian.com",
+    image: "assets/project-yixiu-image2.webp",
     zh: {
-      title: "虾子曰 昨日世界",
-      kicker: "昨日世界",
-      description: "把昨天的世界热点，转译成清楚、有观点、有画面的双语内容。",
+      title: "一休冥想",
+      kicker: "Yixiu Meditation",
+      description: "先照顾身体与呼吸，让情绪安顿下来，再继续前行。",
     },
     en: {
-      title: "Xiazi · Yesterday's World",
-      kicker: "Global news in visuals",
-      description: "Turning yesterday's world events into clear, visual bilingual stories with a point of view.",
+      title: "Yixiu Meditation",
+      kicker: "Rest & breathe",
+      description: "Begin with the body and the breath. Let the emotions settle before moving on.",
     },
   },
   {
     number: "02",
-    href: "https://style-atlas.wonderelian.com",
-    image: "assets/project-style-atlas-image2.webp",
-    zh: {
-      title: "艺术风格图鉴",
-      kicker: "Style Atlas",
-      description: "从图像、脉络与细节出发，发现艺术风格背后的视觉语言。",
-    },
-    en: {
-      title: "Style Atlas",
-      kicker: "Art & visual culture",
-      description: "Discovering the visual language behind art movements through images, context, and detail.",
-    },
-  },
-  {
-    number: "03",
     href: "https://human-design.wonderelian.com",
     image: "assets/project-human-design-image2.webp",
     zh: {
-      title: "认识自己",
+      title: "不二 认识自己",
       kicker: "Human Design",
       description: "理解能量与选择，寻找更接近自己、也更适合自己的生活节奏。",
     },
@@ -62,7 +47,7 @@ const projects = [
     },
   },
   {
-    number: "04",
+    number: "03",
     href: "https://wendao.wonderelian.com",
     image: "assets/project-wendao-image2.webp",
     zh: {
@@ -77,18 +62,33 @@ const projects = [
     },
   },
   {
-    number: "05",
-    href: "https://yixiu.wonderelian.com",
-    image: "assets/project-yixiu-image2.webp",
+    number: "04",
+    href: "https://xiazishuo.com",
+    image: "assets/project-xiazi-image2.webp",
     zh: {
-      title: "一休冥想",
-      kicker: "Yixiu Meditation",
-      description: "先照顾身体与呼吸，让情绪安顿下来，再继续前行。",
+      title: "虾子曰 昨日世界",
+      kicker: "昨日世界",
+      description: "把昨天的世界热点，转译成清楚、有观点、有画面的双语内容。",
     },
     en: {
-      title: "Yixiu Meditation",
-      kicker: "Rest & breathe",
-      description: "Begin with the body and the breath. Let the emotions settle before moving on.",
+      title: "Xiazi · Yesterday's World",
+      kicker: "Global news in visuals",
+      description: "Turning yesterday's world events into clear, visual bilingual stories with a point of view.",
+    },
+  },
+  {
+    number: "05",
+    href: "https://style-atlas.wonderelian.com",
+    image: "assets/project-style-atlas-image2.webp",
+    zh: {
+      title: "艺术风格图鉴",
+      kicker: "Style Atlas",
+      description: "从图像、脉络与细节出发，发现艺术风格背后的视觉语言。",
+    },
+    en: {
+      title: "Style Atlas",
+      kicker: "Art & visual culture",
+      description: "Discovering the visual language behind art movements through images, context, and detail.",
     },
   },
 ];
