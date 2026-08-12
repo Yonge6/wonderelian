@@ -173,12 +173,12 @@ const copy = {
     waysKicker: "FOUR WAYS OF BEING",
     waysTitle: <><span>认识自己，接纳自己，</span><span>成为自己，活出自己。</span></>,
     aboutKicker: "ABOUT ELIAN",
-    aboutTitle: <>把复杂的事物，<br />重新变得清楚而有感觉。</>,
+    aboutTitle: <>把复杂的事物，<br />重新变得清楚而有品味。</>,
     aboutParagraphs: [
-      "我喜欢把复杂、抽象或冰冷的事物，重新组织成清楚、美、有感觉、让人愿意接近的东西。",
+      "我喜欢把复杂、抽象或冰冷的事物，重新组织成清楚、美、有品味、让人愿意接近的东西。",
       "有时它是一台工业机器，有时是一段古老文字，有时是一张关于人的图。WonderElian 是这些探索共同生长的地方。",
     ],
-    footerLine: "用设计理解世界，也理解自己。",
+    footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
     backToTop: "回到开始",
     drawerTitle: "向内认识自己，向外如水而行。",
@@ -189,6 +189,7 @@ const copy = {
     aboutDrawer: "关于 WonderElian",
     aboutDrawerCopy: "认识这个由设计与生命探索构成的个人世界",
     contact: "联系 Elian",
+    aboutContact: "联系 Elian",
     contactCopy: "邮箱与社交媒体",
     support: "随喜相助",
     supportCopy: "有余则助，无余亦安",
@@ -249,7 +250,7 @@ const copy = {
       "I like reorganizing complex, abstract, or cold things into something clear, beautiful, and human—something people want to come closer to.",
       "Sometimes it is an industrial machine, sometimes an ancient text, sometimes a map of a person. WonderElian is not a job title. It is where all these explorations grow together.",
     ],
-    footerLine: "Using design to understand the world—and myself.",
+    footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
     backToTop: "Back to the beginning",
     drawerTitle: "Know yourself within. Move like water through the world.",
@@ -260,6 +261,7 @@ const copy = {
     aboutDrawer: "About WonderElian",
     aboutDrawerCopy: "Meet a personal world shaped by design and the exploration of life",
     contact: "Contact Elian",
+    aboutContact: "Contact Elian",
     contactCopy: "Email and social channels",
     support: "Support the journey",
     supportCopy: "Give freely, or simply stay and read in peace",
@@ -380,6 +382,10 @@ export function App() {
     setDrawerView("home");
     setSupportOpen(true);
   };
+  const openContact = () => {
+    setDrawerView("contact");
+    setDrawerOpen(true);
+  };
   const drawerHeading = drawerView === "about"
     ? c.aboutDrawer
     : drawerView === "contact"
@@ -496,7 +502,13 @@ export function App() {
         <section className="about-section" id="about" aria-labelledby="about-title">
           <p className="eyebrow">{c.aboutKicker}</p>
           <div className="about-layout">
-            <h2 id="about-title">{c.aboutTitle}</h2>
+            <div className="about-heading">
+              <h2 id="about-title">{c.aboutTitle}</h2>
+              <button className="about-contact" type="button" onClick={openContact}>
+                <span>{c.aboutContact}</span>
+                <ArrowRight size={18} weight="light" aria-hidden="true" />
+              </button>
+            </div>
             <div className="about-copy">
               {c.aboutParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             </div>

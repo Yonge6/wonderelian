@@ -533,6 +533,28 @@ button {
   gap: 12vw;
 }
 
+.about-contact {
+  width: fit-content;
+  margin-top: 40px;
+  padding: 11px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  border: 0;
+  border-bottom: 1px solid rgba(215, 164, 85, 0.58);
+  color: #d7a455;
+  background: transparent;
+  font: 500 15px/1.2 var(--serif);
+  cursor: pointer;
+  transition: gap 220ms ease, color 220ms ease;
+}
+
+.about-contact:hover,
+.about-contact:focus-visible {
+  gap: 24px;
+  color: #edc887;
+}
+
 .about-copy {
   padding-top: 10px;
 }
