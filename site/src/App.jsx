@@ -171,7 +171,7 @@ const copy = {
     aboutTitle: <>把复杂的事物，<br />重新变得清楚而有品味。</>,
     aboutParagraphs: [
       "我喜欢把复杂、抽象或冰冷的事物，重新组织成清楚、美、有品味、让人愿意接近的东西。",
-      "有时它是一台工业机器，有时是一段古老文字，有时是一张关于人的图。WonderElian 是这些探索共同生长的地方。",
+      "有时它是一台工业机器，有时是一段古老文字，有时是一个网站、App、玩偶、商品等等。WonderElian 是这些探索共同生长的地方。",
     ],
     footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
@@ -295,10 +295,10 @@ const supportCodeUrl = `${import.meta.env.BASE_URL}assets/support-wechat-appreci
 const supportPosterUrl = `${import.meta.env.BASE_URL}assets/support-wechat-appreciation.webp`;
 const videoChannelUrl = `${import.meta.env.BASE_URL}assets/video-channel.jpg`;
 
-function Wordmark({ label }) {
+function Wordmark({ label, text = "WONDER ELIAN" }) {
   return (
     <a className="wordmark" href="#world" aria-label={label}>
-      WONDER ELIAN
+      {text}
     </a>
   );
 }
@@ -385,12 +385,12 @@ export function App() {
     ? c.aboutDrawer
     : drawerView === "contact"
       ? c.contact
-      : "WONDER ELIAN";
+      : "Wonder Elian";
 
   return (
     <div className="site-shell">
       <header className="site-header">
-        <Wordmark label={c.homeLabel} />
+        <Wordmark label={c.homeLabel} text="Wonder Elian" />
 
         <div className="header-actions">
           <nav className="main-nav" aria-label={c.navLabel}>
@@ -513,7 +513,7 @@ export function App() {
       </main>
 
       <footer className="site-footer">
-        <Wordmark label={c.homeLabel} />
+        <Wordmark label={c.homeLabel} text="Wonder Elian" />
         <p>{c.footerLine}</p>
         <a className="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
           {c.icpLabel}
