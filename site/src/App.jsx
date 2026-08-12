@@ -181,7 +181,6 @@ const copy = {
     footerLine: "用设计理解世界，也理解自己。",
     icpLabel: "京ICP备19022034号-4",
     backToTop: "回到开始",
-    drawerKicker: "永歌的好奇世界",
     drawerTitle: "向内认识自己，向外如水而行。",
     drawerNavLabel: "探索 WonderElian",
     nightMode: "夜读模式",
@@ -194,7 +193,6 @@ const copy = {
     support: "随喜相助",
     supportCopy: "有余则助，无余亦安",
     drawerNote: "阅读、停留与分享，本身也是一种同行。",
-    aboutPanelKicker: "永歌的好奇世界",
     aboutPanelHeadline: "WonderElian",
     aboutPanelIntro: [
       "这里可以同时存在品牌设计、AI 创作实验、古老文字、人类图、插画角色、文章、摄影与生活。",
@@ -254,7 +252,6 @@ const copy = {
     footerLine: "Using design to understand the world—and myself.",
     icpLabel: "京ICP备19022034号-4",
     backToTop: "Back to the beginning",
-    drawerKicker: "Elian's world of curiosity",
     drawerTitle: "Know yourself within. Move like water through the world.",
     drawerNavLabel: "Explore WonderElian",
     nightMode: "Night mode",
@@ -267,7 +264,6 @@ const copy = {
     support: "Support the journey",
     supportCopy: "Give freely, or simply stay and read in peace",
     drawerNote: "Reading, pausing, and sharing are already ways of taking part.",
-    aboutPanelKicker: "Elian's world of curiosity",
     aboutPanelHeadline: "WonderElian is not a job title. It is my personal world.",
     aboutPanelIntro: [
       "Brand design, AI experiments, ancient texts, Human Design, illustrated characters, essays, photography, and life can all exist here.",
@@ -529,7 +525,6 @@ export function App() {
                 </button>
               ) : null}
               <div>
-                <span>{c.drawerKicker}</span>
                 <strong id="drawer-title">{drawerHeading}</strong>
               </div>
               <LanguageToggle compact language={language} label={c.switchLanguage} onToggle={toggleLanguage} />
@@ -606,7 +601,6 @@ export function App() {
 
               {drawerView === "about" ? (
                 <section className="drawer-prose">
-                  <span className="drawer-kicker">{c.aboutPanelKicker}</span>
                   <h3>{c.aboutPanelHeadline}</h3>
                   {c.aboutPanelIntro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                   <p className="drawer-method">{c.aboutMethod}</p>
