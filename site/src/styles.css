@@ -546,20 +546,20 @@ button {
 .site-footer {
   padding: 54px max(48px, calc((100% - 1320px) / 2));
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   align-items: center;
-  gap: 54px;
+  gap: 36px;
   border-top: 1px solid var(--line);
 }
 
 .site-footer p,
-.site-footer > a:last-child {
+.site-footer > a {
   margin: 0;
   color: var(--ink-soft);
   font: 400 13px/1.5 var(--serif);
 }
 
-.site-footer > a:last-child {
+.site-footer > a {
   text-underline-offset: 4px;
 }
 

@@ -179,6 +179,7 @@ const copy = {
       "有时它是一台工业机器，有时是一段古老文字，有时是一张关于人的图。WonderElian 是这些探索共同生长的地方。",
     ],
     footerLine: "用设计理解世界，也理解自己。",
+    icpLabel: "京ICP备19022034号-4",
     backToTop: "回到开始",
     drawerKicker: "永歌的好奇世界",
     drawerTitle: "向内认识自己，向外如水而行。",
@@ -251,6 +252,7 @@ const copy = {
       "Sometimes it is an industrial machine, sometimes an ancient text, sometimes a map of a person. WonderElian is not a job title. It is where all these explorations grow together.",
     ],
     footerLine: "Using design to understand the world—and myself.",
+    icpLabel: "京ICP备19022034号-4",
     backToTop: "Back to the beginning",
     drawerKicker: "Elian's world of curiosity",
     drawerTitle: "Know yourself within. Move like water through the world.",
@@ -510,6 +512,9 @@ export function App() {
       <footer className="site-footer">
         <Wordmark label={c.homeLabel} />
         <p>{c.footerLine}</p>
+        <a className="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
+          {c.icpLabel}
+        </a>
         <a href="#world">{c.backToTop}</a>
       </footer>
 
