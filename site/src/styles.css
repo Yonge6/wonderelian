@@ -88,13 +88,14 @@ button {
 }
 
 .site-header {
-  width: auto;
+  width: 100%;
   height: 106px;
   position: fixed;
   top: 0;
-  left: max(48px, calc((100% - 1320px) / 2));
-  right: max(48px, calc((100% - 1320px) / 2));
+  left: 0;
+  right: 0;
   z-index: 80;
+  padding-inline: max(48px, calc((100% - 1320px) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -541,7 +542,7 @@ section[id] {
 
 .about-layout {
   display: grid;
-  grid-template-columns: 1.1fr 0.8fr;
+  grid-template-columns: 1.34fr 0.7fr;
   gap: 12vw;
 }
 
@@ -1169,6 +1170,7 @@ section[id] {
     left: 24px;
     right: 24px;
     z-index: 80;
+    padding-inline: 0;
     background: var(--header-bg);
     backdrop-filter: blur(18px);
   }
