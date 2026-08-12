@@ -176,7 +176,7 @@ const copy = {
     aboutTitle: <>把复杂的事物，<br />重新变得清楚而有感觉。</>,
     aboutParagraphs: [
       "我喜欢把复杂、抽象或冰冷的事物，重新组织成清楚、美、有感觉、让人愿意接近的东西。",
-      "有时它是一台工业机器，有时是一段古老文字，有时是一张关于人的图。WonderElian 不是职业名称，而是这些探索共同生长的地方。",
+      "有时它是一台工业机器，有时是一段古老文字，有时是一张关于人的图。WonderElian 是这些探索共同生长的地方。",
     ],
     footerLine: "用设计理解世界，也理解自己。",
     backToTop: "回到开始",
@@ -194,7 +194,7 @@ const copy = {
     supportCopy: "有余则助，无余亦安",
     drawerNote: "阅读、停留与分享，本身也是一种同行。",
     aboutPanelKicker: "永歌的好奇世界",
-    aboutPanelHeadline: "WonderElian 不是职业名称，而是我的个人世界。",
+    aboutPanelHeadline: "WonderElian",
     aboutPanelIntro: [
       "这里可以同时存在品牌设计、AI 创作实验、古老文字、人类图、插画角色、文章、摄影与生活。",
       "这些看似不同的探索，底层都来自同一件事：把复杂、抽象或冰冷的事物，重新组织成清楚、美、有感觉、让人愿意接近的东西。",
@@ -419,7 +419,7 @@ export function App() {
         <section className="hero" id="world" aria-labelledby="hero-title">
           <img
             className="hero-current"
-            src={`${import.meta.env.BASE_URL}assets/hero-watercolor-full-v2.webp`}
+            src={`${import.meta.env.BASE_URL}assets/hero-flow-image2-v3.webp`}
             alt=""
             aria-hidden="true"
           />

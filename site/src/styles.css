@@ -205,9 +205,8 @@ button {
 }
 
 .hero {
-  width: min(100%, 1440px);
+  width: 100%;
   min-height: 640px;
-  margin-inline: auto;
   position: relative;
   display: flex;
   align-items: center;
@@ -233,7 +232,7 @@ button {
   object-fit: cover;
   object-position: center;
   mix-blend-mode: multiply;
-  opacity: 0.8;
+  opacity: 0.62;
   pointer-events: none;
 }
 
