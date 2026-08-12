@@ -91,3 +91,42 @@ Bilingual drawer result: passed
 - Mobile QA at `390 x 844`: fixed header remains at `top: 0` after scrolling; the drawer is `362px` wide and begins at `x: 28px`, leaving a visible strip of the homepage; all drawer views remain free of horizontal overflow.
 
 Wendao-aligned refinement result: passed
+## Image 2 full-bleed and project backgrounds — 2026-08-12
+
+- Source visual truth: user browser annotations for the full-bleed hero, five theme-related project backgrounds, and the two-line mobile life-philosophy title; generated Image 2 assets in `public/assets/`.
+- Implementation evidence: `qa-desktop-1281.png` and `qa-mobile-390.png`.
+- Viewports: desktop 1281 × 1263 CSS px; mobile 390 × 844 CSS px; device scale factor 1.
+- Source pixels: hero 1448 × 1086; each project image 1200 × 800 WebP. Implementation screenshots: desktop 1281 px wide full page; mobile 390 × 844.
+- State: Chinese, light theme, drawer closed. Project-card and title states were also checked at 421 × 1263.
+
+**Full-view comparison evidence**
+
+- The hero image fills the full 1281 × 640 hero rectangle on desktop and the full 390 × 700 rectangle on mobile without the previous rectangular edge.
+- All five project backgrounds load at 1200 × 800, cover their complete cards, retain a common restrained editorial palette, and preserve readable copy through a theme-aware overlay.
+- Mobile header remains fixed at top 0. The page scroll width equals client width at 1281, 421, and 390 px.
+
+**Focused region comparison evidence**
+
+- At 421 px, the life-philosophy heading renders as exactly two 373 px-wide lines: `认识自己，接纳自己，` and `成为自己，活出自己。`
+- At 421 px, all five project cards render as 373 × 240 px, with loaded backgrounds and no horizontal overflow.
+- At 390 px, the full-bleed hero image and hero container share the same visible bounds.
+
+**Findings**
+
+- No actionable P0/P1/P2 findings remain.
+- P3 follow-up: project-image strength may be tuned later from user taste; current overlays intentionally favor reading comfort.
+
+**Comparison history**
+
+- Earlier P2: hero art occupied only the right portion and exposed a hard visual boundary. Fixed with a new full-canvas Image 2 watercolor and `object-fit: cover`; post-fix evidence is `qa-desktop-1281.png` and `qa-mobile-390.png`.
+- Earlier P2: mobile philosophy heading wrapped into four awkward lines. Fixed with two semantic line spans and responsive sizing; post-fix 421 px measurement confirms two lines.
+- Earlier P2: project modules lacked theme imagery. Fixed with five distinct Image 2 assets, responsive full-card placement, and light/dark overlays; post-fix evidence is the project region in `qa-desktop-1281.png` and the 421 px browser capture.
+
+**Verification**
+
+- Production build passed.
+- Sites worker tests: 4 passed, 0 failed.
+- Primary links, language toggle, menu/drawer, theme toggle, responsive header, image loading, and horizontal overflow were checked in the in-app browser.
+- Console: no errors or warnings in a fresh final local tab after testing language switch, menu/drawer, and night mode.
+
+final result: passed

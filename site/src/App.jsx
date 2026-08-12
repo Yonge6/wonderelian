@@ -19,6 +19,7 @@ const projects = [
   {
     number: "01",
     href: "https://xiazishuo.com",
+    image: "assets/project-xiazi-image2.webp",
     zh: {
       title: "虾子曰 昨日世界",
       kicker: "昨日世界",
@@ -33,6 +34,7 @@ const projects = [
   {
     number: "02",
     href: "https://style-atlas.wonderelian.com",
+    image: "assets/project-style-atlas-image2.webp",
     zh: {
       title: "艺术风格图鉴",
       kicker: "Style Atlas",
@@ -47,6 +49,7 @@ const projects = [
   {
     number: "03",
     href: "https://human-design.wonderelian.com",
+    image: "assets/project-human-design-image2.webp",
     zh: {
       title: "认识自己",
       kicker: "Human Design",
@@ -61,6 +64,7 @@ const projects = [
   {
     number: "04",
     href: "https://wendao.wonderelian.com",
+    image: "assets/project-wendao-image2.webp",
     zh: {
       title: "三慢问道",
       kicker: "Wendao",
@@ -75,6 +79,7 @@ const projects = [
   {
     number: "05",
     href: "https://yixiu.wonderelian.com",
+    image: "assets/project-yixiu-image2.webp",
     zh: {
       title: "一休冥想",
       kicker: "Yixiu Meditation",
@@ -166,7 +171,7 @@ const copy = {
     current: "此刻",
     currentAlt: "RIGHT NOW",
     waysKicker: "FOUR WAYS OF BEING",
-    waysTitle: <>认识自己，接纳自己，<br />成为自己，活出自己。</>,
+    waysTitle: <><span>认识自己，接纳自己，</span><span>成为自己，活出自己。</span></>,
     aboutKicker: "ABOUT ELIAN",
     aboutTitle: <>把复杂的事物，<br />重新变得清楚而有感觉。</>,
     aboutParagraphs: [
@@ -238,7 +243,7 @@ const copy = {
     current: "Current work",
     currentAlt: "RIGHT NOW",
     waysKicker: "FOUR WAYS OF BEING",
-    waysTitle: <>Know yourself. Welcome yourself.<br />Become yourself. Live as yourself.</>,
+    waysTitle: <><span>Know yourself. Welcome yourself.</span><span>Become yourself. Live as yourself.</span></>,
     aboutKicker: "ABOUT ELIAN",
     aboutTitle: <>Making complex things<br />clear, beautiful, and felt.</>,
     aboutParagraphs: [
@@ -414,7 +419,7 @@ export function App() {
         <section className="hero" id="world" aria-labelledby="hero-title">
           <img
             className="hero-current"
-            src={`${import.meta.env.BASE_URL}assets/watercolor-current.png`}
+            src={`${import.meta.env.BASE_URL}assets/hero-watercolor-full-v2.webp`}
             alt=""
             aria-hidden="true"
           />
@@ -450,6 +455,13 @@ export function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
+                  <img
+                    className="project-background"
+                    src={`${import.meta.env.BASE_URL}${project.image}`}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                  />
                   <span className="project-number" aria-hidden="true">{project.number}</span>
                   <div>
                     <p className="project-kicker">{projectCopy.kicker}</p>
