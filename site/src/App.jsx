@@ -291,8 +291,8 @@ const copy = {
   },
 };
 
-const supportCodeUrl = `${import.meta.env.BASE_URL}assets/support-wechat-appreciation-code.png`;
-const supportPosterUrl = `${import.meta.env.BASE_URL}assets/support-wechat-appreciation.webp`;
+const supportCodeUrl = `${import.meta.env.BASE_URL}assets/support-wechat-appreciation-v2.jpeg`;
+const supportPosterUrl = supportCodeUrl;
 const videoChannelUrl = `${import.meta.env.BASE_URL}assets/video-channel.jpg`;
 
 function Wordmark({ label, text = "WONDER ELIAN" }) {
