@@ -213,7 +213,6 @@ const copy = {
     supportCodeAlt: "Elian 的微信赞赏码",
     supportHold: "长按二维码，识别并支付",
     openCode: "单独打开二维码",
-    openPoster: "查看完整赞赏海报",
     supportClosingLead: "有余则助，无余亦安。",
     supportClosing: "谢谢你珍惜这份作品，也珍惜自己的生活。",
   },
@@ -285,14 +284,12 @@ const copy = {
     supportCodeAlt: "Elian's WeChat appreciation code",
     supportHold: "Press and hold the QR code to recognize it",
     openCode: "Open the QR code on its own",
-    openPoster: "View the complete appreciation poster",
     supportClosingLead: "Give when you can; be at ease when you cannot.",
     supportClosing: "Thank you for valuing this work—and your own life.",
   },
 };
 
 const supportCodeUrl = `${import.meta.env.BASE_URL}assets/support-wechat-appreciation-v2.jpeg`;
-const supportPosterUrl = supportCodeUrl;
 const videoChannelUrl = `${import.meta.env.BASE_URL}assets/video-channel.jpg`;
 
 function Wordmark({ label, text = "WONDER ELIAN" }) {
@@ -683,7 +680,6 @@ export function App() {
                 <strong>{c.supportHold}</strong>
                 <span>
                   <a href={supportCodeUrl} target="_blank" rel="noreferrer">{c.openCode}</a>
-                  <a href={supportPosterUrl} target="_blank" rel="noreferrer">{c.openPoster}</a>
                 </span>
               </div>
               <figcaption>
