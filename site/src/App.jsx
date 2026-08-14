@@ -146,7 +146,7 @@ const contacts = [
 
 const copy = {
   zh: {
-    pageTitle: "WONDER ELIAN — Designing things. Exploring life.",
+    pageTitle: "WonderElian | Design, AI & Independent Creative Products",
     homeLabel: "Wonder Elian 首页",
     navLabel: "主导航",
     nav: [
@@ -171,7 +171,7 @@ const copy = {
     aboutTitle: <>把复杂的事物，<br />重新变得清楚而有品味。</>,
     aboutParagraphs: [
       "我喜欢把复杂、抽象或冰冷的事物，重新组织成清楚、美、有品味、让人愿意接近的东西。",
-      "有时它是一台工业机器，有时是一段古老文字，有时是一个网站、App、玩偶、商品等等。WonderElian 是这些探索共同生长的地方。",
+      "有时它是一台工业机器，有时是一段古老文字，有时是一个网站、App、玩偶、商品等等。WonderElian 位于中国武汉，面向全球创作，是这些探索共同生长的地方。",
     ],
     footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
@@ -217,7 +217,7 @@ const copy = {
     supportClosing: "谢谢你珍惜这份作品，也珍惜自己的生活。",
   },
   en: {
-    pageTitle: "WONDER ELIAN — Designing things. Exploring life.",
+    pageTitle: "WonderElian | Design, AI & Independent Creative Products",
     homeLabel: "Wonder Elian home",
     navLabel: "Main navigation",
     nav: [
@@ -242,7 +242,7 @@ const copy = {
     aboutTitle: <>Making complex things<br />clear, beautiful, and felt.</>,
     aboutParagraphs: [
       "I like reorganizing complex, abstract, or cold things into something clear, beautiful, and human—something people want to come closer to.",
-      "Sometimes it is an industrial machine, sometimes an ancient text, sometimes a map of a person. WonderElian is not a job title. It is where all these explorations grow together.",
+      "Sometimes it is an industrial machine, sometimes an ancient text, sometimes a map of a person. Based in Wuhan, China and creating for a global audience, WonderElian is where all these explorations grow together.",
     ],
     footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
@@ -316,7 +316,7 @@ function LanguageToggle({ language, label, onToggle, compact = false }) {
 }
 
 export function App() {
-  const [language, setLanguage] = useState(() => window.localStorage.getItem("wonderelian-language") || "zh");
+  const [language, setLanguage] = useState(() => window.localStorage.getItem("wonderelian-language") || "en");
   const [theme, setTheme] = useState(() => window.localStorage.getItem("wonderelian-theme") || "light");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerView, setDrawerView] = useState("home");

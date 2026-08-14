@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 import worker from "../worker/index.js";
 
@@ -65,4 +65,22 @@ test("emits the files required by Sites packaging", async () => {
   await access(new URL("../dist/client/index.html", import.meta.url));
   await access(new URL("../dist/server/index.js", import.meta.url));
   await access(new URL("../dist/.openai/hosting.json", import.meta.url));
+});
+
+test("ships global-English crawl and entity metadata", async () => {
+  const [index, robots, sitemap] = await Promise.all([
+    readFile(new URL("../dist/client/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dist/client/robots.txt", import.meta.url), "utf8"),
+    readFile(new URL("../dist/client/sitemap.xml", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(index, /<html lang="en">/);
+  assert.match(index, /rel="canonical" href="https:\/\/wonderelian\.com\/"/);
+  assert.match(index, /property="og:title"/);
+  assert.match(index, /name="twitter:card" content="summary_large_image"/);
+  assert.match(index, /"@type": "Organization"/);
+  assert.match(index, /"@type": "Person"/);
+  assert.match(index, /Wuhan, China/);
+  assert.match(robots, /Sitemap: https:\/\/wonderelian\.com\/sitemap\.xml/);
+  assert.match(sitemap, /<loc>https:\/\/wonderelian\.com\/<\/loc>/);
 });
