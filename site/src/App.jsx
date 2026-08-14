@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "@fontsource/noto-sans-sc/400.css";
 import "@fontsource/noto-sans-sc/500.css";
 import "@fontsource/noto-serif-sc/400.css";
@@ -11,6 +11,8 @@ import {
   Info,
   List,
   Moon,
+  Pause,
+  Play,
   Sun,
   X,
 } from "@phosphor-icons/react";
@@ -150,12 +152,14 @@ const copy = {
     homeLabel: "Wonder Elian 首页",
     navLabel: "主导航",
     nav: [
-      ["世界", "#world"],
-      ["作品", "#now"],
-      ["随记", "#notes"],
-      ["关于", "#about"],
+      ["所见世界", "#world"],
+      ["沿途所作", "#now"],
+      ["片刻随记", "#notes"],
+      ["关于永歌", "#about"],
     ],
     switchLanguage: "Switch to English",
+    playAmbient: "播放一休白噪音",
+    pauseAmbient: "暂停一休白噪音",
     openMenu: "打开菜单",
     closeMenu: "关闭菜单",
     back: "返回",
@@ -221,12 +225,14 @@ const copy = {
     homeLabel: "Wonder Elian home",
     navLabel: "Main navigation",
     nav: [
-      ["World", "#world"],
-      ["Works", "#now"],
-      ["Notes", "#notes"],
-      ["About", "#about"],
+      ["The World", "#world"],
+      ["Along the Way", "#now"],
+      ["Field Notes", "#notes"],
+      ["About Elian", "#about"],
     ],
     switchLanguage: "切换至中文",
+    playAmbient: "Play Yixiu white noise",
+    pauseAmbient: "Pause Yixiu white noise",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     back: "Back",
@@ -322,6 +328,8 @@ export function App() {
   const [drawerView, setDrawerView] = useState("home");
   const [supportOpen, setSupportOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
+  const [ambientPlaying, setAmbientPlaying] = useState(false);
+  const ambientAudioRef = useRef(null);
   const c = copy[language];
   const isZh = language === "zh";
 
@@ -335,6 +343,10 @@ export function App() {
     document.documentElement.dataset.theme = theme;
     window.localStorage.setItem("wonderelian-theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (ambientAudioRef.current) ambientAudioRef.current.volume = 0.34;
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = drawerOpen || supportOpen || videoOpen ? "hidden" : "";
@@ -357,6 +369,19 @@ export function App() {
   }, []);
 
   const toggleLanguage = () => setLanguage((current) => (current === "zh" ? "en" : "zh"));
+  const toggleAmbient = async () => {
+    const audio = ambientAudioRef.current;
+    if (!audio) return;
+    if (audio.paused) {
+      try {
+        await audio.play();
+      } catch {
+        setAmbientPlaying(false);
+      }
+    } else {
+      audio.pause();
+    }
+  };
   const closeDrawer = () => {
     setDrawerOpen(false);
     setDrawerView("home");
@@ -396,6 +421,17 @@ export function App() {
             ))}
           </nav>
 
+          <button
+            className={`ambient-toggle ${ambientPlaying ? "is-playing" : ""}`}
+            type="button"
+            aria-label={ambientPlaying ? c.pauseAmbient : c.playAmbient}
+            aria-pressed={ambientPlaying}
+            title={ambientPlaying ? c.pauseAmbient : c.playAmbient}
+            onClick={toggleAmbient}
+          >
+            {ambientPlaying ? <Pause size={18} weight="fill" /> : <Play size={18} weight="fill" />}
+          </button>
+
           <LanguageToggle language={language} label={c.switchLanguage} onToggle={toggleLanguage} />
 
           <button
@@ -410,6 +446,15 @@ export function App() {
           </button>
         </div>
       </header>
+
+      <audio
+        ref={ambientAudioRef}
+        src={`${import.meta.env.BASE_URL}assets/audio/underwater-white-noise.m4a`}
+        preload="none"
+        loop
+        onPlay={() => setAmbientPlaying(true)}
+        onPause={() => setAmbientPlaying(false)}
+      />
 
       <main>
         <section className="hero" id="world" aria-labelledby="hero-title">
