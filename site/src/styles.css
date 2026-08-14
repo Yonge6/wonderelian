@@ -132,7 +132,7 @@ section[id] {
 
 .main-nav a {
   padding: 12px 0;
-  font: 500 16px/1 var(--sans);
+  font: 500 16px/1 var(--serif);
   text-decoration: none;
   position: relative;
 }
