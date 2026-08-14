@@ -6,13 +6,13 @@ import "@fontsource/noto-serif-sc/600.css";
 import {
   ArrowLeft,
   ArrowRight,
+  Check,
   EnvelopeSimple,
   Heart,
   Info,
   List,
   Moon,
-  Pause,
-  Play,
+  MusicNoteSimple,
   Sun,
   X,
 } from "@phosphor-icons/react";
@@ -118,6 +118,19 @@ const worlds = [
   },
 ];
 
+const ambientSounds = [
+  { id: "morning-birds", file: "morning-birds.m4a", zh: "晨间鸟语", en: "Morning Birds" },
+  { id: "forest-breeze", file: "forest-breeze.m4a", zh: "林间微风", en: "Forest Breeze" },
+  { id: "sunrise-river", file: "sunrise-river.m4a", zh: "晨曦河流", en: "Sunrise River" },
+  { id: "river-flow", file: "river-flow.m4a", zh: "溪流潺潺", en: "Flowing River" },
+  { id: "forest-waterfall", file: "forest-waterfall.m4a", zh: "森林瀑布", en: "Forest Waterfall" },
+  { id: "ocean-waves", file: "ocean-waves.m4a", zh: "海浪", en: "Ocean Waves" },
+  { id: "light-rain", file: "light-rain.m4a", zh: "细雨", en: "Light Rain" },
+  { id: "mountain-wind", file: "mountain-wind.m4a", zh: "山风", en: "Mountain Wind" },
+  { id: "distant-thunder", file: "distant-thunder.m4a", zh: "远雷", en: "Distant Thunder" },
+  { id: "underwater-white-noise", file: "underwater-white-noise.m4a", zh: "水下白噪音", en: "Underwater White Noise" },
+];
+
 const contacts = [
   {
     href: "mailto:hustyy986@gmail.com",
@@ -160,6 +173,10 @@ const copy = {
     switchLanguage: "Switch to English",
     playAmbient: "播放一休白噪音",
     pauseAmbient: "暂停一休白噪音",
+    ambientTitle: "一休白噪音",
+    ambientCopy: "选择此刻想听的声音",
+    ambientIntro: "选择一种声音，让浏览的节奏慢下来。顶部音符可随时播放或暂停。",
+    ambientSelected: "当前声音",
     openMenu: "打开菜单",
     closeMenu: "关闭菜单",
     back: "返回",
@@ -233,6 +250,10 @@ const copy = {
     switchLanguage: "切换至中文",
     playAmbient: "Play Yixiu white noise",
     pauseAmbient: "Pause Yixiu white noise",
+    ambientTitle: "Yixiu White Noise",
+    ambientCopy: "Choose a sound for this moment",
+    ambientIntro: "Choose a sound and let the pace of browsing soften. Use the note above to play or pause at any time.",
+    ambientSelected: "Now playing",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     back: "Back",
@@ -329,9 +350,13 @@ export function App() {
   const [supportOpen, setSupportOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
   const [ambientPlaying, setAmbientPlaying] = useState(false);
+  const [ambientSound, setAmbientSound] = useState("morning-birds");
   const ambientAudioRef = useRef(null);
+  const ambientResumeRef = useRef(false);
   const c = copy[language];
   const isZh = language === "zh";
+  const activeAmbientSound = ambientSounds.find((sound) => sound.id === ambientSound) || ambientSounds[0];
+  const activeAmbientLabel = activeAmbientSound[language];
 
   useEffect(() => {
     document.documentElement.lang = isZh ? "zh-CN" : "en";
@@ -347,6 +372,12 @@ export function App() {
   useEffect(() => {
     if (ambientAudioRef.current) ambientAudioRef.current.volume = 0.34;
   }, []);
+
+  useEffect(() => {
+    if (!ambientResumeRef.current || !ambientAudioRef.current) return;
+    ambientResumeRef.current = false;
+    ambientAudioRef.current.play().catch(() => setAmbientPlaying(false));
+  }, [ambientSound]);
 
   useEffect(() => {
     document.body.style.overflow = drawerOpen || supportOpen || videoOpen ? "hidden" : "";
@@ -382,6 +413,12 @@ export function App() {
       audio.pause();
     }
   };
+  const selectAmbientSound = (sound) => {
+    const audio = ambientAudioRef.current;
+    if (sound.id === ambientSound) return;
+    ambientResumeRef.current = audio ? !audio.paused : false;
+    setAmbientSound(sound.id);
+  };
   const closeDrawer = () => {
     setDrawerOpen(false);
     setDrawerView("home");
@@ -407,7 +444,9 @@ export function App() {
     ? c.aboutDrawer
     : drawerView === "contact"
       ? c.contact
-      : "Wonder Elian";
+      : drawerView === "ambient"
+        ? c.ambientTitle
+        : "Wonder Elian";
 
   return (
     <div className="site-shell">
@@ -424,12 +463,20 @@ export function App() {
           <button
             className={`ambient-toggle ${ambientPlaying ? "is-playing" : ""}`}
             type="button"
-            aria-label={ambientPlaying ? c.pauseAmbient : c.playAmbient}
+            aria-label={`${ambientPlaying ? c.pauseAmbient : c.playAmbient} · ${activeAmbientLabel}`}
             aria-pressed={ambientPlaying}
-            title={ambientPlaying ? c.pauseAmbient : c.playAmbient}
+            title={`${ambientPlaying ? c.pauseAmbient : c.playAmbient} · ${activeAmbientLabel}`}
             onClick={toggleAmbient}
           >
-            {ambientPlaying ? <Pause size={18} weight="fill" /> : <Play size={18} weight="fill" />}
+            <span className="ambient-glyph" aria-hidden="true">
+              <span className="ambient-wave ambient-wave-one" />
+              <span className="ambient-wave ambient-wave-two" />
+              <MusicNoteSimple
+                className="ambient-note"
+                size={18}
+                weight={ambientPlaying ? "fill" : "regular"}
+              />
+            </span>
           </button>
 
           <LanguageToggle language={language} label={c.switchLanguage} onToggle={toggleLanguage} />
@@ -449,7 +496,7 @@ export function App() {
 
       <audio
         ref={ambientAudioRef}
-        src={`${import.meta.env.BASE_URL}assets/audio/underwater-white-noise.m4a`}
+        src={`${import.meta.env.BASE_URL}assets/audio/${activeAmbientSound.file}`}
         preload="none"
         loop
         onPlay={() => setAmbientPlaying(true)}
@@ -616,6 +663,15 @@ export function App() {
                       </button>
                     </div>
 
+                    <button className="drawer-utility-row" type="button" onClick={() => setDrawerView("ambient")}>
+                      <span className="drawer-utility-icon"><MusicNoteSimple size={20} /></span>
+                      <span>
+                        <strong>{c.ambientTitle}</strong>
+                        <small>{activeAmbientLabel} · {c.ambientCopy}</small>
+                      </span>
+                      <ArrowRight size={18} weight="light" aria-hidden="true" />
+                    </button>
+
                     <button className="drawer-utility-row" type="button" onClick={() => setDrawerView("about")}>
                       <span className="drawer-utility-icon"><Info size={20} /></span>
                       <span>
@@ -701,6 +757,35 @@ export function App() {
                       <strong>{c.viewQr}</strong>
                       <ArrowRight size={18} weight="light" aria-hidden="true" />
                     </button>
+                  </div>
+                </section>
+              ) : null}
+
+              {drawerView === "ambient" ? (
+                <section className="ambient-section" aria-label={c.ambientTitle}>
+                  <p className="drawer-intro">{c.ambientIntro}</p>
+                  <div className="ambient-sound-list">
+                    {ambientSounds.map((sound, index) => {
+                      const selected = sound.id === ambientSound;
+                      return (
+                        <button
+                          className={selected ? "is-selected" : ""}
+                          type="button"
+                          key={sound.id}
+                          aria-pressed={selected}
+                          onClick={() => selectAmbientSound(sound)}
+                        >
+                          <span>{String(index + 1).padStart(2, "0")}</span>
+                          <strong>{sound[language]}</strong>
+                          {selected ? (
+                            <span className="ambient-selected">
+                              <Check size={17} weight="bold" aria-hidden="true" />
+                              <small>{c.ambientSelected}</small>
+                            </span>
+                          ) : null}
+                        </button>
+                      );
+                    })}
                   </div>
                 </section>
               ) : null}
