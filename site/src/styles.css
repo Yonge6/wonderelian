@@ -358,12 +358,35 @@ section[id] {
   display: flex;
   align-items: center;
   gap: 14px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   color: var(--amber);
   font: 500 15px/1 var(--serif);
   text-decoration: none;
   transition: color 220ms ease, padding-left 220ms ease;
+}
+
+.text-cta::after {
+  content: "";
+  width: 42%;
+  position: absolute;
+  z-index: -1;
+  inset: -35% auto -35% -46%;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 246, 204, 0.08) 27%,
+    rgba(232, 186, 94, 0.5) 50%,
+    rgba(255, 246, 204, 0.08) 73%,
+    transparent 100%
+  );
+  filter: blur(0.4px);
+  transform: translateX(0) skewX(-18deg);
 }
 
 .text-cta svg {
@@ -1281,6 +1304,10 @@ section[id] {
     animation: enter-now-nudge 2.8s ease-in-out infinite;
   }
 
+  .text-cta::after {
+    animation: enter-now-light 4.8s cubic-bezier(0.3, 0, 0.2, 1) infinite;
+  }
+
   .ambient-toggle.is-playing .ambient-note {
     animation: ambient-note-sway 2.3s ease-in-out infinite;
   }
@@ -1303,6 +1330,13 @@ section[id] {
     0%, 58%, 100% { transform: translateX(0); }
     70% { transform: translateX(6px); }
     82% { transform: translateX(2px); }
+  }
+
+  @keyframes enter-now-light {
+    0%, 57% { opacity: 0; transform: translateX(0) skewX(-18deg); }
+    62% { opacity: 0.28; }
+    76% { opacity: 0.82; }
+    86%, 100% { opacity: 0; transform: translateX(390%) skewX(-18deg); }
   }
 
   @keyframes ambient-note-sway {
