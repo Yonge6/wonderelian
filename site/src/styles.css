@@ -448,7 +448,7 @@ section[id] {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: rgba(248, 244, 235, 0.7);
+  background: rgba(248, 244, 235, 0.52);
   transition: background 320ms ease;
 }
 
@@ -460,7 +460,7 @@ section[id] {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.68;
+  opacity: 0.84;
   transform: scale(1.02);
   transition: opacity 320ms ease, transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -513,16 +513,20 @@ section[id] {
 }
 
 .project-entry--featured::before {
-  background: rgba(248, 244, 235, 0.22);
+  background: rgba(248, 244, 235, 0.52);
 }
 
 :root[data-theme="dark"] .project-entry--featured::before {
-  background: rgba(8, 29, 34, 0.58);
+  background: rgba(8, 29, 34, 0.74);
 }
 
 .project-entry--featured .project-background {
-  opacity: 0.94;
+  opacity: 0.84;
   object-position: center;
+}
+
+:root[data-theme="dark"] .project-entry--featured .project-background {
+  opacity: 0.5;
 }
 
 .project-main {
@@ -605,7 +609,7 @@ section[id] {
 
 .project-entry:hover::before,
 .project-entry:focus-visible::before {
-  background: rgba(248, 244, 235, 0.58);
+  background: rgba(248, 244, 235, 0.4);
 }
 
 .project-entry:hover,
@@ -620,7 +624,7 @@ section[id] {
 
 .project-entry:hover .project-background,
 .project-entry:focus-visible .project-background {
-  opacity: 0.78;
+  opacity: 0.92;
   transform: scale(1.055);
 }
 
@@ -645,19 +649,22 @@ section[id] {
 .project-entry--featured:focus-visible::before,
 :root[data-theme="dark"] .project-entry--featured:hover::before,
 :root[data-theme="dark"] .project-entry--featured:focus-visible::before {
-  background: rgba(248, 244, 235, 0.12);
+  background: rgba(248, 244, 235, 0.4);
 }
 
 :root[data-theme="dark"] .project-entry--featured:hover::before,
 :root[data-theme="dark"] .project-entry--featured:focus-visible::before {
-  background: rgba(8, 29, 34, 0.48);
+  background: rgba(8, 29, 34, 0.64);
 }
 
 .project-entry--featured:hover .project-background,
-.project-entry--featured:focus-visible .project-background,
+.project-entry--featured:focus-visible .project-background {
+  opacity: 0.92;
+}
+
 :root[data-theme="dark"] .project-entry--featured:hover .project-background,
 :root[data-theme="dark"] .project-entry--featured:focus-visible .project-background {
-  opacity: 0.96;
+  opacity: 0.6;
 }
 
 .project-entry:hover .project-arrow,
@@ -1575,7 +1582,7 @@ section[id] {
   }
 
   .project-entry--featured::before {
-    background: rgba(248, 244, 235, 0.34);
+    background: rgba(248, 244, 235, 0.52);
   }
 
   .project-entry--featured .project-background {
@@ -1766,7 +1773,7 @@ section[id] {
   }
 
   .project-entry--featured::before {
-    background: rgba(248, 244, 235, 0.54);
+    background: rgba(248, 244, 235, 0.52);
   }
 
   .project-entry--featured .project-background {
