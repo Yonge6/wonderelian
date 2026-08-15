@@ -427,7 +427,7 @@ section[id] {
 .project-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(190px, auto)) minmax(300px, auto);
+  grid-template-rows: repeat(3, minmax(190px, auto)) minmax(250px, auto);
 }
 
 .project-entry {
@@ -506,8 +506,8 @@ section[id] {
 .project-entry--featured {
   grid-column: 1 / -1;
   grid-row: 4;
-  min-height: 300px;
-  padding: 42px 52px;
+  min-height: 250px;
+  padding: 30px 52px;
   border-left: 0;
   color: var(--ink);
 }
@@ -654,8 +654,8 @@ section[id] {
 }
 
 .project-entry--system {
-  min-height: 290px;
-  padding: 38px 52px;
+  min-height: 250px;
+  padding: 30px 52px;
   border-bottom: 1px solid rgba(183, 122, 27, 0.22);
 }
 
@@ -1662,8 +1662,8 @@ section[id] {
   }
 
   .project-entry--featured {
-    min-height: 300px;
-    padding: 36px 32px;
+    min-height: 280px;
+    padding: 32px;
     color: var(--ink);
   }
 
@@ -1693,8 +1693,8 @@ section[id] {
   }
 
   .project-entry--system {
-    min-height: 300px;
-    padding: 36px 32px;
+    min-height: 280px;
+    padding: 32px;
   }
 
   .project-entry--system .project-background {
@@ -1892,7 +1892,7 @@ section[id] {
   }
 
   .project-entry--system {
-    min-height: 340px;
+    min-height: 320px;
     padding: 38px 22px 34px;
   }
 
