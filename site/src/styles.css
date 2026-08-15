@@ -664,7 +664,7 @@ section[id] {
 }
 
 .project-entry--system .project-main {
-  width: min(680px, 58%);
+  width: min(707px, 58%);
   align-self: stretch;
   align-items: flex-start;
 }
