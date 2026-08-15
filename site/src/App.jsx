@@ -101,7 +101,7 @@ const projects = [
   {
     number: "06",
     href: "https://onelaser.wonderelian.com",
-    image: "assets/project-onelaser-image2.png",
+    image: "assets/project-onelaser-image2-v2.jpg",
     featured: true,
     zh: {
       title: "OneLaser｜品牌与增长设计",
