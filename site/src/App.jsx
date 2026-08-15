@@ -22,6 +22,7 @@ const projects = [
     number: "01",
     href: "https://yixiu.wonderelian.com",
     image: "assets/project-yixiu-image2.webp",
+    icon: "assets/app-icon-yixiu.png",
     zh: {
       title: "一休冥想",
       kicker: "Yixiu Meditation",
@@ -37,6 +38,7 @@ const projects = [
     number: "02",
     href: "https://human-design.wonderelian.com",
     image: "assets/project-human-design-image2.webp",
+    icon: "assets/app-icon-human-design.png",
     zh: {
       title: "不二 认识自己",
       kicker: "Human Design",
@@ -52,6 +54,7 @@ const projects = [
     number: "03",
     href: "https://wendao.wonderelian.com",
     image: "assets/project-wendao-image2.webp",
+    icon: "assets/app-icon-wendao.png",
     zh: {
       title: "三慢问道",
       kicker: "Wendao",
@@ -67,6 +70,7 @@ const projects = [
     number: "04",
     href: "https://xiazishuo.com",
     image: "assets/project-xiazi-image2.webp",
+    icon: "assets/app-icon-xiazi.png",
     zh: {
       title: "虾子曰 昨日世界",
       kicker: "昨日世界",
@@ -82,6 +86,7 @@ const projects = [
     number: "05",
     href: "https://style-atlas.wonderelian.com",
     image: "assets/project-style-atlas-image2.webp",
+    icon: "assets/app-icon-style-atlas.png",
     zh: {
       title: "艺术风格图鉴",
       kicker: "Style Atlas",
@@ -91,6 +96,22 @@ const projects = [
       title: "Style Atlas",
       kicker: "Art & visual culture",
       description: "Discovering the visual language behind art movements through images, context, and detail.",
+    },
+  },
+  {
+    number: "06",
+    href: "https://onelaser.wonderelian.com",
+    image: "assets/project-onelaser-image2.png",
+    featured: true,
+    zh: {
+      title: "OneLaser｜品牌与增长设计",
+      kicker: "BRAND · WEB · CAMPAIGN",
+      description: "从品牌策略到网页、宣传册、Banner 与广告创意，为工业科技建立清晰、有力且一致的全球表达。",
+    },
+    en: {
+      title: "OneLaser · Brand & Growth Design",
+      kicker: "BRAND · WEB · CAMPAIGN",
+      description: "Building a clear, powerful, and consistent global presence for industrial technology—from brand strategy and web to brochures, banners, and campaigns.",
     },
   },
 ];
@@ -191,8 +212,10 @@ const copy = {
     aboutKicker: "ABOUT ELIAN",
     aboutTitle: <>把复杂的事物，<br />重新变得清楚而有品味。</>,
     aboutParagraphs: [
-      "我是永歌Elian，喜欢把复杂、抽象或冰冷的事物，重新组织成清楚、美、有品味、让人愿意接近的东西。",
-      "有时它是一台工业机器，有时是一段古老文字，有时是一个网站、App、玩偶、商品等等。WonderElian 位于中国武汉，面向全球创作，是这些探索共同生长的地方。",
+      "我是永歌 Elian，一名设计师，也一直在用设计、AI 和产品探索自己感兴趣的事。",
+      "我喜欢从复杂、抽象或冰冷的事物里找到秩序，再用设计、AI 与产品，把它们重新变得清楚、美、有温度。",
+      "有时是一台工业机器，有时是一段古老文字；也可能是一个网站、一套文创、一款 App，或一个关于生活的小实验。",
+      <><strong>WonderElian</strong> 是我的个人创作空间。这里记录作品，也记录思考与探索——关于设计、AI、产品，以及如何慢慢成为自己。</>,
     ],
     footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
@@ -205,15 +228,18 @@ const copy = {
     aboutDrawer: "关于 WonderElian",
     aboutDrawerCopy: "认识这个由设计与生命探索构成的世界",
     contact: "联系 Elian",
-    aboutContact: "联系 Elian",
+    aboutContact: "认识 Elian",
+    viewWork: "看看我做的东西",
     contactCopy: "邮箱与社交媒体",
     support: "随喜相助",
     supportCopy: "有余则助，无余亦安",
     drawerNote: "阅读、停留与分享，本身也是一种同行。",
     aboutPanelHeadline: "WonderElian",
     aboutPanelIntro: [
-      "这里同时存在品牌设计、AI 创作实验、古老文字、人类图、插画角色、文章、摄影与生活。",
-      "这些看似不同的探索，底层都来自同一件事：把复杂、抽象或冰冷的事物，重新组织成清楚、美、有品味、让人愿意接近的东西。",
+      "我是永歌 Elian，一名设计师，也一直在用设计、AI 和产品探索自己感兴趣的事。",
+      "我喜欢从复杂、抽象或冰冷的事物里找到秩序，再用设计、AI 与产品，把它们重新变得清楚、美、有温度。",
+      "有时是一台工业机器，有时是一段古老文字；也可能是一个网站、一套文创、一款 App，或一个关于生活的小实验。",
+      <><strong>WonderElian</strong> 是我的个人创作空间。这里记录作品，也记录思考与探索——关于设计、AI、产品，以及如何慢慢成为自己。</>,
     ],
     aboutMethod: "设计 × 理解 × 转译 × 创造",
     lifeKicker: "我们的生命观",
@@ -268,8 +294,10 @@ const copy = {
     aboutKicker: "ABOUT ELIAN",
     aboutTitle: <>Making complex things<br />clear, beautiful, and felt.</>,
     aboutParagraphs: [
-      "I’m Elian. I like reorganizing complex, abstract, or cold things into something clear, beautiful, and human—something people want to come closer to.",
-      "Sometimes it is an industrial machine, sometimes an ancient text, sometimes a map of a person. Based in Wuhan, China and creating for a global audience, WonderElian is where all these explorations grow together.",
+      "I am Elian, a designer who keeps using design, AI, and products to explore the things that interest me.",
+      "I look for order within things that feel complex, abstract, or cold, then use design, AI, and products to make them clear, beautiful, and warm.",
+      "Sometimes it is an industrial machine, sometimes an ancient text; it may also be a website, a creative collection, an app, or a small experiment about life.",
+      <><strong>WonderElian</strong> is my personal creative space. It records both works and explorations—across design, AI, products, and the slow process of becoming myself.</>,
     ],
     footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
@@ -282,15 +310,18 @@ const copy = {
     aboutDrawer: "About WonderElian",
     aboutDrawerCopy: "Meet a world shaped by design and the exploration of life",
     contact: "Contact Elian",
-    aboutContact: "Contact Elian",
+    aboutContact: "Meet Elian",
+    viewWork: "See what I make",
     contactCopy: "Email and social channels",
     support: "Support the journey",
     supportCopy: "Give freely, or simply stay and read in peace",
     drawerNote: "Reading, pausing, and sharing are already ways of taking part.",
-    aboutPanelHeadline: "WonderElian is not a job title. It is my personal world.",
+    aboutPanelHeadline: "WonderElian",
     aboutPanelIntro: [
-      "Brand design, AI experiments, ancient texts, Human Design, illustrated characters, essays, photography, and life can all exist here.",
-      "What connects these different explorations is a single impulse: reorganizing complex, abstract, or cold things into something clear, beautiful, and human—something people want to come closer to.",
+      "I am Elian, a designer who keeps using design, AI, and products to explore the things that interest me.",
+      "I look for order within things that feel complex, abstract, or cold, then use design, AI, and products to make them clear, beautiful, and warm.",
+      "Sometimes it is an industrial machine, sometimes an ancient text; it may also be a website, a creative collection, an app, or a small experiment about life.",
+      <><strong>WonderElian</strong> is my personal creative space. It records both works and explorations—across design, AI, products, and the slow process of becoming myself.</>,
     ],
     aboutMethod: "DESIGN × UNDERSTANDING × TRANSLATION × MAKING",
     lifeKicker: "Our philosophy of life",
@@ -537,7 +568,7 @@ export function App() {
               const projectCopy = project[language];
               return (
                 <a
-                  className="project-entry"
+                  className={`project-entry project-entry--${project.number}${project.featured ? " project-entry--featured" : " project-entry--app"}`}
                   href={project.href}
                   key={project.number}
                   target="_blank"
@@ -551,12 +582,22 @@ export function App() {
                     loading="lazy"
                   />
                   <span className="project-number" aria-hidden="true">{project.number}</span>
-                  <div>
-                    <p className="project-kicker">{projectCopy.kicker}</p>
-                    <h2>{projectCopy.title}</h2>
+                  <div className="project-main">
+                    {project.icon ? (
+                      <img
+                        className="project-icon"
+                        src={`${import.meta.env.BASE_URL}${project.icon}`}
+                        alt={`${projectCopy.title} App icon`}
+                        loading="lazy"
+                      />
+                    ) : null}
+                    <div className="project-copy-block">
+                      <p className="project-kicker">{projectCopy.kicker}</p>
+                      <h2>{projectCopy.title}</h2>
+                      <p className="project-description">{projectCopy.description}</p>
+                      <ArrowRight className="project-arrow" size={21} weight="light" aria-hidden="true" />
+                    </div>
                   </div>
-                  <p>{projectCopy.description}</p>
-                  <ArrowRight className="project-arrow" size={21} weight="light" aria-hidden="true" />
                 </a>
               );
             })}
@@ -588,13 +629,19 @@ export function App() {
           <div className="about-layout">
             <div className="about-heading">
               <h2 id="about-title">{c.aboutTitle}</h2>
-              <button className="about-contact" type="button" onClick={openContact}>
-                <span>{c.aboutContact}</span>
-                <ArrowRight size={18} weight="light" aria-hidden="true" />
-              </button>
+              <div className="about-actions">
+                <button className="about-contact" type="button" onClick={openContact}>
+                  <span>{c.aboutContact}</span>
+                  <ArrowRight size={18} weight="light" aria-hidden="true" />
+                </button>
+                <a className="about-contact" href="#now">
+                  <span>{c.viewWork}</span>
+                  <ArrowRight size={18} weight="light" aria-hidden="true" />
+                </a>
+              </div>
             </div>
             <div className="about-copy">
-              {c.aboutParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {c.aboutParagraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
             </div>
           </div>
         </section>
@@ -707,7 +754,7 @@ export function App() {
               {drawerView === "about" ? (
                 <section className="drawer-prose">
                   <h3>{c.aboutPanelHeadline}</h3>
-                  {c.aboutPanelIntro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                  {c.aboutPanelIntro.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
                   <p className="drawer-method">{c.aboutMethod}</p>
 
                   <section className="life-philosophy">
