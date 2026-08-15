@@ -12,6 +12,7 @@ import {
   Sun,
   X,
 } from "@phosphor-icons/react";
+import { articles } from "./articles";
 
 const projects = [
   {
@@ -370,11 +371,124 @@ const copy = {
 const supportCodeUrl = `${import.meta.env.BASE_URL}assets/support-wechat-appreciation-v2.jpeg`;
 const videoChannelUrl = `${import.meta.env.BASE_URL}assets/video-channel.jpg`;
 
-function Wordmark({ label, text = "WONDER ELIAN" }) {
+function Wordmark({ label, text = "WONDER ELIAN", href = "#world" }) {
   return (
-    <a className="wordmark" href="#world" aria-label={label}>
+    <a className="wordmark" href={href} aria-label={label}>
       {text}
     </a>
+  );
+}
+
+function RichTextLines({ text }) {
+  return text.split("\n").map((line, index) => (
+    <span key={`${line}-${index}`}>
+      {line.replace(/^>\s?/, "")}
+      {index < text.split("\n").length - 1 ? <br /> : null}
+    </span>
+  ));
+}
+
+function ArticleBody({ content }) {
+  const blocks = content.trim().split(/\n\s*\n/);
+
+  return (
+    <div className="article-body">
+      {blocks.map((block, index) => {
+        const imageMatch = block.match(/^!\[(.*?)\]\((.*?)\)$/s);
+        if (imageMatch) {
+          const [, alt, src] = imageMatch;
+          return (
+            <figure className={src.endsWith("image-07.png") ? "article-figure article-figure--poster" : "article-figure"} key={`${src}-${index}`}>
+              <img src={src} alt={alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+              {alt ? <figcaption>{alt}</figcaption> : null}
+            </figure>
+          );
+        }
+
+        if (block.startsWith("## ")) {
+          const heading = block.slice(3);
+          const [chapter, ...title] = heading.split("｜");
+          return (
+            <header className="article-chapter" key={`${heading}-${index}`}>
+              <span>{chapter}</span>
+              <h2>{title.join("｜")}</h2>
+            </header>
+          );
+        }
+
+        if (block.startsWith("### ")) {
+          return <h3 key={`${block}-${index}`}>{block.slice(4)}</h3>;
+        }
+
+        if (block.startsWith("> ")) {
+          return <blockquote key={`${block}-${index}`}><RichTextLines text={block} /></blockquote>;
+        }
+
+        return <p key={`${block}-${index}`}><RichTextLines text={block} /></p>;
+      })}
+    </div>
+  );
+}
+
+function NotesSection({ language }) {
+  return (
+    <section className="notes-section" id="notes" aria-labelledby="notes-title">
+      <div className="notes-heading">
+        <div>
+          <p className="eyebrow">{language === "zh" ? "片刻随记" : "FIELD NOTES"}</p>
+          <h2 id="notes-title">{language === "zh" ? "写下此刻，也留给以后。" : "Notes from the present, kept for what comes next."}</h2>
+        </div>
+        <p>{language === "zh" ? "关于设计、AI、产品与生活。这里会慢慢收录更多文章。" : "Essays on design, AI, products, and life. More will gather here over time."}</p>
+      </div>
+
+      <div className="notes-grid">
+        {articles.map((article, index) => {
+          const item = article[language];
+          return (
+            <a className="note-card" href={`/notes/${article.slug}/`} key={article.slug}>
+              <img src={article.cover} alt="" loading="lazy" decoding="async" />
+              <span className="note-card-number">{String(index + 1).padStart(2, "0")}</span>
+              <div className="note-card-copy">
+                <p>{item.label}</p>
+                <h3>{item.title}</h3>
+                <span className="note-card-excerpt">{item.excerpt}</span>
+                <span className="note-card-meta">{article.date.replaceAll("-", ".")} · {article.readingTime[language]}</span>
+                <span className="note-card-read">{item.read}<ArrowRight size={19} weight="light" aria-hidden="true" /></span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function ArticlePage({ article, language }) {
+  const item = article[language];
+
+  return (
+    <main className="article-page">
+      <article>
+        <header className="article-hero">
+          <a className="article-back" href="/#notes"><ArrowLeft size={18} weight="light" aria-hidden="true" />{item.back}</a>
+          <p className="eyebrow">{item.label}</p>
+          <h1>{item.title}</h1>
+          <p className="article-deck">{item.excerpt}</p>
+          <div className="article-meta">
+            <span>Design · AI · Products · Life</span>
+            <span>{article.author[language]}</span>
+            <span>{article.date.replaceAll("-", ".")}</span>
+            <span>{article.readingTime[language]}</span>
+          </div>
+        </header>
+        <ArticleBody content={item.content} />
+      </article>
+
+      <footer className="article-end">
+        <span>{language === "zh" ? "向内认识自己，向外如水而行。" : "Know yourself within. Move like water through the world."}</span>
+        <a href="/#notes">{item.back}<ArrowRight size={18} weight="light" aria-hidden="true" /></a>
+      </footer>
+    </main>
   );
 }
 
@@ -408,12 +522,39 @@ export function App() {
   const isZh = language === "zh";
   const activeAmbientSound = ambientSounds.find((sound) => sound.id === ambientSound) || ambientSounds[0];
   const activeAmbientLabel = activeAmbientSound[language];
+  const articleSlug = window.location.pathname.match(/^\/notes\/([^/]+)\/?$/)?.[1];
+  const activeArticle = articles.find((article) => article.slug === articleSlug);
+  const homeHref = activeArticle ? "/#world" : "#world";
 
   useEffect(() => {
     document.documentElement.lang = isZh ? "zh-CN" : "en";
-    document.title = c.pageTitle;
+    document.title = activeArticle ? `${activeArticle[language].title} | WonderElian` : c.pageTitle;
+    const canonicalUrl = activeArticle
+      ? `https://wonderelian.com/notes/${activeArticle.slug}/`
+      : "https://wonderelian.com/";
+    const description = activeArticle
+      ? activeArticle[language].excerpt
+      : document.querySelector('meta[name="description"]')?.dataset.homeContent;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    const ogType = document.querySelector('meta[property="og:type"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    const ogImage = document.querySelector('meta[property="og:image"]');
+
+    if (descriptionMeta && !descriptionMeta.dataset.homeContent) {
+      descriptionMeta.dataset.homeContent = descriptionMeta.content;
+    }
+    if (canonical) canonical.href = canonicalUrl;
+    if (descriptionMeta && description) descriptionMeta.content = description;
+    if (ogType) ogType.content = activeArticle ? "article" : "website";
+    if (ogTitle) ogTitle.content = activeArticle ? activeArticle[language].title : c.pageTitle;
+    if (ogDescription && activeArticle) ogDescription.content = activeArticle[language].excerpt;
+    if (ogUrl) ogUrl.content = canonicalUrl;
+    if (ogImage && activeArticle) ogImage.content = `https://wonderelian.com${activeArticle.cover}`;
     window.localStorage.setItem("wonderelian-language", language);
-  }, [c.pageTitle, isZh, language]);
+  }, [activeArticle, c.pageTitle, isZh, language]);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -502,12 +643,12 @@ export function App() {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <Wordmark label={c.homeLabel} text="Wonder Elian" />
+        <Wordmark label={c.homeLabel} text="Wonder Elian" href={homeHref} />
 
         <div className="header-actions">
           <nav className="main-nav" aria-label={c.navLabel}>
             {c.nav.map(([label, href]) => (
-              <a key={label} href={href}>{label}</a>
+              <a key={label} href={activeArticle ? `/${href}` : href}>{label}</a>
             ))}
           </nav>
 
@@ -554,7 +695,7 @@ export function App() {
         onPause={() => setAmbientPlaying(false)}
       />
 
-      <main>
+      {activeArticle ? <ArticlePage article={activeArticle} language={language} /> : <main>
         <section className="hero" id="world" aria-labelledby="hero-title">
           <img
             className="hero-current"
@@ -666,7 +807,9 @@ export function App() {
           </div>
         </section>
 
-        <section className="worlds-section" id="notes" aria-labelledby="worlds-title">
+        <NotesSection language={language} />
+
+        <section className="worlds-section" id="ways" aria-labelledby="worlds-title">
           <div className="worlds-intro">
             <p className="eyebrow">{c.waysKicker}</p>
             <h2 id="worlds-title">{c.waysTitle}</h2>
@@ -708,15 +851,15 @@ export function App() {
           </div>
         </section>
 
-      </main>
+      </main>}
 
       <footer className="site-footer">
-        <Wordmark label={c.homeLabel} text="Wonder Elian" />
+        <Wordmark label={c.homeLabel} text="Wonder Elian" href={homeHref} />
         <p>{c.footerLine}</p>
         <a className="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
           {c.icpLabel}
         </a>
-        <a href="#world">{c.backToTop}</a>
+        <a href={homeHref}>{c.backToTop}</a>
       </footer>
 
       {drawerOpen ? (
@@ -745,7 +888,7 @@ export function App() {
 
                   <nav className="drawer-primary-nav" aria-label={c.drawerNavLabel}>
                     {c.nav.map(([label, href], index) => (
-                      <a href={href} key={label} onClick={closeDrawer}>
+                      <a href={activeArticle ? `/${href}` : href} key={label} onClick={closeDrawer}>
                         <span>0{index + 1}</span>
                         <strong>{label}</strong>
                         <ArrowRight size={18} weight="light" aria-hidden="true" />
