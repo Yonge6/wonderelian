@@ -1,8 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import "@fontsource/noto-sans-sc/400.css";
-import "@fontsource/noto-sans-sc/500.css";
-import "@fontsource/noto-serif-sc/400.css";
-import "@fontsource/noto-serif-sc/600.css";
 import {
   ArrowLeft,
   ArrowRight,
@@ -565,6 +561,8 @@ export function App() {
             src={`${import.meta.env.BASE_URL}assets/hero-flow-image2-v3.webp`}
             alt=""
             aria-hidden="true"
+            decoding="async"
+            fetchPriority="high"
           />
 
           <div className="hero-copy">
@@ -604,6 +602,7 @@ export function App() {
                     alt=""
                     aria-hidden="true"
                     loading="lazy"
+                    decoding="async"
                   />
                   <span className="project-number" aria-hidden="true">{project.number}</span>
                   <div className="project-main">
@@ -613,6 +612,7 @@ export function App() {
                         src={`${import.meta.env.BASE_URL}${project.icon}`}
                         alt={`${projectCopy.title} App icon`}
                         loading="lazy"
+                        decoding="async"
                       />
                     ) : null}
                     <div className="project-copy-block">
@@ -645,6 +645,7 @@ export function App() {
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
+                decoding="async"
               />
               <span className="project-number" aria-hidden="true">{opsProject.number}</span>
               <div className="project-main">

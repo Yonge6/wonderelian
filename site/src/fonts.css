@@ -1,0 +1,36 @@
+/*
+ * Noto SC is kept as the site's Chinese typeface. These files contain only
+ * the glyphs used by WonderElian's fixed bilingual interface, reducing the
+ * original hundreds of unicode-range requests to one file per active weight.
+ */
+@font-face {
+  font-family: "Noto Serif SC";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/assets/fonts/noto-serif-sc-400-wonderelian.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Serif SC";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("/assets/fonts/noto-serif-sc-600-wonderelian.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/assets/fonts/noto-sans-sc-400-wonderelian.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("/assets/fonts/noto-sans-sc-500-wonderelian.woff2") format("woff2");
+}
