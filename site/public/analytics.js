@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  if (!["wonderelian.com", "www.wonderelian.com"].includes(window.location.hostname)) return;
+
   const measurementId = "G-HDHST6WKKB";
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
