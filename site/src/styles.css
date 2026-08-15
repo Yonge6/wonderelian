@@ -757,6 +757,7 @@ section[id] {
   color: #d7a455;
   background: transparent;
   font: 500 15px/1.2 var(--serif);
+  text-decoration: none;
   cursor: pointer;
   transition: gap 220ms ease, color 220ms ease;
 }
