@@ -116,6 +116,24 @@ const projects = [
   },
 ];
 
+const opsProject = {
+  number: "07",
+  href: "https://ops.wonderelian.com",
+  image: "assets/project-ops-image2.webp",
+  zh: {
+    title: "WonderElian OPS｜AI 运营系统",
+    kicker: "AI OPERATIONS · ANALYTICS · AUTOMATION",
+    description: "把多个产品的运营、数据、洞察、实验与行动放进同一个可追踪的系统，让创作不只发生，也能持续生长。",
+    access: "查看公开运营快照",
+  },
+  en: {
+    title: "WonderElian OPS · AI Operations System",
+    kicker: "AI OPERATIONS · ANALYTICS · AUTOMATION",
+    description: "Bringing product operations, data, insight, experiments, and action into one traceable system—so the work can keep growing after it is made.",
+    access: "View the public operations snapshot",
+  },
+};
+
 const worlds = [
   {
     number: "01",
@@ -207,6 +225,9 @@ const copy = {
     enterNowAlt: "Along the Way",
     current: "沿途所作",
     currentAlt: "ALONG THE WAY",
+    behind: "幕后系统",
+    behindAlt: "BEHIND THE WORK",
+    publicReadonly: "公开只读",
     waysKicker: "FOUR WAYS OF BEING",
     waysTitle: <><span>认识自己，接纳自己，</span><span>成为自己，活出自己。</span></>,
     aboutKicker: "ABOUT ELIAN",
@@ -289,6 +310,9 @@ const copy = {
     enterNowAlt: "沿途所作",
     current: "Along the Way",
     currentAlt: "沿途所作",
+    behind: "Behind the Work",
+    behindAlt: "幕后系统",
+    publicReadonly: "Public read-only",
     waysKicker: "FOUR WAYS OF BEING",
     waysTitle: <><span>Know yourself. Welcome yourself.</span><span>Become yourself. Live as yourself.</span></>,
     aboutKicker: "ABOUT ELIAN",
@@ -601,6 +625,43 @@ export function App() {
                 </a>
               );
             })}
+          </div>
+
+          <div className="systems-showcase">
+            <div className="section-label section-label--systems">
+              <span>{c.behind}</span>
+              <span>{c.behindAlt}</span>
+            </div>
+
+            <a
+              className="project-entry project-entry--system"
+              href={opsProject.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="project-background"
+                src={`${import.meta.env.BASE_URL}${opsProject.image}`}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
+              <span className="project-number" aria-hidden="true">{opsProject.number}</span>
+              <div className="project-main">
+                <div className="project-copy-block">
+                  <div className="project-kicker-line">
+                    <p className="project-kicker">{opsProject[language].kicker}</p>
+                    <span className="project-access-badge">{c.publicReadonly}</span>
+                  </div>
+                  <h2>{opsProject[language].title}</h2>
+                  <p className="project-description">{opsProject[language].description}</p>
+                  <span className="project-access-link">
+                    {opsProject[language].access}
+                    <ArrowRight size={18} weight="light" aria-hidden="true" />
+                  </span>
+                </div>
+              </div>
+            </a>
           </div>
         </section>
 
