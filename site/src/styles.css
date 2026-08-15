@@ -427,7 +427,7 @@ section[id] {
 .project-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(190px, auto)) minmax(360px, auto);
+  grid-template-rows: repeat(3, minmax(190px, auto)) minmax(300px, auto);
 }
 
 .project-entry {
@@ -506,8 +506,8 @@ section[id] {
 .project-entry--featured {
   grid-column: 1 / -1;
   grid-row: 4;
-  min-height: 360px;
-  padding: 50px 52px;
+  min-height: 300px;
+  padding: 42px 52px;
   border-left: 0;
   color: var(--ink);
 }
@@ -646,7 +646,7 @@ section[id] {
 }
 
 .systems-showcase {
-  margin-top: 72px;
+  margin-top: 36px;
 }
 
 .section-label--systems {
@@ -654,8 +654,8 @@ section[id] {
 }
 
 .project-entry--system {
-  min-height: 340px;
-  padding: 50px 52px;
+  min-height: 290px;
+  padding: 38px 52px;
   border-bottom: 1px solid rgba(183, 122, 27, 0.22);
 }
 
@@ -664,12 +664,17 @@ section[id] {
 }
 
 .project-entry--system .project-main {
-  width: min(707px, 58%);
+  width: min(805px, 66.2%);
   align-self: stretch;
   align-items: flex-start;
 }
 
+.project-entry--system .project-copy-block {
+  width: min(793.7px, 100%);
+}
+
 .project-entry--system h2 {
+  width: 100%;
   font-size: clamp(38px, 3vw, 46px);
   line-height: 1.2;
 }
@@ -1657,8 +1662,8 @@ section[id] {
   }
 
   .project-entry--featured {
-    min-height: 330px;
-    padding: 42px 32px;
+    min-height: 300px;
+    padding: 36px 32px;
     color: var(--ink);
   }
 
@@ -1684,12 +1689,12 @@ section[id] {
   }
 
   .systems-showcase {
-    margin-top: 58px;
+    margin-top: 36px;
   }
 
   .project-entry--system {
-    min-height: 330px;
-    padding: 42px 32px;
+    min-height: 300px;
+    padding: 36px 32px;
   }
 
   .project-entry--system .project-background {
@@ -1862,7 +1867,7 @@ section[id] {
   }
 
   .project-entry--featured {
-    min-height: 350px;
+    min-height: 320px;
     padding: 38px 22px 34px;
   }
 
@@ -1883,11 +1888,11 @@ section[id] {
   }
 
   .systems-showcase {
-    margin-top: 52px;
+    margin-top: 36px;
   }
 
   .project-entry--system {
-    min-height: 380px;
+    min-height: 340px;
     padding: 38px 22px 34px;
   }
 
