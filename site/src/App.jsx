@@ -225,8 +225,6 @@ const copy = {
     behind: "幕后系统",
     behindAlt: "BEHIND THE WORK",
     publicReadonly: "公开只读",
-    waysKicker: "FOUR WAYS OF BEING",
-    waysTitle: <><span>认识自己，接纳自己，</span><span>成为自己，活出自己。</span></>,
     aboutKicker: "ABOUT ELIAN",
     aboutTitle: <>我喜欢把复杂、抽象或冰冷的事物重新组织，用设计、AI 与产品，让它们变得清楚、美、有温度。</>,
     aboutParagraphs: [
@@ -310,8 +308,6 @@ const copy = {
     behind: "Behind the Work",
     behindAlt: "幕后系统",
     publicReadonly: "Public read-only",
-    waysKicker: "FOUR WAYS OF BEING",
-    waysTitle: <><span>Know yourself. Welcome yourself.</span><span>Become yourself. Live as yourself.</span></>,
     aboutKicker: "ABOUT ELIAN",
     aboutTitle: <>I reorganize what feels complex, abstract, or cold—using design, AI, and products to make it clear, beautiful, and human.</>,
     aboutParagraphs: [
@@ -808,26 +804,6 @@ export function App() {
         </section>
 
         <NotesSection language={language} />
-
-        <section className="worlds-section" id="ways" aria-labelledby="worlds-title">
-          <div className="worlds-intro">
-            <p className="eyebrow">{c.waysKicker}</p>
-            <h2 id="worlds-title">{c.waysTitle}</h2>
-          </div>
-
-          <div className="worlds-grid">
-            {worlds.map((world) => {
-              const worldCopy = world[language];
-              return (
-                <article className="world-item" key={world.number}>
-                  <span className="world-number">{world.number}</span>
-                  <h3>{worldCopy.title}</h3>
-                  <p>{worldCopy.copy}</p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
 
         <section className="about-section" id="about" aria-labelledby="about-title">
           <p className="eyebrow">{c.aboutKicker}</p>
