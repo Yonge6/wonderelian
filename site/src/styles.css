@@ -904,8 +904,8 @@ section[id] {
   display: flex;
   align-items: center;
   gap: 18px;
-  color: #e4b45f;
-  border-bottom: 1px solid rgba(183, 122, 27, 0.48);
+  color: var(--ink);
+  border-bottom: 1px solid currentColor;
   font: 500 14px/1.2 var(--serif);
 }
 
@@ -2414,6 +2414,11 @@ section[id] {
   .worlds-intro h2,
   .about-layout h2 {
     font-size: 38px;
+  }
+
+  .about-layout h2 {
+    font-size: clamp(32px, 8.2vw, 38px);
+    line-height: 1.42;
   }
 
   .worlds-intro h2 {
