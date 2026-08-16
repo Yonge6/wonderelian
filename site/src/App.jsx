@@ -228,7 +228,7 @@ const copy = {
     waysKicker: "FOUR WAYS OF BEING",
     waysTitle: <><span>认识自己，接纳自己，</span><span>成为自己，活出自己。</span></>,
     aboutKicker: "ABOUT ELIAN",
-    aboutTitle: <>不再急着证明自己，<br />慢慢成为自己。</>,
+    aboutTitle: <>我喜欢把复杂、抽象或冰冷的事物重新组织，用设计、AI 与产品，让它们变得清楚、美、有温度。</>,
     aboutParagraphs: [
       "我是永歌 Elian。40岁，重新回到设计职场，也在下班后借助 AI，把真正感兴趣的想法一个个做成产品。",
       "我走过大厂、创业、高峰与低谷。现在，我不再急着用结果证明自己，更想认识自己、接纳自己，并把真正想做的事情认真做好。",
@@ -313,7 +313,7 @@ const copy = {
     waysKicker: "FOUR WAYS OF BEING",
     waysTitle: <><span>Know yourself. Welcome yourself.</span><span>Become yourself. Live as yourself.</span></>,
     aboutKicker: "ABOUT ELIAN",
-    aboutTitle: <>No longer rushing to prove myself.<br />Slowly becoming who I am.</>,
+    aboutTitle: <>I reorganize what feels complex, abstract, or cold—using design, AI, and products to make it clear, beautiful, and human.</>,
     aboutParagraphs: [
       "I am Elian. At 40, I returned to design as a profession. After work, I use AI to turn ideas I genuinely care about into products.",
       "I have moved through big tech, startups, highs, and long lows. I no longer want results to prove my worth. I want to know and accept myself, and give honest effort to the things I truly want to make.",
