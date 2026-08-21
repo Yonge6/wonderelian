@@ -95,11 +95,13 @@ const projects = [
       description: "Discovering the visual language behind art movements through images, context, and detail.",
     },
   },
+];
+
+const featuredProjects = [
   {
     number: "06",
     href: "https://onelaser.wonderelian.com",
     image: "assets/project-onelaser-image2-v2.jpg",
-    featured: true,
     zh: {
       title: "OneLaser｜品牌与增长设计",
       kicker: "BRAND · WEB · CAMPAIGN",
@@ -109,6 +111,21 @@ const projects = [
       title: "OneLaser · Brand & Growth Design",
       kicker: "BRAND · WEB · CAMPAIGN",
       description: "Building a clear, powerful, and consistent global presence for industrial technology—from brand strategy and web to brochures, banners, and campaigns.",
+    },
+  },
+  {
+    number: "06B",
+    href: "https://maker.wonderelian.com/",
+    image: "assets/project-maker-image2-v1.jpg",
+    zh: {
+      title: "Maker Business Lab｜把技能变成生意",
+      kicker: "PRODUCT · PROFIT · PAYBACK",
+      description: "找到值得做的 Maker 产品，算清利润与回本周期，再匹配适合自己的生产方式。",
+    },
+    en: {
+      title: "Maker Business Lab",
+      kicker: "PRODUCT · PROFIT · PAYBACK",
+      description: "Find maker products worth selling, calculate realistic profit and payback, and match the right production setup.",
     },
   },
 ];
@@ -727,7 +744,7 @@ export function App() {
               const projectCopy = project[language];
               return (
                 <a
-                  className={`project-entry project-entry--${project.number}${project.featured ? " project-entry--featured" : " project-entry--app"}`}
+                  className={`project-entry project-entry--${project.number} project-entry--app`}
                   href={project.href}
                   key={project.number}
                   target="_blank"
@@ -762,6 +779,39 @@ export function App() {
                 </a>
               );
             })}
+
+            <div className="project-featured-duo">
+              {featuredProjects.map((project) => {
+                const projectCopy = project[language];
+                return (
+                  <a
+                    className={`project-entry project-entry--featured project-entry--${project.number.toLowerCase()}`}
+                    href={project.href}
+                    key={project.number}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      className="project-background"
+                      src={`${import.meta.env.BASE_URL}${project.image}`}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span className="project-number" aria-hidden="true">{project.number}</span>
+                    <div className="project-main">
+                      <div className="project-copy-block">
+                        <p className="project-kicker">{projectCopy.kicker}</p>
+                        <h2>{projectCopy.title}</h2>
+                        <p className="project-description">{projectCopy.description}</p>
+                        <ArrowRight className="project-arrow" size={21} weight="light" aria-hidden="true" />
+                      </div>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           <div className="systems-showcase">
