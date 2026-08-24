@@ -172,16 +172,16 @@ const worlds = [
 ];
 
 const ambientSounds = [
-  { id: "morning-birds", file: "morning-birds.m4a", zh: "晨间鸟语", en: "Morning Birds" },
-  { id: "forest-breeze", file: "forest-breeze.m4a", zh: "林间微风", en: "Forest Breeze" },
-  { id: "sunrise-river", file: "sunrise-river.m4a", zh: "晨曦河流", en: "Sunrise River" },
-  { id: "river-flow", file: "river-flow.m4a", zh: "溪流潺潺", en: "Flowing River" },
-  { id: "forest-waterfall", file: "forest-waterfall.m4a", zh: "森林瀑布", en: "Forest Waterfall" },
-  { id: "ocean-waves", file: "ocean-waves.m4a", zh: "海浪", en: "Ocean Waves" },
-  { id: "light-rain", file: "light-rain.m4a", zh: "细雨", en: "Light Rain" },
-  { id: "mountain-wind", file: "mountain-wind.m4a", zh: "山风", en: "Mountain Wind" },
-  { id: "distant-thunder", file: "distant-thunder.m4a", zh: "远雷", en: "Distant Thunder" },
-  { id: "underwater-white-noise", file: "underwater-white-noise.m4a", zh: "水下白噪音", en: "Underwater White Noise" },
+  { id: "morning-birds", scene: "birds", file: "morning-birds.m4a", zh: "晨间鸟语", en: "Morning Birds" },
+  { id: "forest-breeze", scene: "valley", file: "forest-breeze.m4a", zh: "林间微风", en: "Forest Breeze" },
+  { id: "sunrise-river", scene: "spring", file: "sunrise-river.m4a", zh: "晨曦河流", en: "Sunrise River" },
+  { id: "river-flow", scene: "stream", file: "river-flow.m4a", zh: "溪流潺潺", en: "Flowing River" },
+  { id: "forest-waterfall", scene: "falls", file: "forest-waterfall.m4a", zh: "森林瀑布", en: "Forest Waterfall" },
+  { id: "ocean-waves", scene: "ocean", file: "ocean-waves.m4a", zh: "海浪", en: "Ocean Waves" },
+  { id: "light-rain", scene: "rain", file: "light-rain.m4a", zh: "细雨", en: "Light Rain" },
+  { id: "mountain-wind", scene: "valley", file: "mountain-wind.m4a", zh: "山风", en: "Mountain Wind" },
+  { id: "distant-thunder", scene: "thunder", file: "distant-thunder.m4a", zh: "远雷", en: "Distant Thunder" },
+  { id: "underwater-white-noise", scene: "underwater", file: "underwater-white-noise.m4a", zh: "水下白噪音", en: "Underwater White Noise" },
 ];
 
 const contacts = [
@@ -230,6 +230,9 @@ const copy = {
     ambientCopy: "选择此刻想听的声音",
     ambientIntro: "选择一种声音，让浏览的节奏慢下来。顶部音符可随时播放或暂停。",
     ambientSelected: "当前声音",
+    ambientCtaEyebrow: "一休 · 完整体验",
+    ambientCta: "在一休中继续聆听",
+    ambientCtaAlt: "完整场景、定时与后台播放",
     openMenu: "打开菜单",
     closeMenu: "关闭菜单",
     back: "返回",
@@ -313,6 +316,9 @@ const copy = {
     ambientCopy: "Choose a sound for this moment",
     ambientIntro: "Choose a sound and let the pace of browsing soften. Use the note above to play or pause at any time.",
     ambientSelected: "Now playing",
+    ambientCtaEyebrow: "YIXIU · FULL EXPERIENCE",
+    ambientCta: "Continue listening in Yixiu",
+    ambientCtaAlt: "Full scenes, timers, and background playback",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     back: "Back",
@@ -535,6 +541,7 @@ export function App() {
   const isZh = language === "zh";
   const activeAmbientSound = ambientSounds.find((sound) => sound.id === ambientSound) || ambientSounds[0];
   const activeAmbientLabel = activeAmbientSound[language];
+  const ambientYixiuHref = `https://yixiu.wonderelian.com/?scene=${activeAmbientSound.scene}&lang=${language}&utm_source=wonderelian&utm_medium=owned_referral&utm_campaign=yixiu_global_growth&utm_content=ambient_drawer`;
   const articleSlug = window.location.pathname.match(/^\/notes\/([^/]+)\/?$/)?.[1];
   const activeArticle = articles.find((article) => article.slug === articleSlug);
   const homeHref = activeArticle ? "/#world" : "#world";
@@ -1065,6 +1072,20 @@ export function App() {
                       );
                     })}
                   </div>
+                  <a
+                    className="ambient-yixiu-cta"
+                    href={ambientYixiuHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-product-referral="ambient_drawer"
+                  >
+                    <span>
+                      <small>{c.ambientCtaEyebrow}</small>
+                      <strong>{c.ambientCta}</strong>
+                      <em>{c.ambientCtaAlt}</em>
+                    </span>
+                    <ArrowRight size={21} weight="light" aria-hidden="true" />
+                  </a>
                 </section>
               ) : null}
             </div>

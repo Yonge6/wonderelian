@@ -1601,6 +1601,58 @@ section[id] {
   white-space: nowrap;
 }
 
+.ambient-yixiu-cta {
+  margin-top: 20px;
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  color: inherit;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(183, 122, 27, 0.13), transparent 52%),
+    var(--section-wash);
+  text-decoration: none;
+  transition: border-color 220ms ease, background-color 220ms ease;
+}
+
+.ambient-yixiu-cta:hover,
+.ambient-yixiu-cta:focus-visible {
+  border-color: rgba(183, 122, 27, 0.56);
+  background-color: rgba(183, 122, 27, 0.08);
+}
+
+.ambient-yixiu-cta > span {
+  min-width: 0;
+  display: grid;
+  gap: 7px;
+}
+
+.ambient-yixiu-cta small {
+  color: var(--amber);
+  font: 600 9px/1 var(--sans);
+  letter-spacing: 0.14em;
+}
+
+.ambient-yixiu-cta strong {
+  font: 500 20px/1.25 var(--serif);
+}
+
+.ambient-yixiu-cta em {
+  color: var(--ink-soft);
+  font: normal 400 12px/1.55 var(--serif);
+}
+
+.ambient-yixiu-cta > svg {
+  transition: transform 220ms ease;
+}
+
+.ambient-yixiu-cta:hover > svg,
+.ambient-yixiu-cta:focus-visible > svg {
+  transform: translateX(4px);
+}
+
 .contact-list a,
 .contact-list button {
   width: 100%;
