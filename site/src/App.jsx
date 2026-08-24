@@ -17,7 +17,7 @@ import { articles } from "./articles";
 const projects = [
   {
     number: "01",
-    href: "https://yixiu.wonderelian.com",
+    href: "https://yixiu.wonderelian.com/?utm_source=wonderelian&utm_medium=referral&utm_campaign=product_discovery&utm_content=homepage_yixiu_card",
     image: "assets/project-yixiu-image2.webp",
     icon: "assets/app-icon-yixiu.png",
     zh: {
