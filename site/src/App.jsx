@@ -17,7 +17,7 @@ import { articles } from "./articles";
 const projects = [
   {
     number: "01",
-    href: "https://yixiu.wonderelian.com/?utm_source=wonderelian&utm_medium=referral&utm_campaign=product_discovery&utm_content=homepage_yixiu_card",
+    href: "https://yixiu.wonderelian.com/?scene=birds&lang=en&utm_source=wonderelian&utm_medium=owned_referral&utm_campaign=yixiu_global_growth&utm_content=project_card",
     image: "assets/project-yixiu-image2.webp",
     icon: "assets/app-icon-yixiu.png",
     zh: {
@@ -27,8 +27,8 @@ const projects = [
     },
     en: {
       title: "Yixiu Meditation",
-      kicker: "Rest & breathe",
-      description: "Begin with the body and the breath. Let the emotions settle before moving on.",
+      kicker: "Sleep · focus · reset",
+      description: "Free nature sounds for sleep, focus, and quiet resets—listen on the web or continue with the iPhone app.",
     },
   },
   {
