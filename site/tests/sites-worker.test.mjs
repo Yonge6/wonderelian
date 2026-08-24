@@ -84,3 +84,18 @@ test("ships global-English crawl and entity metadata", async () => {
   assert.match(robots, /Sitemap: https:\/\/wonderelian\.com\/sitemap\.xml/);
   assert.match(sitemap, /<loc>https:\/\/wonderelian\.com\/<\/loc>/);
 });
+
+test("ships two attributable Yixiu acquisition paths", async () => {
+  const [app, analytics] = await Promise.all([
+    readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
+    readFile(new URL("../public/analytics.js", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(app, /utm_content=project_card/);
+  assert.match(app, /utm_content=ambient_drawer/);
+  assert.match(app, /data-product-referral="ambient_drawer"/);
+  assert.match(app, /Continue listening in Yixiu/);
+  assert.match(app, /scene: "falls"/);
+  assert.match(analytics, /a\[data-product-referral\]\[href\]/);
+  assert.match(analytics, /placement: link\.dataset\.productReferral \|\| "project_card"/);
+});

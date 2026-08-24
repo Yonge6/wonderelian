@@ -18,13 +18,14 @@
   document.head.appendChild(loader);
 
   document.addEventListener("click", (event) => {
-    const link = event.target.closest?.("a.project-entry[href]");
+    const link = event.target.closest?.("a.project-entry[href], a[data-product-referral][href]");
     if (!link) return;
     const destination = new URL(link.href, window.location.href);
     if (destination.hostname === "ops.wonderelian.com") return;
     window.gtag("event", "product_discovery", {
       site_id: "site-wonderelian",
       product_host: destination.hostname,
+      placement: link.dataset.productReferral || "project_card",
       page_path: window.location.pathname,
     });
   });
