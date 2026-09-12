@@ -13,22 +13,23 @@ import {
   X,
 } from "@phosphor-icons/react";
 import { articles } from "./articles";
+import { profileCopy } from "./profile-copy.js";
 
 const projects = [
   {
     number: "01",
-    href: "https://yixiu.wonderelian.com",
+    href: "https://yixiu.wonderelian.com/?scene=birds&lang=en&utm_source=wonderelian&utm_medium=owned_referral&utm_campaign=yixiu_global_growth&utm_content=project_card",
     image: "assets/project-yixiu-image2.webp",
     icon: "assets/app-icon-yixiu.png",
     zh: {
       title: "一休冥想",
       kicker: "Yixiu Meditation",
-      description: "先照顾身体与呼吸，让情绪安顿下来，再继续前行。",
+      description: "从情绪与日常需要出发，把声音、交互与视觉组织成安静、易用的体验。",
     },
     en: {
       title: "Yixiu Meditation",
-      kicker: "Rest & breathe",
-      description: "Begin with the body and the breath. Let the emotions settle before moving on.",
+      kicker: "Sleep · focus · reset",
+      description: "Bringing sound, interaction, and visual design together in a quiet, easy-to-use experience for everyday rest and focus.",
     },
   },
   {
@@ -55,12 +56,12 @@ const projects = [
     zh: {
       title: "三慢问道",
       kicker: "Wendao",
-      description: "慢下来，读一章《道德经》，也读一读此刻的自己。",
+      description: "把古老文字与多层解读整理成清晰的阅读路径，让理解自然发生。",
     },
     en: {
       title: "Wendao · The Slow Way",
       kicker: "Tao Te Ching",
-      description: "Slow down with one chapter of the Tao Te Ching—and listen to the self who is here now.",
+      description: "Organizing ancient texts and layers of interpretation into a clear reading path, so understanding can unfold naturally.",
     },
   },
   {
@@ -87,12 +88,12 @@ const projects = [
     zh: {
       title: "艺术风格图鉴",
       kicker: "Style Atlas",
-      description: "从图像、脉络与细节出发，发现艺术风格背后的视觉语言。",
+      description: "把抽象的风格知识，转化为可看、可比较、可探索的视觉体验。",
     },
     en: {
       title: "Style Atlas",
       kicker: "Art & visual culture",
-      description: "Discovering the visual language behind art movements through images, context, and detail.",
+      description: "Turning abstract knowledge of art and design styles into a visual experience to explore and compare.",
     },
   },
 ];
@@ -105,12 +106,12 @@ const featuredProjects = [
     zh: {
       title: "OneLaser｜品牌与增长设计",
       kicker: "BRAND · WEB · CAMPAIGN",
-      description: "从品牌策略到网页、宣传册、Banner 与广告创意，为工业科技建立清晰、有力且一致的全球表达。",
+      description: "将工业技术转译成清晰的品牌与产品表达，贯穿网页、宣传册和广告创意。",
     },
     en: {
       title: "OneLaser · Brand & Growth Design",
       kicker: "BRAND · WEB · CAMPAIGN",
-      description: "Building a clear, powerful, and consistent global presence for industrial technology—from brand strategy and web to brochures, banners, and campaigns.",
+      description: "Translating industrial technology into clear brand and product communication across websites, brochures, and campaigns.",
     },
   },
   {
@@ -156,8 +157,8 @@ const worlds = [
   },
   {
     number: "02",
-    zh: { title: "不二", copy: "接纳高峰与低谷，拥抱完整而非完美。" },
-    en: { title: "Wholeness", copy: "Welcome both peaks and valleys; choose wholeness over perfection." },
+    zh: { title: "不二", copy: "不评判，没有好坏对错，接纳高峰与低谷，拥抱完整而非完美。" },
+    en: { title: "Wholeness", copy: "Without judgment or labels of good and bad, right and wrong, welcome both peaks and valleys; choose wholeness over perfection." },
   },
   {
     number: "03",
@@ -172,16 +173,16 @@ const worlds = [
 ];
 
 const ambientSounds = [
-  { id: "morning-birds", file: "morning-birds.m4a", zh: "晨间鸟语", en: "Morning Birds" },
-  { id: "forest-breeze", file: "forest-breeze.m4a", zh: "林间微风", en: "Forest Breeze" },
-  { id: "sunrise-river", file: "sunrise-river.m4a", zh: "晨曦河流", en: "Sunrise River" },
-  { id: "river-flow", file: "river-flow.m4a", zh: "溪流潺潺", en: "Flowing River" },
-  { id: "forest-waterfall", file: "forest-waterfall.m4a", zh: "森林瀑布", en: "Forest Waterfall" },
-  { id: "ocean-waves", file: "ocean-waves.m4a", zh: "海浪", en: "Ocean Waves" },
-  { id: "light-rain", file: "light-rain.m4a", zh: "细雨", en: "Light Rain" },
-  { id: "mountain-wind", file: "mountain-wind.m4a", zh: "山风", en: "Mountain Wind" },
-  { id: "distant-thunder", file: "distant-thunder.m4a", zh: "远雷", en: "Distant Thunder" },
-  { id: "underwater-white-noise", file: "underwater-white-noise.m4a", zh: "水下白噪音", en: "Underwater White Noise" },
+  { id: "morning-birds", scene: "birds", file: "morning-birds.m4a", zh: "晨间鸟语", en: "Morning Birds" },
+  { id: "forest-breeze", scene: "valley", file: "forest-breeze.m4a", zh: "林间微风", en: "Forest Breeze" },
+  { id: "sunrise-river", scene: "spring", file: "sunrise-river.m4a", zh: "晨曦河流", en: "Sunrise River" },
+  { id: "river-flow", scene: "stream", file: "river-flow.m4a", zh: "溪流潺潺", en: "Flowing River" },
+  { id: "forest-waterfall", scene: "falls", file: "forest-waterfall.m4a", zh: "森林瀑布", en: "Forest Waterfall" },
+  { id: "ocean-waves", scene: "ocean", file: "ocean-waves.m4a", zh: "海浪", en: "Ocean Waves" },
+  { id: "light-rain", scene: "rain", file: "light-rain.m4a", zh: "细雨", en: "Light Rain" },
+  { id: "mountain-wind", scene: "valley", file: "mountain-wind.m4a", zh: "山风", en: "Mountain Wind" },
+  { id: "distant-thunder", scene: "thunder", file: "distant-thunder.m4a", zh: "远雷", en: "Distant Thunder" },
+  { id: "underwater-white-noise", scene: "underwater", file: "underwater-white-noise.m4a", zh: "水下白噪音", en: "Underwater White Noise" },
 ];
 
 const contacts = [
@@ -230,26 +231,23 @@ const copy = {
     ambientCopy: "选择此刻想听的声音",
     ambientIntro: "选择一种声音，让浏览的节奏慢下来。顶部音符可随时播放或暂停。",
     ambientSelected: "当前声音",
+    ambientCtaEyebrow: "一休 · 完整体验",
+    ambientCta: "在一休中继续聆听",
+    ambientCtaAlt: "完整场景、定时与后台播放",
     openMenu: "打开菜单",
     closeMenu: "关闭菜单",
     back: "返回",
-    heroLead: "用设计理解世界，也理解自己。",
-    heroSpirit: "向内认识自己，向外如水而行。",
+    ...profileCopy.zh,
     enterNow: "沿途所作",
     enterNowAlt: "Along the Way",
+    enterNotes: "片刻随记",
+    enterNotesAlt: "Field Notes",
     current: "沿途所作",
     currentAlt: "ALONG THE WAY",
     behind: "幕后系统",
     behindAlt: "BEHIND THE WORK",
     publicReadonly: "公开只读",
     aboutKicker: "ABOUT ELIAN",
-    aboutTitle: <>我喜欢把复杂、抽象或冰冷的事物重新组织，用设计、AI 与产品，让它们变得清楚、美、有温度。</>,
-    aboutParagraphs: [
-      "我是永歌 Elian。40岁，重新回到设计职场，也在下班后借助 AI，把真正感兴趣的想法一个个做成产品。",
-      "我走过大厂、创业、高峰与低谷。现在，我不再急着用结果证明自己，更想认识自己、接纳自己，并把真正想做的事情认真做好。",
-      "设计是我的语言，AI 是新的工具，产品是让想法真正存在的方式。面对工业机器、古老文字、新闻或人的自我探索，我都在做同一件事：发现问题、建立秩序，再把复杂的事物表达得清楚、美、有温度。",
-      <><strong>WonderElian</strong> 是我的个人创作世界。这里记录作品，也记录一个40岁的设计师，如何继续理解世界、重新学习生活，并慢慢成为自己。</>,
-    ],
     footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
     backToTop: "回到开始",
@@ -262,18 +260,13 @@ const copy = {
     aboutDrawerCopy: "认识这个由设计与生命探索构成的世界",
     contact: "联系 Elian",
     aboutContact: "认识 Elian",
-    viewWork: "看看我做的东西",
+    viewWork: "沿途所作",
     contactCopy: "邮箱与社交媒体",
     support: "随喜相助",
     supportCopy: "有余则助，无余亦安",
     drawerNote: "阅读、停留与分享，本身也是一种同行。",
     aboutPanelHeadline: "WonderElian",
-    aboutPanelIntro: [
-      "我是永歌 Elian。40岁，重新回到设计职场，也在下班后借助 AI，把真正感兴趣的想法一个个做成产品。",
-      "我走过大厂、创业、高峰与低谷。现在，我不再急着用结果证明自己，更想认识自己、接纳自己，并把真正想做的事情认真做好。",
-      "设计是我的语言，AI 是新的工具，产品是让想法真正存在的方式。面对工业机器、古老文字、新闻或人的自我探索，我都在做同一件事：发现问题、建立秩序，再把复杂的事物表达得清楚、美、有温度。",
-      <><strong>WonderElian</strong> 是我的个人创作世界。这里记录作品，也记录一个40岁的设计师，如何继续理解世界、重新学习生活，并慢慢成为自己。</>,
-    ],
+    aboutPanelIntro: profileCopy.zh.aboutParagraphs,
     aboutMethod: "设计 × 理解 × 转译 × 创造",
     lifeKicker: "我们的生命观",
     lifeTitle: "生命不是用来证明自己的，而是用来认识、接纳、成为并活出自己。",
@@ -313,26 +306,23 @@ const copy = {
     ambientCopy: "Choose a sound for this moment",
     ambientIntro: "Choose a sound and let the pace of browsing soften. Use the note above to play or pause at any time.",
     ambientSelected: "Now playing",
+    ambientCtaEyebrow: "YIXIU · FULL EXPERIENCE",
+    ambientCta: "Continue listening in Yixiu",
+    ambientCtaAlt: "Full scenes, timers, and background playback",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     back: "Back",
-    heroLead: "Using design to understand the world—and myself.",
-    heroSpirit: "Know yourself within. Move like water through the world.",
+    ...profileCopy.en,
     enterNow: "Along the Way",
     enterNowAlt: "沿途所作",
+    enterNotes: "Field Notes",
+    enterNotesAlt: "片刻随记",
     current: "Along the Way",
     currentAlt: "沿途所作",
     behind: "Behind the Work",
     behindAlt: "幕后系统",
     publicReadonly: "Public read-only",
     aboutKicker: "ABOUT ELIAN",
-    aboutTitle: <>I reorganize what feels complex, abstract, or cold—using design, AI, and products to make it clear, beautiful, and human.</>,
-    aboutParagraphs: [
-      "I am Elian. At 40, I returned to design as a profession. After work, I use AI to turn ideas I genuinely care about into products.",
-      "I have moved through big tech, startups, highs, and long lows. I no longer want results to prove my worth. I want to know and accept myself, and give honest effort to the things I truly want to make.",
-      "Design is my language. AI is a new tool. Products are how ideas become real. Whether the subject is an industrial machine, an ancient text, the news, or self-understanding, I keep doing the same thing: finding the problem, creating order, and making complexity clear, beautiful, and human.",
-      <><strong>WonderElian</strong> is my personal world of making. It holds the work, but also the story of a 40-year-old designer continuing to understand the world, relearn how to live, and slowly become myself.</>,
-    ],
     footerLine: "Design · AI · Products · Life",
     icpLabel: "京ICP备19022034号-4",
     backToTop: "Back to the beginning",
@@ -345,18 +335,13 @@ const copy = {
     aboutDrawerCopy: "Meet a world shaped by design and the exploration of life",
     contact: "Contact Elian",
     aboutContact: "Meet Elian",
-    viewWork: "See what I make",
+    viewWork: "Along the Way",
     contactCopy: "Email and social channels",
     support: "Support the journey",
     supportCopy: "Give freely, or simply stay and read in peace",
     drawerNote: "Reading, pausing, and sharing are already ways of taking part.",
     aboutPanelHeadline: "WonderElian",
-    aboutPanelIntro: [
-      "I am Elian. At 40, I returned to design as a profession. After work, I use AI to turn ideas I genuinely care about into products.",
-      "I have moved through big tech, startups, highs, and long lows. I no longer want results to prove my worth. I want to know and accept myself, and give honest effort to the things I truly want to make.",
-      "Design is my language. AI is a new tool. Products are how ideas become real. Whether the subject is an industrial machine, an ancient text, the news, or self-understanding, I keep doing the same thing: finding the problem, creating order, and making complexity clear, beautiful, and human.",
-      <><strong>WonderElian</strong> is my personal world of making. It holds the work, but also the story of a 40-year-old designer continuing to understand the world, relearn how to live, and slowly become myself.</>,
-    ],
+    aboutPanelIntro: profileCopy.en.aboutParagraphs,
     aboutMethod: "DESIGN × UNDERSTANDING × TRANSLATION × MAKING",
     lifeKicker: "Our philosophy of life",
     lifeTitle: "Life is not for proving yourself. It is for knowing, accepting, becoming, and living as yourself.",
@@ -444,6 +429,37 @@ function ArticleBody({ content }) {
 }
 
 function NotesSection({ language }) {
+  const featuredArticle = articles.find((article) => article.featured) ?? articles[0];
+  const archiveArticles = articles.filter((article) => article !== featuredArticle);
+
+  const renderArticleCard = (article, isFeatured = false) => {
+    const item = article[language] ?? article.zh;
+    const labelNumber = article.zh?.label?.match(/\b(\d{2})\b/)?.[1];
+    const articleNumber = article.number ?? labelNumber ?? String(articles.indexOf(article) + 1).padStart(2, "0");
+    const readingTime = article.readingTime[language] ?? article.readingTime.zh;
+
+    return (
+      <a
+        className={`note-card ${isFeatured ? "note-card--featured" : "note-card--archive"}`}
+        href={`/notes/${article.slug}/`}
+        key={article.slug}
+      >
+        {isFeatured && <img src={article.cover} alt="" loading="lazy" decoding="async" />}
+        <span className="note-card-number">{articleNumber}</span>
+        <div className="note-card-copy">
+          {isFeatured && (
+            <span className="note-card-pin">{language === "zh" ? "置顶主稿" : "FEATURED ESSAY"}</span>
+          )}
+          {isFeatured && <p>{item.label}</p>}
+          <h3>{item.title}</h3>
+          <span className="note-card-excerpt">{item.excerpt}</span>
+          <span className="note-card-meta">{article.date.replaceAll("-", ".")} · {readingTime}</span>
+          <span className="note-card-read">{item.read}<ArrowRight size={19} weight="light" aria-hidden="true" /></span>
+        </div>
+      </a>
+    );
+  };
+
   return (
     <section className="notes-section" id="notes" aria-labelledby="notes-title">
       <div className="notes-heading">
@@ -454,30 +470,30 @@ function NotesSection({ language }) {
         <p>{language === "zh" ? "关于设计、AI、产品与生活。这里会慢慢收录更多文章。" : "Essays on design, AI, products, and life. More will gather here over time."}</p>
       </div>
 
-      <div className="notes-grid">
-        {articles.map((article, index) => {
-          const item = article[language];
-          return (
-            <a className="note-card" href={`/notes/${article.slug}/`} key={article.slug}>
-              <img src={article.cover} alt="" loading="lazy" decoding="async" />
-              <span className="note-card-number">{String(index + 1).padStart(2, "0")}</span>
-              <div className="note-card-copy">
-                <p>{item.label}</p>
-                <h3>{item.title}</h3>
-                <span className="note-card-excerpt">{item.excerpt}</span>
-                <span className="note-card-meta">{article.date.replaceAll("-", ".")} · {article.readingTime[language]}</span>
-                <span className="note-card-read">{item.read}<ArrowRight size={19} weight="light" aria-hidden="true" /></span>
-              </div>
-            </a>
-          );
-        })}
-      </div>
+      {featuredArticle && (
+        <div className="notes-featured">
+          {renderArticleCard(featuredArticle, true)}
+        </div>
+      )}
+
+      {archiveArticles.length > 0 && (
+        <div className="notes-archive">
+          <div className="section-label notes-archive-label">
+            <span>{language === "zh" ? "更多随记" : "MORE NOTES"}</span>
+          </div>
+          <div className="notes-grid">
+            {archiveArticles.map((article) => renderArticleCard(article))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
 
 function ArticlePage({ article, language }) {
-  const item = article[language];
+  const item = article[language] ?? article.zh;
+  const author = article.author[language] ?? article.author.zh;
+  const readingTime = article.readingTime[language] ?? article.readingTime.zh;
 
   return (
     <main className="article-page">
@@ -489,9 +505,9 @@ function ArticlePage({ article, language }) {
           <p className="article-deck">{item.excerpt}</p>
           <div className="article-meta">
             <span>Design · AI · Products · Life</span>
-            <span>{article.author[language]}</span>
+            <span>{author}</span>
             <span>{article.date.replaceAll("-", ".")}</span>
-            <span>{article.readingTime[language]}</span>
+            <span>{readingTime}</span>
           </div>
         </header>
         <ArticleBody content={item.content} />
@@ -535,19 +551,21 @@ export function App() {
   const isZh = language === "zh";
   const activeAmbientSound = ambientSounds.find((sound) => sound.id === ambientSound) || ambientSounds[0];
   const activeAmbientLabel = activeAmbientSound[language];
+  const ambientYixiuHref = `https://yixiu.wonderelian.com/?scene=${activeAmbientSound.scene}&lang=${language}&utm_source=wonderelian&utm_medium=owned_referral&utm_campaign=yixiu_global_growth&utm_content=ambient_drawer`;
   const articleSlug = window.location.pathname.match(/^\/notes\/([^/]+)\/?$/)?.[1];
   const activeArticle = articles.find((article) => article.slug === articleSlug);
+  const activeArticleCopy = activeArticle ? (activeArticle[language] ?? activeArticle.zh) : null;
+  const activeArticleUsesChineseFallback = Boolean(activeArticle && !activeArticle[language] && activeArticle.zh);
   const homeHref = activeArticle ? "/#world" : "#world";
 
   useEffect(() => {
-    document.documentElement.lang = isZh ? "zh-CN" : "en";
-    document.title = activeArticle ? `${activeArticle[language].title} | WonderElian` : c.pageTitle;
+    document.documentElement.lang = isZh || activeArticleUsesChineseFallback ? "zh-CN" : "en";
+    document.title = activeArticleCopy ? `${activeArticleCopy.title} | WonderElian` : c.pageTitle;
     const canonicalUrl = activeArticle
       ? `https://wonderelian.com/notes/${activeArticle.slug}/`
       : "https://wonderelian.com/";
-    const description = activeArticle
-      ? activeArticle[language].excerpt
-      : document.querySelector('meta[name="description"]')?.dataset.homeContent;
+    const homeDescription = profileCopy[language].description;
+    const description = activeArticleCopy ? activeArticleCopy.excerpt : homeDescription;
     const canonical = document.querySelector('link[rel="canonical"]');
     const descriptionMeta = document.querySelector('meta[name="description"]');
     const ogType = document.querySelector('meta[property="og:type"]');
@@ -555,6 +573,12 @@ export function App() {
     const ogDescription = document.querySelector('meta[property="og:description"]');
     const ogUrl = document.querySelector('meta[property="og:url"]');
     const ogImage = document.querySelector('meta[property="og:image"]');
+    const ogImageAlt = document.querySelector('meta[property="og:image:alt"]');
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    const twitterImageAlt = document.querySelector('meta[name="twitter:image:alt"]');
 
     if (descriptionMeta && !descriptionMeta.dataset.homeContent) {
       descriptionMeta.dataset.homeContent = descriptionMeta.content;
@@ -562,12 +586,36 @@ export function App() {
     if (canonical) canonical.href = canonicalUrl;
     if (descriptionMeta && description) descriptionMeta.content = description;
     if (ogType) ogType.content = activeArticle ? "article" : "website";
-    if (ogTitle) ogTitle.content = activeArticle ? activeArticle[language].title : c.pageTitle;
-    if (ogDescription && activeArticle) ogDescription.content = activeArticle[language].excerpt;
+    if (ogTitle) ogTitle.content = activeArticleCopy ? activeArticleCopy.title : c.pageTitle;
+    if (ogDescription) ogDescription.content = description;
     if (ogUrl) ogUrl.content = canonicalUrl;
-    if (ogImage && activeArticle) ogImage.content = `https://wonderelian.com${activeArticle.cover}`;
+    const socialImage = activeArticle ? `https://wonderelian.com${activeArticle.cover}` : "https://wonderelian.com/assets/hero-flow-image2-v3.webp";
+    const socialImageAlt = activeArticleCopy ? activeArticleCopy.title : (isZh ? "WonderElian 流动的抽象水彩山水" : "A flowing abstract watercolor landscape representing WonderElian");
+    if (ogImage) ogImage.content = socialImage;
+    if (ogImageAlt) ogImageAlt.content = socialImageAlt;
+    if (ogLocale) ogLocale.content = isZh ? "zh_CN" : "en_US";
+    if (twitterTitle) twitterTitle.content = activeArticleCopy ? activeArticleCopy.title : c.pageTitle;
+    if (twitterDescription) twitterDescription.content = description;
+    if (twitterImage) twitterImage.content = socialImage;
+    if (twitterImageAlt) twitterImageAlt.content = socialImageAlt;
+
+    if (activeArticleCopy) {
+      const jsonLd = document.querySelector('script[type="application/ld+json"]');
+      try {
+        const data = JSON.parse(jsonLd?.textContent || "{}");
+        const posting = data["@graph"]?.find((entry) => entry["@type"] === "BlogPosting");
+        if (posting) {
+          posting.headline = activeArticleCopy.title;
+          posting.description = activeArticleCopy.excerpt;
+          posting.inLanguage = isZh ? "zh-CN" : "en";
+          jsonLd.textContent = JSON.stringify(data);
+        }
+      } catch {
+        // Static metadata remains valid if an extension modifies the JSON-LD block.
+      }
+    }
     window.localStorage.setItem("wonderelian-language", language);
-  }, [activeArticle, c.pageTitle, isZh, language]);
+  }, [activeArticle, activeArticleCopy, activeArticleUsesChineseFallback, c.pageTitle, isZh, language]);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -723,13 +771,20 @@ export function App() {
             <h1 id="hero-title">Designing things.<br />Exploring life.</h1>
             <p className="hero-lead">{c.heroLead}</p>
             <span className="short-rule" aria-hidden="true" />
-            <p className="hero-spirit">{c.heroSpirit}</p>
+            <p className="hero-spirit"><RichTextLines text={c.heroSpirit} /></p>
 
-            <a className="text-cta" href="#now">
-              <span>{c.enterNow}</span>
-              <span>{c.enterNowAlt}</span>
-              <ArrowRight size={19} weight="light" aria-hidden="true" />
-            </a>
+            <div className="hero-ctas">
+              <a className="text-cta" href="#now">
+                <span>{c.enterNow}</span>
+                <span>{c.enterNowAlt}</span>
+                <ArrowRight size={19} weight="light" aria-hidden="true" />
+              </a>
+              <a className="text-cta" href="#notes">
+                <span>{c.enterNotes}</span>
+                <span>{c.enterNotesAlt}</span>
+                <ArrowRight size={19} weight="light" aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </section>
 
@@ -859,7 +914,7 @@ export function App() {
           <p className="eyebrow">{c.aboutKicker}</p>
           <div className="about-layout">
             <div className="about-heading">
-              <h2 id="about-title">{c.aboutTitle}</h2>
+              <h2 id="about-title"><RichTextLines text={c.aboutTitle} /></h2>
               <div className="about-actions">
                 <button className="about-contact" type="button" onClick={openContact}>
                   <span>{c.aboutContact}</span>
@@ -873,6 +928,7 @@ export function App() {
             </div>
             <div className="about-copy">
               {c.aboutParagraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+              <p className="about-signature">{c.aboutSignature}</p>
             </div>
           </div>
         </section>
@@ -1065,6 +1121,20 @@ export function App() {
                       );
                     })}
                   </div>
+                  <a
+                    className="ambient-yixiu-cta"
+                    href={ambientYixiuHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-product-referral="ambient_drawer"
+                  >
+                    <span>
+                      <small>{c.ambientCtaEyebrow}</small>
+                      <strong>{c.ambientCta}</strong>
+                      <em>{c.ambientCtaAlt}</em>
+                    </span>
+                    <ArrowRight size={21} weight="light" aria-hidden="true" />
+                  </a>
                 </section>
               ) : null}
             </div>

@@ -11,3 +11,5 @@ The selected `沿途所作` layout is Product Design option 2: one large App mod
 When implementing from a selected generated mock, treat that image as the source of truth for layout, component anatomy, density, spacing, color, typography, visible content, and hierarchy.
 
 Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts/prepare-sites-build.mjs`, and `tests/sites-worker.test.mjs` intact so the same local prototype can be handed to Sites. Before a Sites handoff, run `npm run build` and `npm run test:sites`; the build must leave `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.
+
+The approved September 10, 2026 positioning is distributed across the existing homepage: a concise design/product/AI capability statement in the hero, project descriptions that demonstrate it, and a three-paragraph About story with the inward/water philosophy as its closing signature. Keep the watercolor visual direction and existing section order. Share bilingual profile copy between the homepage, About drawer, and crawlable homepage; do not add a separate seven-strengths panel.

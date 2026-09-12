@@ -1,8 +1,11 @@
+import { importedArticles } from "./articles-imported.js";
+
 const assetRoot = "/assets/notes/2026-08-15-proving-to-becoming";
 
 export const articles = [
   {
     slug: "from-proving-to-becoming",
+    featured: true,
     date: "2026-08-15",
     readingTime: { zh: "约 18 分钟", en: "18 min read" },
     author: { zh: "永歌 Elian", en: "Elian Yong" },
@@ -1012,6 +1015,7 @@ It simply records how a 40-year-old designer continues to use design to understa
       `,
     },
   },
+  ...importedArticles,
 ];
 
 export const featuredArticle = articles[0];

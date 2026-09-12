@@ -67,11 +67,26 @@ test("emits the files required by Sites packaging", async () => {
   await access(new URL("../dist/.openai/hosting.json", import.meta.url));
 });
 
+test("prerenders crawlable English article pages with article metadata", async () => {
+  const odyssey = await readFile(new URL("../dist/client/notes/odyssey-the-long-way-home/index.html", import.meta.url), "utf8");
+
+  assert.match(odyssey, /<html lang="en">/);
+  assert.match(odyssey, /rel="canonical" href="https:\/\/wonderelian\.com\/notes\/odyssey-the-long-way-home\/"/);
+  assert.match(odyssey, /property="og:type" content="article"/);
+  assert.match(odyssey, /"@type": "BlogPosting"/);
+  assert.match(odyssey, /<article>/);
+  assert.match(odyssey, /Some Take Ten Years to Return Home; Others a Lifetime/);
+  assert.match(odyssey, /Pain Is Not the Same as Responsibility/);
+  assert.match(odyssey, /At WonderElian, Continuing the Way Back to Yourself/);
+  assert.doesNotMatch(odyssey, /Chinese · 9 min read/);
+});
+
 test("ships global-English crawl and entity metadata", async () => {
-  const [index, robots, sitemap] = await Promise.all([
+  const [index, robots, sitemap, llms] = await Promise.all([
     readFile(new URL("../dist/client/index.html", import.meta.url), "utf8"),
     readFile(new URL("../dist/client/robots.txt", import.meta.url), "utf8"),
     readFile(new URL("../dist/client/sitemap.xml", import.meta.url), "utf8"),
+    readFile(new URL("../dist/client/llms.txt", import.meta.url), "utf8"),
   ]);
 
   assert.match(index, /<html lang="en">/);
@@ -81,6 +96,27 @@ test("ships global-English crawl and entity metadata", async () => {
   assert.match(index, /"@type": "Organization"/);
   assert.match(index, /"@type": "Person"/);
   assert.match(index, /Wuhan, China/);
+  assert.match(index, /data-seo-fallback/);
+  assert.match(index, /Elian Yong/);
+  assert.match(robots, /User-agent: OAI-SearchBot/);
+  assert.match(robots, /User-agent: ChatGPT-User/);
   assert.match(robots, /Sitemap: https:\/\/wonderelian\.com\/sitemap\.xml/);
   assert.match(sitemap, /<loc>https:\/\/wonderelian\.com\/<\/loc>/);
+  assert.match(llms, /# WonderElian/);
+  assert.match(llms, /odyssey-the-long-way-home/);
+});
+
+test("ships two attributable Yixiu acquisition paths", async () => {
+  const [app, analytics] = await Promise.all([
+    readFile(new URL("../src/App.jsx", import.meta.url), "utf8"),
+    readFile(new URL("../public/analytics.js", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(app, /utm_content=project_card/);
+  assert.match(app, /utm_content=ambient_drawer/);
+  assert.match(app, /data-product-referral="ambient_drawer"/);
+  assert.match(app, /Continue listening in Yixiu/);
+  assert.match(app, /scene: "falls"/);
+  assert.match(analytics, /a\[data-product-referral\]\[href\]/);
+  assert.match(analytics, /placement: link\.dataset\.productReferral \|\| "project_card"/);
 });

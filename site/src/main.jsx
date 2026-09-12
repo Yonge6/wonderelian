@@ -6,7 +6,10 @@ import { App } from "./App.jsx";
 import "./fonts.css";
 import "./styles.css";
 
-createRoot(document.getElementById("root")).render(
+const root = document.getElementById("root");
+root.replaceChildren();
+
+createRoot(root).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,

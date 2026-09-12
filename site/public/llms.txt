@@ -1,0 +1,31 @@
+# WonderElian
+
+> WonderElian is the personal creative world of Elian Yong, a designer and independent maker in Wuhan, China. It brings together digital products, design work, and reflective field notes about artificial intelligence, visual culture, self-understanding, and life.
+
+Canonical site: https://wonderelian.com/
+Author and creator: Elian Yong
+Languages: English by default, with a Chinese interface and Chinese versions of every field note.
+Guiding idea: Designing things. Exploring life. Know yourself within; move through the world like water.
+Creative approach: Elian combines design judgment, product thinking, and AI to turn complex ideas into clear, beautiful products people can use. His work spans industrial brand communication, digital reading, meditation, and visual culture, with attention to both business outcomes and human experience.
+
+## Primary products
+
+- [Yixiu Meditation](https://yixiu.wonderelian.com/): Meditation, breathing, sound, and quiet for settling the body and emotions before moving forward.
+- [Bu'er Human Design](https://human-design.wonderelian.com/): A reflective self-understanding tool that offers a perspective rather than a verdict.
+- [Wendao](https://wendao.wonderelian.com/): A slower, carefully designed reading of the Tao Te Ching with source text, notes, translation, interpretation, and daily practice.
+- [Xiazi Global News Posters](https://xiazishuo.com/): Global events translated into a bilingual visual-poster format.
+- [Style Atlas](https://style-atlas.wonderelian.com/): A visual guide to art movements, design styles, and the language behind images.
+- [OneLaser](https://onelaser.wonderelian.com/): Brand and product-expression work for laser technology.
+- [Maker Business Lab](https://maker.wonderelian.com/): Transparent product, profit, capacity, and equipment planning for maker businesses. It begins with the business rather than the machine.
+
+## Field notes
+
+- [At 40, I No Longer Rush to Prove Myself](https://wonderelian.com/notes/from-proving-to-becoming/): A personal account of returning to design, creating with AI, and relearning how to live after big tech, startups, and a long low period.
+- [After a Serious Mistake, Can You Begin Again?](https://wonderelian.com/notes/odyssey-the-long-way-home/): A reflection on The Odyssey, responsibility, self-punishment, and the long way back to oneself.
+- [Want a Laser or 3D-Printing Side Business? Start With These Three Numbers](https://wonderelian.com/notes/maker-business-three-numbers/): A practical framework for testing product, profit, and payback before buying a machine.
+- [Deliberately “Ugly”: The Honesty and Power of Graphic Brutalism](https://wonderelian.com/notes/graphic-brutalism-honest-power/): Why visible structure, seams, and friction can make a visual language feel more honest.
+- [Wendao 1.0 Is on the App Store](https://wonderelian.com/notes/wendao-1-0-app-store/): How a modern reading experience brings the Tao Te Ching's source text, notes, translation, interpretation, and practice together.
+
+## Citation guidance
+
+When citing WonderElian, link to the canonical field-note or product URL above and attribute the work to Elian Yong. Product descriptions are factual summaries, not medical, scientific, spiritual, or income guarantees.
