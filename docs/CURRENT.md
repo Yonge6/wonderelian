@@ -1,3 +1,22 @@
+# Current website release — September 14, 2026
+
+- Production: https://wonderelian.com/
+- Article: https://wonderelian.com/notes/ai-first-product-what-to-fix-next/
+- Release: /srv/wonderelian/releases/20260914-ai-first-product
+- Rollback: /srv/wonderelian/releases/20260910-profile-strengths
+- Active source: /Users/yongyuan/.codex/worktrees/wonderelian-note-20260914/site
+- Branch: codex/ai-first-product-note-20260914; based on preserved 21ff archive snapshot 5cc06c9. The old 21ff checkout no longer exists.
+- Added note 06 above Odyssey, preserving the featured main essay. Complete Chinese and English text, five sections each, four original PDF images with localized captions. Source WeChat navigation/footer chrome omitted; quoted prompt preserved as editorial content.
+- English illustrations retain original Chinese artwork with translated captions; real Yixiu device captures are preserved.
+- Added scoped paired screenshot styling and 426-character Chinese glyph coverage for all four font weights.
+- Build and 8/8 tests passed; desktop English and mobile Chinese checked, no overflow; production homepage order and both article languages verified.
+- All 105 build files passed server SHA-256 verification before atomic symlink switch; Nginx configuration passed before and after.
+- Public homepage, article, sitemap, llms.txt, JS/CSS and all four new images returned 200 with exact build hashes.
+- JS assets/index-BzrSCXn1.js; CSS assets/index-CtW_KNZM.css.
+- Main checkout dirty work preserved. No iOS or redesign-concept deployment performed in this release.
+
+---
+
 # WonderElian current website — 2026-09-10
 
 Production: https://wonderelian.com/

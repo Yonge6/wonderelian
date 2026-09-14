@@ -120,3 +120,20 @@ test("ships two attributable Yixiu acquisition paths", async () => {
   assert.match(analytics, /a\[data-product-referral\]\[href\]/);
   assert.match(analytics, /placement: link\.dataset\.productReferral \|\| "project_card"/);
 });
+
+test("publishes the complete bilingual AI product note above Odyssey", async () => {
+  const { articles } = await import("../src/articles.js");
+  const note = articles.find((item) => item.slug === "ai-first-product-what-to-fix-next");
+  assert.equal(articles.indexOf(note) + 1, articles.findIndex((item) => item.slug === "odyssey-the-long-way-home"));
+  for (const language of ["zh", "en"]) {
+    assert.equal((note[language].content.match(/^## /gm) || []).length, 5);
+    const images = [...note[language].content.matchAll(/!\[.*?\]\((.*?)\)/g)];
+    assert.equal(images.length, 4);
+    for (const image of images) await access(new URL(`../public${image[1]}`, import.meta.url));
+  }
+  const html = await readFile(new URL("../dist/client/notes/ai-first-product-what-to-fix-next/index.html", import.meta.url), "utf8");
+  assert.match(html, /Let AI Help You Prioritize/);
+  assert.match(html, /Today, Choose One Thing Worth Fixing/);
+  assert.match(html, /"@type": "BlogPosting"/);
+  assert.match(html, /2026-09-14/);
+});

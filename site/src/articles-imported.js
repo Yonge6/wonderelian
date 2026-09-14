@@ -1,3 +1,4 @@
+import { aiFirstProductArticle } from "./article-ai-first-product.js";
 import { odysseyArticle } from "./article-odyssey.js";
 
 const makerRoot = "/assets/notes/2026-08-21-maker-business-lab";
@@ -5,6 +6,7 @@ const brutalismRoot = "/assets/notes/2026-08-20-graphic-brutalism";
 const wendaoRoot = "/assets/notes/2026-08-18-wendao-1-0";
 
 export const importedArticles = [
+  aiFirstProductArticle,
   odysseyArticle,
   {
     slug: "maker-business-three-numbers",

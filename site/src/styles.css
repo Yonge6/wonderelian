@@ -2681,3 +2681,12 @@ section[id] {
     padding: 48px 24px 32px;
   }
 }
+
+/* Keep the two original device screenshots readable without making them page-height posters. */
+.article-body .article-figure--product-screen { display: inline-block; vertical-align: top; width: calc(50% - 12px); margin: 24px 0; }
+.article-body .article-figure--product-screen:has(+ .article-figure--product-screen) { margin-right: 24px; }
+.article-body .article-figure--product-screen img { width: 100%; height: auto; }
+@media (max-width: 560px) {
+  .article-body .article-figure--product-screen { width: calc(50% - 6px); }
+  .article-body .article-figure--product-screen:has(+ .article-figure--product-screen) { margin-right: 12px; }
+}

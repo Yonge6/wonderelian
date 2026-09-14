@@ -396,7 +396,7 @@ function ArticleBody({ content }) {
         if (imageMatch) {
           const [, alt, src] = imageMatch;
           return (
-            <figure className={src.endsWith("image-07.png") ? "article-figure article-figure--poster" : "article-figure"} key={`${src}-${index}`}>
+            <figure className={/2026-09-14-ai-first-product\/(sound-library|player)\.png$/.test(src) ? "article-figure article-figure--product-screen" : src.endsWith("image-07.png") ? "article-figure article-figure--poster" : "article-figure"} key={`${src}-${index}`}>
               <img src={src} alt={alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
               {alt ? <figcaption>{alt}</figcaption> : null}
             </figure>
