@@ -1,3 +1,4 @@
+import { aiHomepageClarityArticle } from "./article-ai-homepage-clarity.js";
 import { aiFirstProductArticle } from "./article-ai-first-product.js";
 import { odysseyArticle } from "./article-odyssey.js";
 
@@ -6,6 +7,7 @@ const brutalismRoot = "/assets/notes/2026-08-20-graphic-brutalism";
 const wendaoRoot = "/assets/notes/2026-08-18-wendao-1-0";
 
 export const importedArticles = [
+  aiHomepageClarityArticle,
   aiFirstProductArticle,
   odysseyArticle,
   {

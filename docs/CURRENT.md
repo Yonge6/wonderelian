@@ -1,3 +1,19 @@
+# Current website release — September 15, 2026
+
+- Article: https://wonderelian.com/notes/ai-homepage-beautiful-but-unclear/
+- Active release: /srv/wonderelian/releases/20260915-homepage-clarity
+- Rollback: /srv/wonderelian/releases/20260914-ai-first-product
+- Source remains /Users/yongyuan/.codex/worktrees/wonderelian-note-20260914/site.
+- Added note 07 / Product Notes 02 first in archive, above note 06; featured essay unchanged.
+- Complete Chinese and English text, four sections and four original PDF images each. WeChat advertising/footer controls excluded. Chinese artwork retained with translated English captions; all copy examples and caveats translated in body text.
+- Shared paired-device layout extended to the two new captures; supplemental glyphs cover all 389 Chinese characters at four font weights.
+- Build and 9/9 tests passed. English desktop screenshot inspected in IAB after ego screenshot timeout; Chinese mobile DOM and overflow checked. Live homepage order, article language switch, and four chapters checked.
+- 121 build files hash-verified on server; atomic symlink update with nginx -t before/after.
+- Public homepage, article, sitemap, llms.txt, JS/CSS and all four images returned 200 and matched local hashes.
+- JS assets/index-DaScXfGz.js; CSS assets/index-DDsuesSx.css.
+
+---
+
 # Current website release — September 14, 2026
 
 - Production: https://wonderelian.com/

@@ -137,3 +137,19 @@ test("publishes the complete bilingual AI product note above Odyssey", async () 
   assert.match(html, /"@type": "BlogPosting"/);
   assert.match(html, /2026-09-14/);
 });
+
+test("publishes bilingual homepage clarity note first in the archive", async () => {
+  const { articles } = await import("../src/articles.js");
+  const note = articles.filter((a) => !a.featured)[0];
+  assert.equal(note.slug, "ai-homepage-beautiful-but-unclear");
+  for (const lang of ["zh", "en"]) {
+    assert.equal((note[lang].content.match(/^## /gm) || []).length, 4);
+    const images = [...note[lang].content.matchAll(/!\[.*?\]\((.*?)\)/g)];
+    assert.equal(images.length, 4);
+    for (const image of images) await access(new URL(`../public${image[1]}`, import.meta.url));
+  }
+  assert.match(note.en.content, /there are no conversion data/);
+  const html = await readFile(new URL("../dist/client/notes/ai-homepage-beautiful-but-unclear/index.html", import.meta.url), "utf8");
+  assert.match(html, /Ask AI to Look Like a First-Time Visitor/);
+  assert.match(html, /"@type": "BlogPosting"/);
+});
