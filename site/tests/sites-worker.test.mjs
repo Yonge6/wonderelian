@@ -138,9 +138,9 @@ test("publishes the complete bilingual AI product note above Odyssey", async () 
   assert.match(html, /2026-09-14/);
 });
 
-test("publishes bilingual homepage clarity note first in the archive", async () => {
+test("keeps the bilingual homepage clarity note immediately after the newer OPC note", async () => {
   const { articles } = await import("../src/articles.js");
-  const note = articles.filter((a) => !a.featured)[0];
+  const note = articles.filter((a) => !a.featured)[1];
   assert.equal(note.slug, "ai-homepage-beautiful-but-unclear");
   for (const lang of ["zh", "en"]) {
     assert.equal((note[lang].content.match(/^## /gm) || []).length, 4);
@@ -151,5 +151,22 @@ test("publishes bilingual homepage clarity note first in the archive", async () 
   assert.match(note.en.content, /there are no conversion data/);
   const html = await readFile(new URL("../dist/client/notes/ai-homepage-beautiful-but-unclear/index.html", import.meta.url), "utf8");
   assert.match(html, /Ask AI to Look Like a First-Time Visitor/);
+  assert.match(html, /"@type": "BlogPosting"/);
+});
+
+test("publishes bilingual OPC opportunity note first in the archive", async () => {
+  const { articles } = await import("../src/articles.js");
+  const note = articles.filter((article) => !article.featured)[0];
+  assert.equal(note.slug, "ai-era-opc-opportunity");
+  for (const language of ["zh", "en"]) {
+    assert.equal((note[language].content.match(/^## /gm) || []).length, 7);
+    const images = [...note[language].content.matchAll(/!\[.*?\]\((.*?)\)/g)];
+    assert.equal(images.length, 2);
+    for (const image of images) await access(new URL(`../public${image[1]}`, import.meta.url));
+  }
+  assert.match(note.en.content, /hypothetical scenario/);
+  assert.match(note.en.content, /does not claim that the products have achieved corresponding revenue or integrations/);
+  const html = await readFile(new URL("../dist/client/notes/ai-era-opc-opportunity/index.html", import.meta.url), "utf8");
+  assert.match(html, /Small Products Connect Interesting Souls/);
   assert.match(html, /"@type": "BlogPosting"/);
 });

@@ -1,3 +1,19 @@
+# Current website release — September 18, 2026
+
+- Article: https://wonderelian.com/notes/ai-era-opc-opportunity/
+- Active release: /srv/wonderelian/releases/20260918-opc-opportunity
+- Rollback: /srv/wonderelian/releases/20260915-homepage-clarity
+- Source remains /Users/yongyuan/.codex/worktrees/wonderelian-note-20260914/site.
+- Added note 08 first in the archive, above note 07; featured essay unchanged.
+- Complete Chinese and English text with seven sections and two source illustrations per language. WeChat footer, QR code, and advertising chrome excluded.
+- Added scoped Chinese glyph coverage for the new article at all four font weights.
+- Build and 10/10 tests passed. English desktop and Chinese 390px mobile layouts checked; both illustrations loaded and no horizontal overflow was found.
+- All 136 release files passed server SHA-256 verification; Nginx configuration passed before and after the atomic symlink switch.
+- Public homepage, article, sitemap, llms.txt, JS/CSS and both images returned exact local-build hashes. Live homepage order and both article languages were read back; the article has seven chapters and no desktop or mobile overflow.
+- JS assets/index-BD1KkpCj.js; CSS assets/index-D1ypPUxa.css.
+
+---
+
 # Current website release — September 15, 2026
 
 - Article: https://wonderelian.com/notes/ai-homepage-beautiful-but-unclear/
