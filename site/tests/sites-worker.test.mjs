@@ -188,3 +188,22 @@ test("publishes the bilingual shared-subscriptions note first in the archive", a
   assert.match(html, /"@type": "BlogPosting"/);
   assert.match(html, /2026-09-18/);
 });
+
+test("removes the Maker Business and Graphic Brutalism notes from public discovery", async () => {
+  const { articles } = await import("../src/articles.js");
+  const removed = ["maker-business-three-numbers", "graphic-brutalism-honest-power"];
+  assert.deepEqual(
+    articles.filter((article) => removed.includes(article.slug)),
+    [],
+  );
+
+  const [sitemap, llms] = await Promise.all([
+    readFile(new URL("../dist/client/sitemap.xml", import.meta.url), "utf8"),
+    readFile(new URL("../dist/client/llms.txt", import.meta.url), "utf8"),
+  ]);
+  for (const slug of removed) {
+    assert.doesNotMatch(sitemap, new RegExp(slug));
+    assert.doesNotMatch(llms, new RegExp(slug));
+    await assert.rejects(access(new URL(`../dist/client/notes/${slug}/index.html`, import.meta.url)));
+  }
+});

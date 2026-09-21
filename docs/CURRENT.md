@@ -1,3 +1,17 @@
+# Current website release — September 21, 2026 (remove two notes)
+
+- Production: https://wonderelian.com/#notes
+- Active release: /srv/wonderelian/releases/20260921-remove-maker-brutalism
+- Rollback: /srv/wonderelian/releases/20260921-shared-subscriptions
+- Removed Maker Business and Graphic Brutalism from the public article collection, homepage archive, prerendered routes, sitemap, and llms.txt.
+- Source article definitions and media remain in Git history; the public build no longer exposes either note.
+- Build and 12/12 tests passed. Local homepage readback contains seven notes, omits both removed slugs, and has no horizontal overflow.
+- All 141 release files passed server SHA-256 verification; Nginx configuration passed before and after the atomic symlink switch.
+- Public homepage, sitemap, llms.txt, JS, and CSS returned exact local-build hashes. Live homepage contains seven note links and neither removed slug; both former article URLs now render the general homepage without an article element.
+- JS assets/index-CgPggwus.js; CSS assets/index-CnQnSTuC.css.
+
+---
+
 # Current website release — September 21, 2026
 
 - Article: https://wonderelian.com/notes/apple-shared-subscriptions-one-person-company/

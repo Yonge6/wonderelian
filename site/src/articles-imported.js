@@ -813,4 +813,7 @@ Be real. Live fluidly.
       `,
     },
   },
-];
+].filter(
+  (article) =>
+    !["maker-business-three-numbers", "graphic-brutalism-honest-power"].includes(article.slug),
+);
