@@ -1,3 +1,20 @@
+# Current website release — September 21, 2026
+
+- Article: https://wonderelian.com/notes/apple-shared-subscriptions-one-person-company/
+- Active release: /srv/wonderelian/releases/20260921-shared-subscriptions
+- Rollback: /srv/wonderelian/releases/20260918-opc-opportunity
+- Source remains /Users/yongyuan/.codex/worktrees/wonderelian-note-20260914/site.
+- Added note 09 first in the archive, above note 08; featured essay unchanged.
+- Complete Chinese and English text with seven sections and two source illustrations per language. WeChat author card, QR code, footer, and advertising chrome excluded.
+- Apple Bundles and Suites facts were checked against Apple Developer pages; the article preserves the request/approval, StoreKit 2, platform-timing, app-limit, and no-current-Suite caveats.
+- Added article-scoped Chinese font subsets at all four site weights.
+- Build and 11/11 tests passed. English desktop and Chinese 390px mobile layouts checked; both illustrations loaded and no horizontal overflow was found.
+- All 143 release files passed server SHA-256 verification; Nginx configuration passed before and after the atomic symlink switch.
+- Public homepage, article, sitemap, llms.txt, JS/CSS and both images returned exact local-build hashes. Live homepage order and both article languages were read back; the article has seven chapters, both images loaded, and no desktop or mobile overflow.
+- JS assets/index-CjUR6TrD.js; CSS assets/index-CnQnSTuC.css.
+
+---
+
 # Current website release — September 18, 2026
 
 - Article: https://wonderelian.com/notes/ai-era-opc-opportunity/

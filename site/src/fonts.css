@@ -111,3 +111,9 @@
 @font-face { font-family: "Noto Sans SC"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/note-20260918-noto-sans-sc-112-500-normal.woff2") format("woff2"); unicode-range: U+5348,U+5353,U+5360,U+5E8A,U+6293; }
 @font-face { font-family: "Noto Sans SC"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/note-20260918-noto-sans-sc-119-500-normal.woff2") format("woff2"); unicode-range: U+6708; }
 @font-face { font-family: "Noto Sans SC"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/note-20260918-noto-sans-sc-chinese-simplified-500-normal.woff2") format("woff2"); unicode-range: U+4E3E,U+4E70,U+4EE4,U+5047,U+5141,U+514D,U+5217,U+5236,U+52BF,U+558A,U+56FD,U+578B,U+5BA2,U+5C3D,U+5C97,U+5DEE,U+5E02,U+5E72,U+5E97,U+5FC6,U+60EF,U+62A4,U+633A,U+63D2,U+6599,U+67B6,U+6F5C,U+7279,U+76D6,U+76EF,U+786C,U+79EF,U+7A33,U+7BC7,U+7CBE,U+7D2F,U+806A,U+82F9,U+85CF,U+88C5,U+8986,U+8BA2,U+8BBF,U+8D39,U+8DD1,U+8DDF,U+8DE8,U+8F85,U+9192,U+961F,U+9886,U+9B42,U+9F50; }
+
+/* Product Notes 04 glyphs. Each file is a text subset of the complete bilingual article. */
+@font-face { font-family: "Noto Serif SC"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/note-20260921-noto-serif-sc-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Noto Serif SC"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/note-20260921-noto-serif-sc-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Noto Sans SC"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/note-20260921-noto-sans-sc-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Noto Sans SC"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/note-20260921-noto-sans-sc-500-normal.woff2") format("woff2"); }

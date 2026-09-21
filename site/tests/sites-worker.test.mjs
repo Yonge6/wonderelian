@@ -140,7 +140,7 @@ test("publishes the complete bilingual AI product note above Odyssey", async () 
 
 test("keeps the bilingual homepage clarity note immediately after the newer OPC note", async () => {
   const { articles } = await import("../src/articles.js");
-  const note = articles.filter((a) => !a.featured)[1];
+  const note = articles.filter((a) => !a.featured)[2];
   assert.equal(note.slug, "ai-homepage-beautiful-but-unclear");
   for (const lang of ["zh", "en"]) {
     assert.equal((note[lang].content.match(/^## /gm) || []).length, 4);
@@ -156,7 +156,7 @@ test("keeps the bilingual homepage clarity note immediately after the newer OPC 
 
 test("publishes bilingual OPC opportunity note first in the archive", async () => {
   const { articles } = await import("../src/articles.js");
-  const note = articles.filter((article) => !article.featured)[0];
+  const note = articles.filter((article) => !article.featured)[1];
   assert.equal(note.slug, "ai-era-opc-opportunity");
   for (const language of ["zh", "en"]) {
     assert.equal((note[language].content.match(/^## /gm) || []).length, 7);
@@ -169,4 +169,22 @@ test("publishes bilingual OPC opportunity note first in the archive", async () =
   const html = await readFile(new URL("../dist/client/notes/ai-era-opc-opportunity/index.html", import.meta.url), "utf8");
   assert.match(html, /Small Products Connect Interesting Souls/);
   assert.match(html, /"@type": "BlogPosting"/);
+});
+
+test("publishes the bilingual shared-subscriptions note first in the archive", async () => {
+  const { articles } = await import("../src/articles.js");
+  const note = articles.filter((article) => !article.featured)[0];
+  assert.equal(note.slug, "apple-shared-subscriptions-one-person-company");
+  for (const language of ["zh", "en"]) {
+    assert.equal((note[language].content.match(/^## /gm) || []).length, 7);
+    const images = [...note[language].content.matchAll(/!\[.*?\]\((.*?)\)/g)];
+    assert.equal(images.length, 2);
+    for (const image of images) await access(new URL(`../public${image[1]}`, import.meta.url));
+  }
+  assert.match(note.en.content, /has not enabled an Apple Suite/);
+  assert.match(note.en.content, /makes no promise about revenue or conversion/);
+  const html = await readFile(new URL("../dist/client/notes/apple-shared-subscriptions-one-person-company/index.html", import.meta.url), "utf8");
+  assert.match(html, /What I want to build is a body of work/);
+  assert.match(html, /"@type": "BlogPosting"/);
+  assert.match(html, /2026-09-18/);
 });
