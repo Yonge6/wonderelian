@@ -25,7 +25,6 @@
   --radius-control: 20px;
   --radius-card: 28px;
   --radius-panel: 36px;
-  --radius-section: 52px;
   --radius-pill: 999px;
   --surface-gap: 16px;
 }
@@ -2773,9 +2772,7 @@ section[id] {
 
 /* Flowing surfaces: shared radii scale with the existing mobile breakpoint.
    Artwork, including QR pixels, stays unchanged; only its outer frame is rounded. */
-.site-header { border-radius: 0 0 var(--radius-control) var(--radius-control); }
-.hero { border-radius: 0 0 var(--radius-section) var(--radius-section); }
-.about-section { border-radius: var(--radius-section); }
+/* Full-width header and section backgrounds keep straight viewport edges. */
 .wordmark, .main-nav a, .site-footer a { border-radius: var(--radius-small); }
 .menu-toggle, .language-toggle, .drawer-back, .drawer-close, .support-close { border-radius: var(--radius-pill); }
 .drawer-back { border-right: 0; }
@@ -2888,7 +2885,6 @@ section[id] {
     --radius-control: 18px;
     --radius-card: 24px;
     --radius-panel: 28px;
-    --radius-section: 36px;
     --surface-gap: 12px;
   }
   .site-drawer { width: calc(100% - 16px); inset: 8px; height: calc(100% - 16px); }

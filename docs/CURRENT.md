@@ -1,3 +1,13 @@
+# Straight section edges — 2026-09-23
+
+- Live: `20260923-square-sections`; rollback: `20260923-rounded-water`.
+- Removed rounding from the full-width header, hero and About backgrounds across all breakpoints; cards and controls stay rounded.
+- Build and 18 checks passed. Local 555px/1280px and live 1577px DOM confirms all three section radii are 0px.
+- All 245 staged files checksum-verified; Nginx checks passed; atomic switch. Four public resources match build hashes.
+- JS `index-ByeD29VY.js`; CSS `index-Dkizd-8a.css`.
+
+---
+
 # Rounded website release — 2026-09-23
 
 - Production: https://wonderelian.com/zh/#notes
