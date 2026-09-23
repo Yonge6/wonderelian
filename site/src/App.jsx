@@ -12,7 +12,11 @@ import {
   Sun,
   X,
 } from "@phosphor-icons/react";
-import { articles } from "./articles";
+import articles from "./generated/articles.json";
+import readingImages from "./generated/reading-images.json";
+import { chapters, markdownHtml } from "./markdown.js";
+import { homeAnchor, pagePath, parseRoute } from "./routes.js";
+import { useDialogFocus, useHashNavigation } from "./usePageNavigation.js";
 import { profileCopy } from "./profile-copy.js";
 
 const projects = [
@@ -215,7 +219,7 @@ const contacts = [
 
 const copy = {
   zh: {
-    pageTitle: "WonderElian | Design, AI & Independent Creative Products",
+    pageTitle: "WonderElian · 永歌的设计、AI、产品与生活",
     homeLabel: "Wonder Elian 首页",
     navLabel: "主导航",
     nav: [
@@ -259,7 +263,7 @@ const copy = {
     aboutDrawer: "关于 WonderElian",
     aboutDrawerCopy: "认识这个由设计与生命探索构成的世界",
     contact: "联系 Elian",
-    aboutContact: "认识 Elian",
+    aboutContact: "联系 Elian",
     viewWork: "沿途所作",
     contactCopy: "邮箱与社交媒体",
     support: "随喜相助",
@@ -275,7 +279,7 @@ const copy = {
     lifePath: ["认识自己", "接纳自己", "成为自己", "活出自己"],
     lifeQuote: "向内认识自己，向外如水而行。",
     lifeVision: "我们愿陪伴彼此走过低谷与高峰，探索身心健康的工作与生活方式；真实面对自己与世界，善待自己、他人与生命，并在创造和欣赏中活出生命之美。",
-    contactIntro: "你可以在这些地方找到 Elian。欢迎分享感受、提出建议，或只是来说声你好。",
+    contactIntro: "如果你正在做产品体验、品牌网站，或想把一个 AI 产品想法做出来，欢迎聊聊。也欢迎分享阅读感受，或只是来说声你好。",
     videoChannel: "视频号",
     viewQr: "查看二维码",
     videoCodeAlt: "Elian 的视频号二维码",
@@ -334,7 +338,7 @@ const copy = {
     aboutDrawer: "About WonderElian",
     aboutDrawerCopy: "Meet a world shaped by design and the exploration of life",
     contact: "Contact Elian",
-    aboutContact: "Meet Elian",
+    aboutContact: "Contact Elian",
     viewWork: "Along the Way",
     contactCopy: "Email and social channels",
     support: "Support the journey",
@@ -350,7 +354,7 @@ const copy = {
     lifePath: ["Know yourself", "Accept yourself", "Become yourself", "Live as yourself"],
     lifeQuote: "Know yourself within; move through the world like water.",
     lifeVision: "We hope to accompany one another through valleys and peaks, exploring healthier ways to work and live: facing self and world truthfully, treating life with kindness, and creating and appreciating beauty.",
-    contactIntro: "These are the places where you can find Elian. Share a thought, suggest an idea, or simply say hello.",
+    contactIntro: "Working on a product experience, a brand website, or an idea for an AI product? Let’s talk. You’re also welcome to share a thought about an essay, or simply say hello.",
     videoChannel: "WeChat Channels",
     viewQr: "View QR code",
     videoCodeAlt: "Elian's WeChat Channels QR code",
@@ -387,46 +391,14 @@ function RichTextLines({ text }) {
 }
 
 function ArticleBody({ content }) {
-  const blocks = content.trim().split(/\n\s*\n/);
-
-  return (
-    <div className="article-body">
-      {blocks.map((block, index) => {
-        const imageMatch = block.match(/^!\[(.*?)\]\((.*?)\)$/s);
-        if (imageMatch) {
-          const [, alt, src] = imageMatch;
-          return (
-            <figure className={/(?:2026-09-14-ai-first-product\/(?:sound-library|player)|2026-09-15-ai-homepage-clarity\/(?:player|breathing))\.png$/.test(src) ? "article-figure article-figure--product-screen" : src.endsWith("image-07.png") ? "article-figure article-figure--poster" : "article-figure"} key={`${src}-${index}`}>
-              <img src={src} alt={alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
-              {alt ? <figcaption>{alt}</figcaption> : null}
-            </figure>
-          );
-        }
-
-        if (block.startsWith("## ")) {
-          const heading = block.slice(3);
-          const [chapter, ...title] = heading.split("｜");
-          return (
-            <header className="article-chapter" key={`${heading}-${index}`}>
-              <span>{chapter}</span>
-              <h2>{title.join("｜")}</h2>
-            </header>
-          );
-        }
-
-        if (block.startsWith("### ")) {
-          return <h3 key={`${block}-${index}`}>{block.slice(4)}</h3>;
-        }
-
-        if (block.startsWith("> ")) {
-          return <blockquote key={`${block}-${index}`}><RichTextLines text={block} /></blockquote>;
-        }
-
-        return <p key={`${block}-${index}`}><RichTextLines text={block} /></p>;
-      })}
-    </div>
-  );
+  return <div className="article-body" dangerouslySetInnerHTML={{__html:markdownHtml(content,readingImages)}} />;
 }
+
+const topics = {
+  product: { zh: "AI 与产品", en: "AI & PRODUCT" },
+  opc: { zh: "一人公司", en: "SOLO BUSINESS" },
+  life: { zh: "生活与成长", en: "LIFE & GROWTH" },
+};
 
 function NotesSection({ language }) {
   const featuredArticle = articles.find((article) => article.featured) ?? articles[0];
@@ -441,16 +413,17 @@ function NotesSection({ language }) {
     return (
       <a
         className={`note-card ${isFeatured ? "note-card--featured" : "note-card--archive"}`}
-        href={`/notes/${article.slug}/`}
+        href={pagePath(language,article.slug)}
         key={article.slug}
       >
-        {isFeatured && <img src={article.cover} alt="" loading="lazy" decoding="async" />}
+        {isFeatured && <img src={readingImages[article.cover]?.src || article.cover} width={readingImages[article.cover]?.width} height={readingImages[article.cover]?.height} alt="" loading="lazy" decoding="async" />}
         <span className="note-card-number">{articleNumber}</span>
         <div className="note-card-copy">
           {isFeatured && (
             <span className="note-card-pin">{language === "zh" ? "置顶主稿" : "FEATURED ESSAY"}</span>
           )}
           {isFeatured && <p>{item.label}</p>}
+          {!isFeatured && <span className="note-card-topic">{topics[article.topic][language]}</span>}
           <h3>{item.title}</h3>
           <span className="note-card-excerpt">{item.excerpt}</span>
           <span className="note-card-meta">{article.date.replaceAll("-", ".")} · {readingTime}</span>
@@ -490,32 +463,71 @@ function NotesSection({ language }) {
   );
 }
 
-function ArticlePage({ article, language }) {
-  const item = article[language] ?? article.zh;
-  const author = article.author[language] ?? article.author.zh;
-  const readingTime = article.readingTime[language] ?? article.readingTime.zh;
-
+function ArticlePage({ article, language, onContact, onReady }) {
+  const item = article[language];
+  const [content, setContent] = useState(() => {
+    try {
+      const data = JSON.parse(document.getElementById("article-data")?.textContent || "null");
+      return data?.slug === article.slug && data?.language === language ? data.content : null;
+    } catch { return null; }
+  });
+  const [failed,setFailed] = useState(false);
+  const [retry,setRetry] = useState(0);
+  useEffect(() => {
+    if (content) { onReady(true); return; }
+    const controller = new AbortController();
+    setFailed(false);
+    fetch(item.dataPath,{signal:controller.signal}).then(response => {
+      if (!response.ok) throw new Error("Article unavailable");
+      return response.json();
+    }).then(data => {
+      if (data.slug !== article.slug || data.language !== language || !data.content) throw new Error("Article mismatch");
+      setContent(data.content);
+    }).catch(error => { if (error.name !== "AbortError") setFailed(true); });
+    return () => controller.abort();
+  },[article.slug,language,item.dataPath,content,retry]);
+  const related = articles.find(note=>note.slug===article.related);
+  const product = article.product === "wendao"
+    ? {name:language === "zh" ? "三慢问道" : "Wendao",href:"https://wendao.wonderelian.com"}
+    : {name:language === "zh" ? "一休冥想" : "Yixiu Meditation",href:`https://yixiu.wonderelian.com/?lang=${language}`};
+  const outline = content ? chapters(content) : [];
   return (
     <main className="article-page">
       <article>
         <header className="article-hero">
-          <a className="article-back" href="/#notes"><ArrowLeft size={18} weight="light" aria-hidden="true" />{item.back}</a>
-          <p className="eyebrow">{item.label}</p>
+          <a className="article-back" href={homeAnchor(language,"#notes")}><ArrowLeft size={18} weight="light" aria-hidden="true" />{item.back}</a>
+          <p className="eyebrow">{item.label} · {topics[article.topic][language]}</p>
           <h1>{item.title}</h1>
           <p className="article-deck">{item.excerpt}</p>
           <div className="article-meta">
-            <span>Design · AI · Products · Life</span>
-            <span>{author}</span>
-            <span>{article.date.replaceAll("-", ".")}</span>
-            <span>{readingTime}</span>
+            <span>Design · AI · Products · Life</span><span>{article.author[language]}</span>
+            <span>{article.date.replaceAll("-", ".")}</span><span>{article.readingTime[language]}</span>
           </div>
         </header>
-        <ArticleBody content={item.content} />
+        {outline.length > 0 && <details className="article-toc">
+          <summary>{language === "zh" ? "这篇随记的章节" : "In this essay"}<span>{outline.length}</span></summary>
+          <nav aria-label={language === "zh" ? "文章目录" : "Table of contents"}>
+            {outline.map((heading,index)=><a key={heading.id} href={`#${heading.id}`}><span>{String(index+1).padStart(2,"0")}</span>{heading.title}</a>)}
+          </nav>
+        </details>}
+        {content ? <ArticleBody content={content} /> : <div className="article-status" role="status">
+          <p>{failed ? (language === "zh" ? "这篇随记暂时未能加载。" : "This essay could not be loaded.") : (language === "zh" ? "正在打开随记…" : "Opening the essay…")}</p>
+          {failed && <button type="button" onClick={()=>setRetry(value=>value+1)}>{language === "zh" ? "重新加载" : "Try again"}</button>}
+        </div>}
       </article>
-
+      {content && <section className="article-next" aria-labelledby="article-next-title">
+        <p className="eyebrow" id="article-next-title">{language === "zh" ? "继续探索" : "KEEP EXPLORING"}</p>
+        {related && <a className="article-related" href={pagePath(language,related.slug)}>
+          <span>{language === "zh" ? "下一篇随记" : "ANOTHER ESSAY"}</span><h2>{related[language].title}</h2><ArrowRight size={24} aria-hidden="true" />
+        </a>}
+        <div className="article-next-actions">
+          <a href={product.href} target="_blank" rel="noreferrer">{language === "zh" ? "体验" : "Explore"} {product.name}<ArrowRight size={18} aria-hidden="true" /></a>
+          <button type="button" onClick={onContact}>{language === "zh" ? "聊聊你的产品想法" : "Talk about your product idea"}<ArrowRight size={18} aria-hidden="true" /></button>
+        </div>
+      </section>}
       <footer className="article-end">
         <span>{language === "zh" ? "向内认识自己，向外如水而行。" : "Know yourself within. Move like water through the world."}</span>
-        <a href="/#notes">{item.back}<ArrowRight size={18} weight="light" aria-hidden="true" /></a>
+        <a href={homeAnchor(language,"#notes")}>{item.back}<ArrowRight size={18} weight="light" aria-hidden="true" /></a>
       </footer>
     </main>
   );
@@ -537,12 +549,15 @@ function LanguageToggle({ language, label, onToggle, compact = false }) {
 }
 
 export function App() {
-  const [language, setLanguage] = useState(() => window.localStorage.getItem("wonderelian-language") || "en");
+  const route = parseRoute(window.location.pathname);
+  const language = route.language || "en";
+  const [articleReady,setArticleReady] = useState(false);
   const [theme, setTheme] = useState(() => window.localStorage.getItem("wonderelian-theme") || "light");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerView, setDrawerView] = useState("home");
   const [supportOpen, setSupportOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
+  const [wechatOpen,setWechatOpen] = useState(false);
   const [ambientPlaying, setAmbientPlaying] = useState(false);
   const [ambientSound, setAmbientSound] = useState("morning-birds");
   const ambientAudioRef = useRef(null);
@@ -552,18 +567,20 @@ export function App() {
   const activeAmbientSound = ambientSounds.find((sound) => sound.id === ambientSound) || ambientSounds[0];
   const activeAmbientLabel = activeAmbientSound[language];
   const ambientYixiuHref = `https://yixiu.wonderelian.com/?scene=${activeAmbientSound.scene}&lang=${language}&utm_source=wonderelian&utm_medium=owned_referral&utm_campaign=yixiu_global_growth&utm_content=ambient_drawer`;
-  const articleSlug = window.location.pathname.match(/^\/notes\/([^/]+)\/?$/)?.[1];
+  const articleSlug = route.slug;
   const activeArticle = articles.find((article) => article.slug === articleSlug);
   const activeArticleCopy = activeArticle ? (activeArticle[language] ?? activeArticle.zh) : null;
   const activeArticleUsesChineseFallback = Boolean(activeArticle && !activeArticle[language] && activeArticle.zh);
-  const homeHref = activeArticle ? "/#world" : "#world";
+  const homeHref = activeArticle || !route.valid || route.slug ? homeAnchor(language,"#world") : "#world";
+  const missingPage = !route.valid || Boolean(articleSlug && !activeArticle);
+  useHashNavigation(!activeArticle || articleReady);
 
   useEffect(() => {
     document.documentElement.lang = isZh || activeArticleUsesChineseFallback ? "zh-CN" : "en";
-    document.title = activeArticleCopy ? `${activeArticleCopy.title} | WonderElian` : c.pageTitle;
+    document.title = missingPage ? (isZh ? "找不到这一页 | WonderElian" : "Page not found | WonderElian") : activeArticleCopy ? `${activeArticleCopy.title} | WonderElian` : c.pageTitle;
     const canonicalUrl = activeArticle
-      ? `https://wonderelian.com/notes/${activeArticle.slug}/`
-      : "https://wonderelian.com/";
+      ? `https://wonderelian.com${pagePath(language,activeArticle.slug)}`
+      : `https://wonderelian.com${pagePath(language)}`;
     const homeDescription = profileCopy[language].description;
     const description = activeArticleCopy ? activeArticleCopy.excerpt : homeDescription;
     const canonical = document.querySelector('link[rel="canonical"]');
@@ -589,7 +606,7 @@ export function App() {
     if (ogTitle) ogTitle.content = activeArticleCopy ? activeArticleCopy.title : c.pageTitle;
     if (ogDescription) ogDescription.content = description;
     if (ogUrl) ogUrl.content = canonicalUrl;
-    const socialImage = activeArticle ? `https://wonderelian.com${activeArticle.cover}` : "https://wonderelian.com/assets/hero-flow-image2-v3.webp";
+    const socialImage = activeArticle ? `https://wonderelian.com${readingImages[activeArticle.cover]?.src || activeArticle.cover}` : "https://wonderelian.com/assets/hero-flow-image2-v3.webp";
     const socialImageAlt = activeArticleCopy ? activeArticleCopy.title : (isZh ? "WonderElian 流动的抽象水彩山水" : "A flowing abstract watercolor landscape representing WonderElian");
     if (ogImage) ogImage.content = socialImage;
     if (ogImageAlt) ogImageAlt.content = socialImageAlt;
@@ -615,7 +632,7 @@ export function App() {
       }
     }
     window.localStorage.setItem("wonderelian-language", language);
-  }, [activeArticle, activeArticleCopy, activeArticleUsesChineseFallback, c.pageTitle, isZh, language]);
+  }, [activeArticle, activeArticleCopy, activeArticleUsesChineseFallback, c.pageTitle, isZh, language, missingPage]);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -633,26 +650,23 @@ export function App() {
   }, [ambientSound]);
 
   useEffect(() => {
-    document.body.style.overflow = drawerOpen || supportOpen || videoOpen ? "hidden" : "";
+    document.body.style.overflow = drawerOpen || supportOpen || videoOpen || wechatOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [drawerOpen, supportOpen, videoOpen]);
+  }, [drawerOpen, supportOpen, videoOpen, wechatOpen]);
 
-  useEffect(() => {
-    const onKeyDown = (event) => {
-      if (event.key === "Escape") {
-        setSupportOpen(false);
-        setVideoOpen(false);
-        setDrawerOpen(false);
-        setDrawerView("home");
-      }
-    };
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
-
-  const toggleLanguage = () => setLanguage((current) => (current === "zh" ? "en" : "zh"));
+  const modalKind = wechatOpen ? "wechat" : videoOpen ? "video" : supportOpen ? "support" : drawerOpen ? "drawer" : null;
+  useDialogFocus(modalKind,drawerView,() => {
+    if (wechatOpen) setWechatOpen(false);
+    else if (videoOpen) setVideoOpen(false);
+    else if (supportOpen) setSupportOpen(false);
+    else { setDrawerOpen(false); setDrawerView("home"); }
+  });
+  const toggleLanguage = () => {
+    const target = language === "zh" ? "en" : "zh";
+    window.location.assign(pagePath(target,activeArticle?.slug) + window.location.search + window.location.hash);
+  };
   const toggleAmbient = async () => {
     const audio = ambientAudioRef.current;
     if (!audio) return;
@@ -703,13 +717,14 @@ export function App() {
 
   return (
     <div className="site-shell">
+      <div className="site-content">
       <header className="site-header">
         <Wordmark label={c.homeLabel} text="Wonder Elian" href={homeHref} />
 
         <div className="header-actions">
           <nav className="main-nav" aria-label={c.navLabel}>
             {c.nav.map(([label, href]) => (
-              <a key={label} href={activeArticle ? `/${href}` : href}>{label}</a>
+              <a key={label} href={activeArticle || missingPage ? homeAnchor(language,href) : href}>{label}</a>
             ))}
           </nav>
 
@@ -739,7 +754,7 @@ export function App() {
             type="button"
             aria-label={drawerOpen ? c.closeMenu : c.openMenu}
             aria-expanded={drawerOpen}
-            aria-controls="wonderelian-drawer"
+            aria-controls="drawer-dialog"
             onClick={toggleDrawer}
           >
             {drawerOpen ? <X size={22} weight="light" /> : <List size={24} weight="light" />}
@@ -756,7 +771,7 @@ export function App() {
         onPause={() => setAmbientPlaying(false)}
       />
 
-      {activeArticle ? <ArticlePage article={activeArticle} language={language} /> : <main>
+      {missingPage ? <main className="missing-page"><p className="eyebrow">404</p><h1>{language === "zh" ? "这一页已不在这里。" : "This page is no longer here."}</h1><p>{language === "zh" ? "还有其他随记，留给此刻的你。" : "There are other notes to explore."}</p><a href={homeAnchor(language,"#notes")}>{language === "zh" ? "看看其他随记" : "Explore Field Notes"}<ArrowRight size={18} /></a></main> : activeArticle ? <ArticlePage key={`${activeArticle.slug}-${language}`} article={activeArticle} language={language} onContact={openContact} onReady={setArticleReady} /> : <main>
         <section className="hero" id="world" aria-labelledby="hero-title">
           <img
             className="hero-current"
@@ -774,7 +789,7 @@ export function App() {
             <p className="hero-spirit"><RichTextLines text={c.heroSpirit} /></p>
 
             <div className="hero-ctas">
-              <a className="text-cta" href="#now">
+              <a className="text-cta text-cta--primary" href="#now">
                 <span>{c.enterNow}</span>
                 <span>{c.enterNowAlt}</span>
                 <ArrowRight size={19} weight="light" aria-hidden="true" />
@@ -784,6 +799,7 @@ export function App() {
                 <span>{c.enterNotesAlt}</span>
                 <ArrowRight size={19} weight="light" aria-hidden="true" />
               </a>
+              <button className="hero-contact" type="button" onClick={openContact}>{language === "zh" ? "聊聊你的产品想法" : "Talk about your product idea"}<ArrowRight size={18} aria-hidden="true" /></button>
             </div>
           </div>
         </section>
@@ -944,10 +960,11 @@ export function App() {
         <a href={homeHref}>{c.backToTop}</a>
       </footer>
 
+      </div>
       {drawerOpen ? (
         <div className="drawer-layer">
           <button className="drawer-backdrop" type="button" aria-label={c.closeMenu} onClick={closeDrawer} />
-          <aside className="site-drawer" id="wonderelian-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+          <aside className="site-drawer" id="drawer-dialog" tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="drawer-title">
             <header className={`drawer-header ${drawerView !== "home" ? "has-back" : ""}`}>
               {drawerView !== "home" ? (
                 <button className="drawer-back" type="button" aria-label={c.back} onClick={() => setDrawerView("home")}>
@@ -970,7 +987,7 @@ export function App() {
 
                   <nav className="drawer-primary-nav" aria-label={c.drawerNavLabel}>
                     {c.nav.map(([label, href], index) => (
-                      <a href={activeArticle ? `/${href}` : href} key={label} onClick={closeDrawer}>
+                      <a href={activeArticle || missingPage ? homeAnchor(language,href) : href} key={label} onClick={closeDrawer}>
                         <span>0{index + 1}</span>
                         <strong>{label}</strong>
                         <ArrowRight size={18} weight="light" aria-hidden="true" />
@@ -1074,6 +1091,11 @@ export function App() {
                 <section className="contact-section" aria-label={c.contact}>
                   <p className="drawer-intro">{c.contactIntro}</p>
                   <div className="contact-list">
+                    <button type="button" className="wechat-contact" onClick={()=>setWechatOpen(true)}>
+                      <span>{isZh ? "微信" : "WeChat"}</span>
+                      <strong>{isZh ? "添加好友" : "Add as a friend"}</strong>
+                      <ArrowRight size={18} weight="light" aria-hidden="true" />
+                    </button>
                     {contacts.map((contact) => (
                       <a
                         key={contact.href}
@@ -1145,7 +1167,7 @@ export function App() {
       {supportOpen ? (
         <div className="support-layer">
           <button className="support-backdrop" type="button" aria-label={c.closeMenu} onClick={() => setSupportOpen(false)} />
-          <section className="support-dialog" role="dialog" aria-modal="true" aria-labelledby="support-title">
+          <section className="support-dialog" id="support-dialog" tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="support-title">
             <button className="support-close" type="button" aria-label={c.closeMenu} onClick={() => setSupportOpen(false)}>
               <X size={23} weight="light" />
             </button>
@@ -1169,10 +1191,24 @@ export function App() {
         </div>
       ) : null}
 
+      {wechatOpen && <div className="video-layer">
+        <button className="support-backdrop" type="button" aria-label={c.closeMenu} onClick={()=>setWechatOpen(false)} />
+        <section className="video-dialog wechat-dialog" id="wechat-dialog" tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="wechat-title">
+          <button className="support-close" type="button" aria-label={c.closeMenu} onClick={()=>setWechatOpen(false)}><X size={23} weight="light" /></button>
+          <h2 id="wechat-title">{isZh ? "微信联系 Elian" : "Connect with Elian on WeChat"}</h2>
+          <img src="/assets/wechat-contact-20260923.jpg" width="888" height="1131" alt={isZh ? "Elian 永歌的微信好友二维码" : "Elian Yong’s WeChat contact QR code"} />
+          <p>{isZh ? "扫码添加好友，也可以保存图片后在微信中识别。" : "Scan to add Elian, or save the image and open it in WeChat’s scanner."}</p>
+          <div className="wechat-actions">
+            <a href="/assets/wechat-contact-20260923.jpg" target="_blank" rel="noreferrer">{isZh ? "打开原图" : "Open original"}</a>
+            <a href="/assets/wechat-contact-20260923.jpg" download="Elian-WeChat.jpg">{isZh ? "保存二维码" : "Save QR code"}</a>
+          </div>
+        </section>
+      </div>}
+
       {videoOpen ? (
         <div className="video-layer">
           <button className="support-backdrop" type="button" aria-label={c.closeMenu} onClick={() => setVideoOpen(false)} />
-          <figure className="video-dialog" role="dialog" aria-modal="true" aria-label={c.videoChannel}>
+          <figure className="video-dialog" id="video-dialog" tabIndex={-1} role="dialog" aria-modal="true" aria-label={c.videoChannel}>
             <button className="support-close" type="button" aria-label={c.closeMenu} onClick={() => setVideoOpen(false)}>
               <X size={23} weight="light" />
             </button>

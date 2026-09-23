@@ -1,3 +1,25 @@
+# WonderElian website — 2026-09-23
+
+- Production: https://wonderelian.com/zh/#notes · English: https://wonderelian.com/en/
+- Release: `/srv/wonderelian/releases/20260923-reading-bilingual-contact`
+- Rollback: `/srv/wonderelian/releases/20260921-remove-maker-brutalism`
+- Active source: `/Users/yongyuan/.codex/worktrees/wonderelian-note-20260914/site`.
+- User explicitly deferred portfolio/case-study redesign. Original project definitions and works section are byte-identical to commit `54d5e1a`, covered by a regression check.
+- Shared escaped article renderer now handles bold, italics and clickable source links. Added stable chapter IDs/TOC, related reading and product/contact next steps. Fixed initial/hash/return positioning with fixed-header offsets.
+- Contact is visible in the hero and explicit in About. Dialogs trap/restore keyboard focus, make background inert, and handle nested QR dialogs. Added the user-provided WeChat contact QR as an unchanged original, with open/save actions in both languages.
+- Stable `/zh/` and `/en/` home/article routes, localized canonical/hreflang/OG/JSON-LD, and automatic sitemap/llms generation. Legacy links retain saved language and hash via compatibility navigation.
+- Seven complete bilingual source articles moved into `site/content/notes/*.json`; exact body and original metadata/image-reference parity against the prior release verified. Homepage now imports summaries; article pages embed only their selected language and have a separate retryable payload fallback.
+- Build produces 31 responsive reading-image sets, with explicit dimensions. Original source images retained. Largest display variants total 2,631,534 bytes vs 19,791,617 original bytes (86.7% smaller); this is not a network-speed or CWV claim.
+- Homepage JS 282,874 bytes vs 411,670 before (31.3% smaller, uncompressed). Assets: `index-D3bzvYAI.js`, `index-CyrFpJKS.css`.
+- Withdrawn article definitions excluded from build; their unique images and old JS are not served by the active release. Main-domain unknown routes return a real 404; other mapped apps retain their prior route fallback.
+- Validation: 18/18 automated checks; all seven bilingual articles match the former published source; local and live mobile/desktop, chapter/language/return navigation, text formatting, source links and contact/WeChat inspected. No horizontal overflow in checked 390px views.
+- Deployment: 245 files SHA-256 verified on server; Nginx tested before/after; loopback staging checks verified 200/404 behavior and preserved other-host fallback; atomic release switch with rollback trap. Existing privacy and domain-verification files match the former release.
+- Public acceptance: 30 HTML/assets/index files match exact local hashes; 6 removed/unknown route or old-JS checks return 404, plus 2 removed article image checks return 404. QR SHA-256 `7fa8553c755052cd216e96745dbad291afc8d42b3b6c087345ca1edd91807e29` matches supplied original.
+- QA evidence: `/Users/yongyuan/Documents/WonderElian/qa/2026-09-23-release/`.
+- No App Store/iOS resubmission in this scope. No performance-score, search-index-removal, conversion or successful WeChat friend-add claim.
+
+---
+
 # Current website release — September 21, 2026 (remove two notes)
 
 - Production: https://wonderelian.com/#notes

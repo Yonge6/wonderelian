@@ -1,0 +1,555 @@
+{
+  "/assets/notes/2026-08-15-proving-to-becoming/image-01.jpg": {
+    "src": "/assets/reading/63d0627b2eed-1080.webp",
+    "width": 1080,
+    "height": 608,
+    "variants": [
+      {
+        "src": "/assets/reading/63d0627b2eed-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/63d0627b2eed-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/63d0627b2eed-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-15-proving-to-becoming/image-02.jpg": {
+    "src": "/assets/reading/82bb9f11f7af-1080.webp",
+    "width": 1080,
+    "height": 608,
+    "variants": [
+      {
+        "src": "/assets/reading/82bb9f11f7af-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/82bb9f11f7af-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/82bb9f11f7af-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-15-proving-to-becoming/image-03.jpg": {
+    "src": "/assets/reading/6a126ac3584a-1080.webp",
+    "width": 1080,
+    "height": 608,
+    "variants": [
+      {
+        "src": "/assets/reading/6a126ac3584a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/6a126ac3584a-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/6a126ac3584a-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-15-proving-to-becoming/image-04.jpg": {
+    "src": "/assets/reading/c97fb646ba55-1080.webp",
+    "width": 1080,
+    "height": 608,
+    "variants": [
+      {
+        "src": "/assets/reading/c97fb646ba55-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/c97fb646ba55-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/c97fb646ba55-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-15-proving-to-becoming/image-05.jpg": {
+    "src": "/assets/reading/2ed382233223-1080.webp",
+    "width": 1080,
+    "height": 608,
+    "variants": [
+      {
+        "src": "/assets/reading/2ed382233223-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/2ed382233223-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/2ed382233223-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-15-proving-to-becoming/image-06.jpg": {
+    "src": "/assets/reading/1956a76d6cc2-1080.webp",
+    "width": 1080,
+    "height": 608,
+    "variants": [
+      {
+        "src": "/assets/reading/1956a76d6cc2-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/1956a76d6cc2-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/1956a76d6cc2-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-15-proving-to-becoming/image-07.png": {
+    "src": "/assets/reading/9fb02996e8ae-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/9fb02996e8ae-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/9fb02996e8ae-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-09-18-shared-subscriptions/cover.png": {
+    "src": "/assets/reading/4b0e784222a6-1080.webp",
+    "width": 1080,
+    "height": 459,
+    "variants": [
+      {
+        "src": "/assets/reading/4b0e784222a6-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/4b0e784222a6-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/4b0e784222a6-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-18-shared-subscriptions/one-day.png": {
+    "src": "/assets/reading/b7ef183f76b5-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/b7ef183f76b5-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/b7ef183f76b5-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/b7ef183f76b5-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-17-opc-opportunity/cover.png": {
+    "src": "/assets/reading/aca7862ae687-1080.webp",
+    "width": 1080,
+    "height": 459,
+    "variants": [
+      {
+        "src": "/assets/reading/aca7862ae687-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/aca7862ae687-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/aca7862ae687-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-17-opc-opportunity/entryways.png": {
+    "src": "/assets/reading/39ee3511bac3-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/39ee3511bac3-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/39ee3511bac3-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/39ee3511bac3-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-15-ai-homepage-clarity/cover.png": {
+    "src": "/assets/reading/59f7d6fc122d-1080.webp",
+    "width": 1080,
+    "height": 459,
+    "variants": [
+      {
+        "src": "/assets/reading/59f7d6fc122d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/59f7d6fc122d-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/59f7d6fc122d-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-15-ai-homepage-clarity/player.png": {
+    "src": "/assets/reading/622a8f630222-590.webp",
+    "width": 590,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/assets/reading/622a8f630222-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/622a8f630222-590.webp",
+        "width": 590
+      }
+    ]
+  },
+  "/assets/notes/2026-09-15-ai-homepage-clarity/breathing.png": {
+    "src": "/assets/reading/593bdfdbe7eb-590.webp",
+    "width": 590,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/assets/reading/593bdfdbe7eb-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/593bdfdbe7eb-590.webp",
+        "width": 590
+      }
+    ]
+  },
+  "/assets/notes/2026-09-15-ai-homepage-clarity/copy-comparison.png": {
+    "src": "/assets/reading/23496b63d95d-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/23496b63d95d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/23496b63d95d-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/23496b63d95d-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-14-ai-first-product/cover.png": {
+    "src": "/assets/reading/ff4e4a67da1e-1080.webp",
+    "width": 1080,
+    "height": 462,
+    "variants": [
+      {
+        "src": "/assets/reading/ff4e4a67da1e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/ff4e4a67da1e-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/ff4e4a67da1e-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-14-ai-first-product/sound-library.png": {
+    "src": "/assets/reading/057838d8b9e7-1080.webp",
+    "width": 1080,
+    "height": 2341,
+    "variants": [
+      {
+        "src": "/assets/reading/057838d8b9e7-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/057838d8b9e7-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/057838d8b9e7-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-14-ai-first-product/player.png": {
+    "src": "/assets/reading/1258f99f9f33-1080.webp",
+    "width": 1080,
+    "height": 2341,
+    "variants": [
+      {
+        "src": "/assets/reading/1258f99f9f33-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/1258f99f9f33-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/1258f99f9f33-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-14-ai-first-product/priorities.png": {
+    "src": "/assets/reading/67b812f18f67-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/67b812f18f67-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/67b812f18f67-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/67b812f18f67-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-26-odyssey-long-way-home/image-01.png": {
+    "src": "/assets/reading/c6e8496d390b-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/c6e8496d390b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/c6e8496d390b-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/c6e8496d390b-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-26-odyssey-long-way-home/image-02.png": {
+    "src": "/assets/reading/6780fd31ac2d-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/6780fd31ac2d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/6780fd31ac2d-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/6780fd31ac2d-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-26-odyssey-long-way-home/image-03.png": {
+    "src": "/assets/reading/bb781da544c5-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/bb781da544c5-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/bb781da544c5-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/bb781da544c5-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-26-odyssey-long-way-home/image-04.png": {
+    "src": "/assets/reading/5e232eb6053f-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/5e232eb6053f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/5e232eb6053f-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/5e232eb6053f-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-26-odyssey-long-way-home/image-05.png": {
+    "src": "/assets/reading/b57b37fb3c9e-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/b57b37fb3c9e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/b57b37fb3c9e-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/b57b37fb3c9e-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-18-wendao-1-0/image-01.jpg": {
+    "src": "/assets/reading/6faf73389ff7-1080.webp",
+    "width": 1080,
+    "height": 738,
+    "variants": [
+      {
+        "src": "/assets/reading/6faf73389ff7-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/6faf73389ff7-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/6faf73389ff7-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-08-18-wendao-1-0/image-02.jpg": {
+    "src": "/assets/reading/9c1ad95b4918-900.webp",
+    "width": 900,
+    "height": 1951,
+    "variants": [
+      {
+        "src": "/assets/reading/9c1ad95b4918-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/9c1ad95b4918-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/assets/notes/2026-08-18-wendao-1-0/image-03.jpg": {
+    "src": "/assets/reading/c6e649bb961a-900.webp",
+    "width": 900,
+    "height": 1951,
+    "variants": [
+      {
+        "src": "/assets/reading/c6e649bb961a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/c6e649bb961a-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/assets/notes/2026-08-18-wendao-1-0/image-04.jpg": {
+    "src": "/assets/reading/c31b8caa664f-900.webp",
+    "width": 900,
+    "height": 1951,
+    "variants": [
+      {
+        "src": "/assets/reading/c31b8caa664f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/c31b8caa664f-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/assets/notes/2026-08-18-wendao-1-0/image-05.jpg": {
+    "src": "/assets/reading/a5bbcc90e048-900.webp",
+    "width": 900,
+    "height": 1951,
+    "variants": [
+      {
+        "src": "/assets/reading/a5bbcc90e048-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a5bbcc90e048-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/assets/notes/2026-08-18-wendao-1-0/image-06.jpg": {
+    "src": "/assets/reading/6ce8a5cad319-900.webp",
+    "width": 900,
+    "height": 1951,
+    "variants": [
+      {
+        "src": "/assets/reading/6ce8a5cad319-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/6ce8a5cad319-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/assets/notes/2026-08-18-wendao-1-0/image-07.jpg": {
+    "src": "/assets/reading/d0f375749644-900.webp",
+    "width": 900,
+    "height": 1951,
+    "variants": [
+      {
+        "src": "/assets/reading/d0f375749644-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/d0f375749644-900.webp",
+        "width": 900
+      }
+    ]
+  }
+}

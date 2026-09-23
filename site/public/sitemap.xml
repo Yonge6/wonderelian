@@ -1,51 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://wonderelian.com/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://wonderelian.com/notes/apple-shared-subscriptions-one-person-company/</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wonderelian.com/notes/ai-era-opc-opportunity/</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wonderelian.com/notes/from-proving-to-becoming/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wonderelian.com/notes/ai-homepage-beautiful-but-unclear/</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wonderelian.com/notes/ai-first-product-what-to-fix-next/</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wonderelian.com/notes/odyssey-the-long-way-home/</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wonderelian.com/notes/wendao-1-0-app-store/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://wonderelian.com/zh/</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/" /></url>
+  <url><loc>https://wonderelian.com/en/</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/" /></url>
+  <url><loc>https://wonderelian.com/zh/notes/from-proving-to-becoming/</loc><lastmod>2026-08-15</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/from-proving-to-becoming/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/from-proving-to-becoming/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/from-proving-to-becoming/" /></url>
+  <url><loc>https://wonderelian.com/en/notes/from-proving-to-becoming/</loc><lastmod>2026-08-15</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/from-proving-to-becoming/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/from-proving-to-becoming/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/from-proving-to-becoming/" /></url>
+  <url><loc>https://wonderelian.com/zh/notes/apple-shared-subscriptions-one-person-company/</loc><lastmod>2026-09-18</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/apple-shared-subscriptions-one-person-company/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/apple-shared-subscriptions-one-person-company/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/apple-shared-subscriptions-one-person-company/" /></url>
+  <url><loc>https://wonderelian.com/en/notes/apple-shared-subscriptions-one-person-company/</loc><lastmod>2026-09-18</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/apple-shared-subscriptions-one-person-company/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/apple-shared-subscriptions-one-person-company/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/apple-shared-subscriptions-one-person-company/" /></url>
+  <url><loc>https://wonderelian.com/zh/notes/ai-era-opc-opportunity/</loc><lastmod>2026-09-17</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/ai-era-opc-opportunity/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/ai-era-opc-opportunity/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/ai-era-opc-opportunity/" /></url>
+  <url><loc>https://wonderelian.com/en/notes/ai-era-opc-opportunity/</loc><lastmod>2026-09-17</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/ai-era-opc-opportunity/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/ai-era-opc-opportunity/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/ai-era-opc-opportunity/" /></url>
+  <url><loc>https://wonderelian.com/zh/notes/ai-homepage-beautiful-but-unclear/</loc><lastmod>2026-09-15</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/ai-homepage-beautiful-but-unclear/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/ai-homepage-beautiful-but-unclear/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/ai-homepage-beautiful-but-unclear/" /></url>
+  <url><loc>https://wonderelian.com/en/notes/ai-homepage-beautiful-but-unclear/</loc><lastmod>2026-09-15</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/ai-homepage-beautiful-but-unclear/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/ai-homepage-beautiful-but-unclear/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/ai-homepage-beautiful-but-unclear/" /></url>
+  <url><loc>https://wonderelian.com/zh/notes/ai-first-product-what-to-fix-next/</loc><lastmod>2026-09-14</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/ai-first-product-what-to-fix-next/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/ai-first-product-what-to-fix-next/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/ai-first-product-what-to-fix-next/" /></url>
+  <url><loc>https://wonderelian.com/en/notes/ai-first-product-what-to-fix-next/</loc><lastmod>2026-09-14</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/ai-first-product-what-to-fix-next/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/ai-first-product-what-to-fix-next/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/ai-first-product-what-to-fix-next/" /></url>
+  <url><loc>https://wonderelian.com/zh/notes/odyssey-the-long-way-home/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/odyssey-the-long-way-home/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/odyssey-the-long-way-home/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/odyssey-the-long-way-home/" /></url>
+  <url><loc>https://wonderelian.com/en/notes/odyssey-the-long-way-home/</loc><lastmod>2026-08-26</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/odyssey-the-long-way-home/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/odyssey-the-long-way-home/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/odyssey-the-long-way-home/" /></url>
+  <url><loc>https://wonderelian.com/zh/notes/wendao-1-0-app-store/</loc><lastmod>2026-08-18</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/wendao-1-0-app-store/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/wendao-1-0-app-store/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/wendao-1-0-app-store/" /></url>
+  <url><loc>https://wonderelian.com/en/notes/wendao-1-0-app-store/</loc><lastmod>2026-08-18</lastmod><xhtml:link rel="alternate" hreflang="zh-CN" href="https://wonderelian.com/zh/notes/wendao-1-0-app-store/" /><xhtml:link rel="alternate" hreflang="en" href="https://wonderelian.com/en/notes/wendao-1-0-app-store/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://wonderelian.com/en/notes/wendao-1-0-app-store/" /></url>
 </urlset>

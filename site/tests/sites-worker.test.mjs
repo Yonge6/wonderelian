@@ -18,7 +18,7 @@ test("serves existing static assets without a fallback", async () => {
   assert.deepEqual(calls, ["/assets/app.js"]);
 });
 
-test("falls back to index.html for an unknown app route", async () => {
+test("returns a genuine missing page for unknown HTML routes", async () => {
   const calls = [];
   const response = await worker.fetch(
     new Request("https://example.test/flow/step-two?source=share", {
@@ -29,16 +29,17 @@ test("falls back to index.html for an unknown app route", async () => {
         fetch: async (request) => {
           const url = new URL(request.url);
           calls.push(url.pathname + url.search);
-          return new Response(url.pathname === "/index.html" ? "app" : "missing", {
-            status: url.pathname === "/index.html" ? 200 : 404,
+          return new Response(url.pathname === "/404.html" ? "Missing page" : "missing", {
+            status: url.pathname === "/404.html" ? 200 : 404,
           });
         },
       },
     },
   );
 
-  assert.equal(response.status, 200);
-  assert.deepEqual(calls, ["/flow/step-two?source=share", "/index.html"]);
+  assert.equal(response.status, 404);
+  assert.equal(await response.text(), "Missing page");
+  assert.deepEqual(calls, ["/flow/step-two?source=share", "/404.html"]);
 });
 
 test("does not turn missing API or write requests into the app shell", async () => {
@@ -71,7 +72,7 @@ test("prerenders crawlable English article pages with article metadata", async (
   const odyssey = await readFile(new URL("../dist/client/notes/odyssey-the-long-way-home/index.html", import.meta.url), "utf8");
 
   assert.match(odyssey, /<html lang="en">/);
-  assert.match(odyssey, /rel="canonical" href="https:\/\/wonderelian\.com\/notes\/odyssey-the-long-way-home\/"/);
+  assert.match(odyssey, /rel="canonical" href="https:\/\/wonderelian\.com\/en\/notes\/odyssey-the-long-way-home\/"/);
   assert.match(odyssey, /property="og:type" content="article"/);
   assert.match(odyssey, /"@type": "BlogPosting"/);
   assert.match(odyssey, /<article>/);
@@ -90,7 +91,7 @@ test("ships global-English crawl and entity metadata", async () => {
   ]);
 
   assert.match(index, /<html lang="en">/);
-  assert.match(index, /rel="canonical" href="https:\/\/wonderelian\.com\/"/);
+  assert.match(index, /rel="canonical" href="https:\/\/wonderelian\.com\/en\/"/);
   assert.match(index, /property="og:title"/);
   assert.match(index, /name="twitter:card" content="summary_large_image"/);
   assert.match(index, /"@type": "Organization"/);
@@ -101,7 +102,7 @@ test("ships global-English crawl and entity metadata", async () => {
   assert.match(robots, /User-agent: OAI-SearchBot/);
   assert.match(robots, /User-agent: ChatGPT-User/);
   assert.match(robots, /Sitemap: https:\/\/wonderelian\.com\/sitemap\.xml/);
-  assert.match(sitemap, /<loc>https:\/\/wonderelian\.com\/<\/loc>/);
+  assert.match(sitemap, /<loc>https:\/\/wonderelian\.com\/en\/<\/loc>/);
   assert.match(llms, /# WonderElian/);
   assert.match(llms, /odyssey-the-long-way-home/);
 });

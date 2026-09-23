@@ -1,0 +1,246 @@
+[
+  {
+    "slug": "from-proving-to-becoming",
+    "featured": true,
+    "date": "2026-08-15",
+    "readingTime": {
+      "zh": "约 18 分钟",
+      "en": "18 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-08-15-proving-to-becoming/image-01.jpg",
+    "zh": {
+      "label": "片刻随记 · 01",
+      "title": "40岁，我不再急着证明自己：一个设计师用 AI 做了 7 个产品，也重新学习怎样生活",
+      "excerpt": "从大厂设计师、连续创业与人生低谷，到重新回到设计职场、AI 与独立创作。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/from-proving-to-becoming/zh-3c20248a42e7.json"
+    },
+    "en": {
+      "label": "Field Notes · 01",
+      "title": "At 40, I No Longer Rush to Prove Myself: A Designer Built Seven Products with AI—and Learned How to Live Again",
+      "excerpt": "From big-tech design, serial entrepreneurship, and a long personal low to returning to design, AI, and independent creation.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/from-proving-to-becoming/en-615f7fd58645.json"
+    },
+    "status": "published",
+    "order": 0,
+    "topic": "life",
+    "related": "odyssey-the-long-way-home",
+    "product": "yixiu"
+  },
+  {
+    "slug": "apple-shared-subscriptions-one-person-company",
+    "number": "09",
+    "date": "2026-09-18",
+    "readingTime": {
+      "zh": "约 8 分钟",
+      "en": "8 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-18-shared-subscriptions/cover.png",
+    "zh": {
+      "label": "片刻随记 · 09",
+      "title": "苹果允许多个 App 共用一份订阅，一人公司的新机会来了？",
+      "excerpt": "一份订阅，一组产品，一段长期关系：新能力真正改变的，也许不是价格，而是小开发者经营作品的方式。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/apple-shared-subscriptions-one-person-company/zh-175f60b6b844.json"
+    },
+    "en": {
+      "label": "Field Notes · 09",
+      "title": "Apple Now Lets Multiple Apps Share One Subscription. Is This a New Opportunity for One-Person Companies?",
+      "excerpt": "One subscription, a family of products, and a long-term relationship: the real change may be how small developers build a body of work.",
+      "read": "Read the note",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/apple-shared-subscriptions-one-person-company/en-8cd516d02a27.json"
+    },
+    "status": "published",
+    "order": 1,
+    "topic": "opc",
+    "related": "ai-era-opc-opportunity",
+    "product": "yixiu"
+  },
+  {
+    "slug": "ai-era-opc-opportunity",
+    "number": "08",
+    "date": "2026-09-17",
+    "readingTime": {
+      "zh": "约 9 分钟",
+      "en": "9 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-17-opc-opportunity/cover.png",
+    "zh": {
+      "label": "片刻随记 · 08",
+      "title": "AI 时代，互联网人做一人公司 OPC 的大机会，原来藏在这里！",
+      "excerpt": "把产品、设计、开发与运营接起来：先解决自己的真实需要，再用 App、网页与 AI，把小产品带向大世界。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/ai-era-opc-opportunity/zh-6b52ead44620.json"
+    },
+    "en": {
+      "label": "FIELD NOTES · 08",
+      "title": "The Big Opportunity for Internet Professionals Building One-Person Companies in the AI Era",
+      "excerpt": "Connect product, design, development, and operations: begin with a real need of your own, then use apps, the web, and AI to bring a small product to a wider world.",
+      "read": "Read the full note",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/ai-era-opc-opportunity/en-de8c328c28aa.json"
+    },
+    "status": "published",
+    "order": 2,
+    "topic": "opc",
+    "related": "ai-first-product-what-to-fix-next",
+    "product": "wendao"
+  },
+  {
+    "slug": "ai-homepage-beautiful-but-unclear",
+    "number": "07",
+    "date": "2026-09-15",
+    "readingTime": {
+      "zh": "约 5 分钟",
+      "en": "5 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-15-ai-homepage-clarity/cover.png",
+    "zh": {
+      "label": "片刻随记 · 07",
+      "title": "AI 做首页做得很漂亮，为什么别人还是看不懂？",
+      "excerpt": "首页可以有气质，也要讲清楚：这是什么，和读者有什么关系，点击以后能做什么。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/ai-homepage-beautiful-but-unclear/zh-8ba0fbe3a08b.json"
+    },
+    "en": {
+      "label": "FIELD NOTES · 07",
+      "title": "AI Made Your Homepage Beautiful. Why Do People Still Not Understand It?",
+      "excerpt": "A homepage can have character and still be clear: what is here, why it matters to the reader, and what happens after they click.",
+      "read": "Read the full note",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/ai-homepage-beautiful-but-unclear/en-b7b4c45891c2.json"
+    },
+    "status": "published",
+    "order": 3,
+    "topic": "product",
+    "related": "ai-first-product-what-to-fix-next",
+    "product": "yixiu"
+  },
+  {
+    "slug": "ai-first-product-what-to-fix-next",
+    "number": "06",
+    "date": "2026-09-14",
+    "readingTime": {
+      "zh": "约 7 分钟",
+      "en": "7 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-14-ai-first-product/cover.png",
+    "zh": {
+      "label": "片刻随记 · 06",
+      "title": "AI 做出第一版产品后，为什么越改越没底？",
+      "excerpt": "第一版已经摆在眼前，接下来怎样选出一个值得先解决的问题：先走通，再讲清，最后打磨。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/ai-first-product-what-to-fix-next/zh-ad84a96ac76e.json"
+    },
+    "en": {
+      "label": "FIELD NOTES · 06",
+      "title": "After AI Builds Your First Version, Why Does Every Change Leave You Less Sure?",
+      "excerpt": "Your first version is here. How do you choose what to fix next? Make it work, make it clear, then refine it.",
+      "read": "Read the full note",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/ai-first-product-what-to-fix-next/en-cdd8e25eb9ca.json"
+    },
+    "status": "published",
+    "order": 4,
+    "topic": "product",
+    "related": "ai-homepage-beautiful-but-unclear",
+    "product": "yixiu"
+  },
+  {
+    "slug": "odyssey-the-long-way-home",
+    "number": "05",
+    "date": "2026-08-26",
+    "readingTime": {
+      "zh": "约 9 分钟",
+      "en": "9 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-08-26-odyssey-long-way-home/image-01.png",
+    "zh": {
+      "label": "片刻随记 · 05",
+      "title": "犯过大错后，还能重新开始吗？有人用十年回家，有人用一生，才终于回到自己｜奥德赛",
+      "excerpt": "错误有代价，选择有后果；真正能回应过去的，是今天之后你选择成为怎样的人。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/odyssey-the-long-way-home/zh-ad0f8007a1a3.json"
+    },
+    "en": {
+      "label": "FIELD NOTE · 05",
+      "title": "After a Serious Mistake, Can You Begin Again? Some Take Ten Years to Return Home; Others a Lifetime to Return to Themselves | The Odyssey",
+      "excerpt": "Mistakes carry a price, and choices have consequences. What truly answers the past is the person you choose to become from this day forward.",
+      "read": "Read the essay",
+      "back": "Back to field notes",
+      "dataPath": "/content/odyssey-the-long-way-home/en-7671f41ae5f0.json"
+    },
+    "status": "published",
+    "order": 5,
+    "topic": "life",
+    "related": "from-proving-to-becoming",
+    "product": "wendao"
+  },
+  {
+    "slug": "wendao-1-0-app-store",
+    "date": "2026-08-18",
+    "readingTime": {
+      "zh": "约 9 分钟",
+      "en": "9 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-08-18-wendao-1-0/image-01.jpg",
+    "zh": {
+      "label": "片刻随记 · 04",
+      "title": "三慢问道 1.0 上架 App Store：把《道德经》读慢一点，也读近一点",
+      "excerpt": "把原文、校读、今译、现代解读与生活实践，放进一个安静的阅读体验。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/wendao-1-0-app-store/zh-cce115653d1f.json"
+    },
+    "en": {
+      "label": "FIELD NOTE · 04",
+      "title": "Wendao 1.0 Is on the App Store: Reading the Tao Te Ching More Slowly—and More Closely",
+      "excerpt": "An unhurried reading experience that brings source text, textual notes, translation, interpretation, and daily practice together.",
+      "read": "Read the essay",
+      "back": "Back to field notes",
+      "dataPath": "/content/wendao-1-0-app-store/en-9b88702b61e3.json"
+    },
+    "status": "published",
+    "order": 6,
+    "topic": "product",
+    "related": "from-proving-to-becoming",
+    "product": "wendao"
+  }
+]
