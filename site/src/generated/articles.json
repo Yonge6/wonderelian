@@ -35,6 +35,76 @@
     "product": "yixiu"
   },
   {
+    "slug": "xiazi-100-issues-1800-posters",
+    "number": "11",
+    "date": "2026-09-22",
+    "order": 1,
+    "topic": "product",
+    "related": "justin-welsh-small-by-design",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 7 分钟",
+      "en": "7 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-22-xiazi-100/cover.png",
+    "zh": {
+      "label": "片刻随记 · 11",
+      "title": "第100期，1800张海报：每天看一遍世界，其中有没有一件事，正在悄悄改变我们的未来？",
+      "excerpt": "从每天的好奇出发，把新闻筛选、双语表达与视觉判断，慢慢积累成一份持续生长的作品。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/xiazi-100-issues-1800-posters/zh-9da0578e4965.json"
+    },
+    "en": {
+      "label": "Field Notes · 11",
+      "title": "100 Issues, 1,800 Posters: Looking at the World Every Day, What Is Quietly Changing Our Future?",
+      "excerpt": "Daily curiosity becomes a body of work through choosing stories, writing in two languages, and making fresh visual judgments.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/xiazi-100-issues-1800-posters/en-5520e8af1c3c.json"
+    }
+  },
+  {
+    "slug": "justin-welsh-small-by-design",
+    "number": "10",
+    "date": "2026-09-21",
+    "order": 2,
+    "topic": "opc",
+    "related": "xiazi-100-issues-1800-posters",
+    "product": "yixiu",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 8 分钟",
+      "en": "8 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-21-justin-small-by-design/cover.png",
+    "zh": {
+      "label": "片刻随记 · 10",
+      "title": "年利润超过400万美元后，他却说：我不想把一人公司 OPC 做大",
+      "excerpt": "Justin Welsh 的选择让我重新问自己：如果一个机会真的成功，它会让我过上想要的生活吗？",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/justin-welsh-small-by-design/zh-55111aaabb83.json"
+    },
+    "en": {
+      "label": "Field Notes · 10",
+      "title": "After More Than $4 Million in Annual Profit, He Says: I Do Not Want a Bigger One-Person Business",
+      "excerpt": "Justin Welsh’s choices raise a different question: if an opportunity succeeds, will it give me the life I want?",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/justin-welsh-small-by-design/en-2c867758895e.json"
+    }
+  },
+  {
     "slug": "apple-shared-subscriptions-one-person-company",
     "number": "09",
     "date": "2026-09-18",
@@ -64,7 +134,7 @@
       "dataPath": "/content/apple-shared-subscriptions-one-person-company/en-8cd516d02a27.json"
     },
     "status": "published",
-    "order": 1,
+    "order": 3,
     "topic": "opc",
     "related": "ai-era-opc-opportunity",
     "product": "yixiu"
@@ -99,7 +169,7 @@
       "dataPath": "/content/ai-era-opc-opportunity/en-de8c328c28aa.json"
     },
     "status": "published",
-    "order": 2,
+    "order": 4,
     "topic": "opc",
     "related": "ai-first-product-what-to-fix-next",
     "product": "wendao"
@@ -134,7 +204,7 @@
       "dataPath": "/content/ai-homepage-beautiful-but-unclear/en-b7b4c45891c2.json"
     },
     "status": "published",
-    "order": 3,
+    "order": 5,
     "topic": "product",
     "related": "ai-first-product-what-to-fix-next",
     "product": "yixiu"
@@ -169,7 +239,7 @@
       "dataPath": "/content/ai-first-product-what-to-fix-next/en-cdd8e25eb9ca.json"
     },
     "status": "published",
-    "order": 4,
+    "order": 6,
     "topic": "product",
     "related": "ai-homepage-beautiful-but-unclear",
     "product": "yixiu"
@@ -204,7 +274,7 @@
       "dataPath": "/content/odyssey-the-long-way-home/en-7671f41ae5f0.json"
     },
     "status": "published",
-    "order": 5,
+    "order": 7,
     "topic": "life",
     "related": "from-proving-to-becoming",
     "product": "wendao"
@@ -238,7 +308,7 @@
       "dataPath": "/content/wendao-1-0-app-store/en-9b88702b61e3.json"
     },
     "status": "published",
-    "order": 6,
+    "order": 8,
     "topic": "product",
     "related": "from-proving-to-becoming",
     "product": "wendao"

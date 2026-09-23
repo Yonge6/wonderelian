@@ -486,7 +486,9 @@ function ArticlePage({ article, language, onContact, onReady }) {
     return () => controller.abort();
   },[article.slug,language,item.dataPath,content,retry]);
   const related = articles.find(note=>note.slug===article.related);
-  const product = article.product === "wendao"
+  const product = article.product === "xiazi"
+    ? {name:language === "zh" ? "虾子曰 · 昨日世界" : "Xiazi · Yesterday’s World",href:"https://xiazishuo.com/"}
+    : article.product === "wendao"
     ? {name:language === "zh" ? "三慢问道" : "Wendao",href:"https://wendao.wonderelian.com"}
     : {name:language === "zh" ? "一休冥想" : "Yixiu Meditation",href:`https://yixiu.wonderelian.com/?lang=${language}`};
   const outline = content ? chapters(content) : [];

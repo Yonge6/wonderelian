@@ -2,6 +2,12 @@
 
 September 23, 2026 refinement: keep the full-width site header, hero (`#world`) and About section (`#about`) square. Their containers must not get border radii at any breakpoint. Internal cards, buttons, image frames and dialogs retain the rounded treatment.
 
+About actions “联系 Elian” and “沿途所作” are plain text with arrows, without a rectangular/pill border. Preserve their interactive behavior and keyboard focus indication.
+
+Notes archive arrows have no circular background; retain the standalone arrow within each rounded card.
+
+“查看公开运营快照” and the featured essay’s “阅读全文” are also plain text-and-arrow actions without pill/rectangular frames.
+
 September 23, 2026 follow-up: the user wants all interface corners soft and rounded, “圆润 如水”. Use the shared responsive radius tokens for cards, images, buttons, drawers and dialogs. Portfolio content and arrangement remain unchanged; rounded frames and spacing now apply there too. Remove the secondary Notes introduction in both languages; keep the Notes title.
 
 September 23, 2026: the user explicitly deferred the portfolio/case-study improvement. Preserve the current works layout, project copy and artwork while implementing the reading, navigation, contact, localization and publishing improvements. Do not apply older layout proposals to this scope.

@@ -46,7 +46,7 @@ export function markdownHtml(content, images = {}) {
     const image = block.match(/^!\[(.*?)\]\((.*?)\)$/s);
     if (image) {
       const [, alt, src] = image;
-      const modifier = /(?:2026-09-14-ai-first-product\/(?:sound-library|player)|2026-09-15-ai-homepage-clarity\/(?:player|breathing))\.png$/.test(src) ? " article-figure--product-screen" : src.endsWith("image-07.png") ? " article-figure--poster" : "";
+      const modifier = /(?:2026-09-14-ai-first-product\/(?:sound-library|player)|2026-09-15-ai-homepage-clarity\/(?:player|breathing))\.png$/.test(src) ? " article-figure--product-screen" : /\/(?:image-07|poster)\.png$/.test(src) ? " article-figure--poster" : "";
       return `<figure class="article-figure${modifier}">${imageHtml(src, alt, images, index === 0)}${alt ? `<figcaption>${escapeHtml(alt)}</figcaption>` : ""}</figure>`;
     }
     if (block.startsWith("## ")) {

@@ -1,3 +1,21 @@
+# Two bilingual essays and visual refinements — 2026-09-23
+
+- Production: https://wonderelian.com/zh/#notes
+- Active release: `/srv/wonderelian/releases/20260923-two-essays-refinement`.
+- Rollback: `/srv/wonderelian/releases/20260923-square-sections`.
+- Added note 11 `xiazi-100-issues-1800-posters` (2026-09-22) and note 10 `justin-welsh-small-by-design` (2026-09-21), ahead of the Apple subscription essay. Featured essay unchanged; 9 bilingual notes total.
+- Chinese content follows the supplied PDFs, preserving updated wording, publication dates, five/six chapters, dated data qualifications, and the author’s personal perspective. Complete English translations; seven original illustrations extracted from PDFs with localized captions. WeChat page chrome/contact footer excluded.
+- Justin figures remain explicitly self-reported and unaudited; AI concept images remain identified as not being his portrait. Milestone statistics retain their September 22 snapshot and code revision, without implying a fresh operational audit.
+- Added four compact font subsets covering 123 additional Chinese glyphs at each existing weight; responsive WebP variants and article payloads generated automatically. Tall source posters use the existing bounded poster layout.
+- Full-width header, hero and About stay square. About actions, public OPS action, featured Read action and all archive arrows are borderless text/arrow elements; article cards stay rounded.
+- Build and 19 checks passed. Seven prior articles compared exactly with previous source, excluding order fields. Chinese/English desktop and mobile pages, images, TOC jump (104px offset), and visual annotations inspected.
+- 285 staged files SHA-256 verified; existing privacy and domain verification preserved. Nginx checked before/after atomic switch, previous release retained.
+- 34 public pages, article payloads, source/optimized illustrations and fonts match build hashes. Live homepage has 9 notes in expected order; all three full-width surfaces have 0px radii and annotated actions have no borders/background circles. New live pages show 5/6 chapters and 3/4 images with no observed horizontal overflow.
+- JS `index-Cw4uVF2N.js`; CSS `index-uoFQFF2Y.css`.
+- QA: `/Users/yongyuan/Documents/WonderElian/qa/2026-09-23-two-notes/`.
+
+---
+
 # Straight section edges — 2026-09-23
 
 - Live: `20260923-square-sections`; rollback: `20260923-rounded-water`.

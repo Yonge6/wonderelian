@@ -128,6 +128,131 @@
       }
     ]
   },
+  "/assets/notes/2026-09-22-xiazi-100/cover.png": {
+    "src": "/assets/reading/fd7d0291e7b9-1080.webp",
+    "width": 1080,
+    "height": 675,
+    "variants": [
+      {
+        "src": "/assets/reading/fd7d0291e7b9-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/fd7d0291e7b9-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/fd7d0291e7b9-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-22-xiazi-100/poster.png": {
+    "src": "/assets/reading/468ad8d9aab8-800.webp",
+    "width": 800,
+    "height": 1600,
+    "variants": [
+      {
+        "src": "/assets/reading/468ad8d9aab8-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/468ad8d9aab8-800.webp",
+        "width": 800
+      }
+    ]
+  },
+  "/assets/notes/2026-09-22-xiazi-100/style-atlas.png": {
+    "src": "/assets/reading/58a4d2149c67-1080.webp",
+    "width": 1080,
+    "height": 719,
+    "variants": [
+      {
+        "src": "/assets/reading/58a4d2149c67-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/58a4d2149c67-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/58a4d2149c67-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-21-justin-small-by-design/cover.png": {
+    "src": "/assets/reading/bd29ff93426d-1080.webp",
+    "width": 1080,
+    "height": 462,
+    "variants": [
+      {
+        "src": "/assets/reading/bd29ff93426d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/bd29ff93426d-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/bd29ff93426d-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-21-justin-small-by-design/poster.png": {
+    "src": "/assets/reading/d4ec947b889f-640.webp",
+    "width": 640,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/assets/reading/d4ec947b889f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/d4ec947b889f-640.webp",
+        "width": 640
+      }
+    ]
+  },
+  "/assets/notes/2026-09-21-justin-small-by-design/what-if-it-works.png": {
+    "src": "/assets/reading/cc5fc330db36-1080.webp",
+    "width": 1080,
+    "height": 567,
+    "variants": [
+      {
+        "src": "/assets/reading/cc5fc330db36-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/cc5fc330db36-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/cc5fc330db36-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-21-justin-small-by-design/rules.png": {
+    "src": "/assets/reading/d6118d3771ef-1080.webp",
+    "width": 1080,
+    "height": 719,
+    "variants": [
+      {
+        "src": "/assets/reading/d6118d3771ef-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/d6118d3771ef-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/d6118d3771ef-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
   "/assets/notes/2026-09-18-shared-subscriptions/cover.png": {
     "src": "/assets/reading/4b0e784222a6-1080.webp",
     "width": 1080,

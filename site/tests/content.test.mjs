@@ -56,7 +56,7 @@ test("every published translation has matching static metadata, body, related no
 });
 test("homepage bundle carries summaries, not article bodies or removed essays",()=>{
   const summaries=JSON.parse(read('../src/generated/articles.json'));
-  assert.equal(summaries.length,7);
+  assert.equal(summaries.length,articles.length);
   for(const a of summaries)for(const lang of ['zh','en'])assert.equal(a[lang].content,undefined);
   const assets=new URL('../dist/client/assets/',import.meta.url);
   const bundle=readdirSync(assets).filter(n=>n.endsWith('.js')).map(n=>readFileSync(new URL(n,assets),'utf8')).join('\n');
@@ -71,4 +71,21 @@ test("deferred portfolio section and project definitions remain exactly unchange
   assert.equal(projects(current),projects(old));
   const section=source=>source.slice(source.indexOf('<section className="now-section"'),source.indexOf('<NotesSection language={language} />'));
   assert.equal(section(current),section(old));
+});
+
+test("publishes both supplied essays in date order with complete translations and original illustrations",()=>{
+  const archive=articles.filter(a=>!a.featured);
+  assert.deepEqual(archive.slice(0,3).map(a=>a.slug),['xiazi-100-issues-1800-posters','justin-welsh-small-by-design','apple-shared-subscriptions-one-person-company']);
+  const [milestone,profile]=archive;
+  assert.equal(milestone.date,'2026-09-22');
+  assert.equal(profile.date,'2026-09-21');
+  for(const [article,chapterCount,imageCount] of [[milestone,5,3],[profile,6,4]])for(const lang of ['zh','en']) {
+    assert.equal(chapters(article[lang].content).length,chapterCount);
+    assert.equal([...article[lang].content.matchAll(/!\[/g)].length,imageCount);
+    assert.doesNotMatch(article[lang].content,/\{\{|LET’S MAKE IT REAL|喜欢作者|上一[篇条]/);
+  }
+  assert.match(milestone.en.content,/2,894[\s\S]*215[\s\S]*237[\s\S]*30,231/);
+  assert.match(profile.en.content,/have not been independently audited/);
+  assert.match(profile.zh.content,/并非 Justin Welsh 肖像/);
+  assert.match(profile.en.content,/not a portrait of Justin Welsh/);
 });

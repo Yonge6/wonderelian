@@ -1280,7 +1280,6 @@ section[id] {
   align-items: center;
   gap: 18px;
   border: 0;
-  border-bottom: 1px solid rgba(215, 164, 85, 0.58);
   color: #d7a455;
   background: transparent;
   font: 500 15px/1.2 var(--serif);
@@ -2795,21 +2794,13 @@ section[id] {
 }
 .project-entry::before, .project-entry .project-background { border-radius: inherit; }
 .project-entry--system { margin-top: var(--surface-gap); }
-.project-access-link, .note-card--featured .note-card-read, .article-back, .about-contact {
+.article-back {
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
   padding: 10px 18px;
 }
-.about-contact { border-color: rgba(215, 164, 85, .58); }
 .note-card--featured .note-card-read { width: fit-content; }
-.note-card--archive .note-card-read {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-pill);
-  background: var(--section-wash);
-}
+.project-access-link, .note-card--featured .note-card-read { border: 0; }
 .note-card::after { border-radius: inherit; }
 .note-card:focus-visible { outline-offset: 3px; }
 
