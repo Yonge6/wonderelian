@@ -814,7 +814,10 @@ section[id] {
 .notes-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--surface-gap);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
 }
 
 .notes-archive {
@@ -930,17 +933,35 @@ section[id] {
 .note-card--archive .note-card-copy {
   width: 100%;
   min-width: 0;
-  padding: 21px 190px 19px 74px;
+  padding: 21px 190px 19px 226px;
   display: flex;
   flex-direction: column;
 }
 
 .note-card--archive {
-  min-height: 112px;
-  border: 1px solid var(--line);
+  min-height: 120px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
   align-items: stretch;
   background: rgba(246, 239, 225, 0.9);
   transition: background-color 220ms ease;
+}
+
+.note-card--archive:last-child {
+  border-bottom: 0;
+}
+
+.note-card--archive > img {
+  inset: 14px auto 14px 72px;
+  z-index: 0;
+  width: 132px;
+  height: calc(100% - 28px);
+  border-radius: var(--radius-small);
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+  filter: saturate(0.72) contrast(0.94);
 }
 
 .note-card--archive::after {
@@ -2353,7 +2374,7 @@ section[id] {
   }
 
   .note-card--archive {
-    min-height: 142px;
+    min-height: 112px;
   }
 
   .note-card::after {
@@ -2385,7 +2406,7 @@ section[id] {
   }
 
   .note-card--archive .note-card-copy {
-    padding: 20px 48px 18px 58px;
+    padding: 14px 36px 13px 126px;
   }
 
   .note-card h3 {
@@ -2408,26 +2429,33 @@ section[id] {
   }
 
   .note-card--archive .note-card-excerpt {
-    margin-top: 10px;
-    white-space: nowrap;
-    font-size: 13px;
+    display: none;
   }
 
   .note-card--archive .note-card-meta {
     position: static;
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 6px;
   }
 
   .note-card--archive .note-card-read {
-    right: 20px;
-    bottom: 18px;
+    right: 14px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
   }
 
   .note-card--archive .note-card-number {
-    top: 20px;
-    left: 20px;
+    top: 14px;
+    left: 14px;
     right: auto;
+  }
+
+  .note-card--archive > img {
+    inset: 12px auto 12px 42px;
+    width: 70px;
+    height: calc(100% - 24px);
+    border-radius: 12px;
   }
 
   .article-page {
@@ -2708,7 +2736,7 @@ section[id] {
   font: 500 10px/1.4 var(--sans);
   letter-spacing: .1em;
 }
-.note-card--archive .note-card-copy { padding-block: 26px; }
+.note-card--archive .note-card-copy { padding-block: 21px; }
 .note-card--archive h3 { line-height: 1.4; }
 .note-card--archive .note-card-excerpt { font-size: 14px; line-height: 1.7; }
 .note-card--archive .note-card-meta { top: 28px; line-height: 1.5; }
@@ -2889,10 +2917,12 @@ section[id] {
   .notes-heading h2 { font-size: 36px; }
   .hero .hero-ctas { margin-top: 32px; }
   .hero .text-cta { min-width: min(306px, calc(100vw - 36px)); }
-  .note-card--archive .note-card-copy { padding-block: 22px; }
-  .note-card--archive .note-card-number { top: 26px; }
-  .note-card--archive h3 { font-size: 22px; }
-  .note-card--archive .note-card-excerpt { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: normal; }
+  .note-card--archive .note-card-copy { padding-block: 14px; }
+  .note-card--archive .note-card-number { top: 14px; }
+  .note-card--archive .note-card-topic { margin-bottom: 5px; }
+  .note-card--archive h3 { font-size: 18px; line-height: 1.36; }
+  .note-card--archive h3 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .note-card--archive .note-card-excerpt { display: none; }
   .article-toc { margin-bottom: 36px; }
   .article-toc nav a { font-size: 15px; }
   .article-chapter, .article-body > h3 { scroll-margin-top: 104px; }

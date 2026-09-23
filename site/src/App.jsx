@@ -416,7 +416,7 @@ function NotesSection({ language }) {
         href={pagePath(language,article.slug)}
         key={article.slug}
       >
-        {isFeatured && <img src={readingImages[article.cover]?.src || article.cover} width={readingImages[article.cover]?.width} height={readingImages[article.cover]?.height} alt="" loading="lazy" decoding="async" />}
+        <img src={readingImages[article.cover]?.src || article.cover} width={readingImages[article.cover]?.width} height={readingImages[article.cover]?.height} alt="" loading="lazy" decoding="async" />
         <span className="note-card-number">{articleNumber}</span>
         <div className="note-card-copy">
           {isFeatured && (

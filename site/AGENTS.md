@@ -6,6 +6,8 @@ About actions “联系 Elian” and “沿途所作” are plain text with arro
 
 Notes archive arrows have no circular background; retain the standalone arrow within each rounded card.
 
+Treat the Notes archive as one rounded outer module with connected article rows and thin internal dividers. Do not round every archived row or leave gaps between rows. Show each cover as a compact thumbnail, and keep mobile rows short by omitting the excerpt while preserving topic, title, date and reading time.
+
 “查看公开运营快照” and the featured essay’s “阅读全文” are also plain text-and-arrow actions without pill/rectangular frames.
 
 September 23, 2026 follow-up: the user wants all interface corners soft and rounded, “圆润 如水”. Use the shared responsive radius tokens for cards, images, buttons, drawers and dialogs. Portfolio content and arrangement remain unchanged; rounded frames and spacing now apply there too. Remove the secondary Notes introduction in both languages; keep the Notes title.
