@@ -21,6 +21,13 @@
   --serif: "Noto Serif SC", "Songti SC", STSong, serif;
   --display: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
   --sans: "Noto Sans SC", "PingFang SC", sans-serif;
+  --radius-small: 14px;
+  --radius-control: 20px;
+  --radius-card: 28px;
+  --radius-panel: 36px;
+  --radius-section: 52px;
+  --radius-pill: 999px;
+  --surface-gap: 16px;
 }
 
 :root[data-theme="dark"] {
@@ -790,10 +797,7 @@ section[id] {
 
 .notes-heading {
   margin-bottom: 34px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.55fr);
-  align-items: end;
-  gap: 8vw;
+  display: block;
 }
 
 .notes-heading h2 {
@@ -803,22 +807,15 @@ section[id] {
   letter-spacing: 0.025em;
 }
 
-.notes-heading > p {
-  margin: 0 0 9px;
-  color: var(--ink-soft);
-  font: 400 16px/1.8 var(--serif);
-}
-
-.notes-featured,
-.notes-grid {
+.notes-featured {
   border: 1px solid var(--line);
-  background: var(--line);
+  border-radius: var(--radius-panel);
 }
 
 .notes-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1px;
+  gap: var(--surface-gap);
 }
 
 .notes-archive {
@@ -837,12 +834,14 @@ section[id] {
   isolation: isolate;
   overflow: hidden;
   color: var(--ink);
+  border-radius: var(--radius-card);
   background: #f3ecdd;
   text-decoration: none;
 }
 
 .note-card--featured {
   min-height: 310px;
+  border-radius: calc(var(--radius-panel) - 1px);
 }
 
 .note-card::after {
@@ -939,6 +938,7 @@ section[id] {
 
 .note-card--archive {
   min-height: 112px;
+  border: 1px solid var(--line);
   align-items: stretch;
   background: rgba(246, 239, 225, 0.9);
   transition: background-color 220ms ease;
@@ -1200,7 +1200,7 @@ section[id] {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 2px;
+  border-radius: var(--radius-control);
 }
 
 .article-figure figcaption {
@@ -2117,15 +2117,6 @@ section[id] {
     padding-right: 24px;
   }
 
-  .notes-heading {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .notes-heading > p {
-    max-width: 560px;
-  }
-
   .note-card--featured {
     min-height: 310px;
   }
@@ -2344,7 +2335,6 @@ section[id] {
 
   .notes-heading {
     margin-bottom: 28px;
-    gap: 16px;
   }
 
   .notes-heading h2 {
@@ -2691,7 +2681,7 @@ section[id] {
   .article-body .article-figure--product-screen:has(+ .article-figure--product-screen) { margin-right: 12px; }
 }
 
-/* September 2026: reading, navigation and contact. Portfolio styles unchanged. */
+/* September 2026: reading, navigation and contact. */
 .site-content { min-width: 0; }
 .hero .hero-ctas { margin-top: 38px; gap: 10px; }
 .hero .text-cta { color: var(--ink); }
@@ -2780,11 +2770,134 @@ section[id] {
 .wechat-dialog > p { margin: 16px 0; color: var(--ink-soft); font: 400 14px/1.7 var(--serif); }
 .wechat-actions { display: flex; flex-wrap: wrap; gap: 20px; }
 .wechat-actions a { min-height: 44px; display: inline-flex; align-items: center; color: var(--ink); font: 500 14px/1.5 var(--serif); text-underline-offset: 4px; }
+
+/* Flowing surfaces: shared radii scale with the existing mobile breakpoint.
+   Artwork, including QR pixels, stays unchanged; only its outer frame is rounded. */
+.site-header { border-radius: 0 0 var(--radius-control) var(--radius-control); }
+.hero { border-radius: 0 0 var(--radius-section) var(--radius-section); }
+.about-section { border-radius: var(--radius-section); }
+.wordmark, .main-nav a, .site-footer a { border-radius: var(--radius-small); }
+.menu-toggle, .language-toggle, .drawer-back, .drawer-close, .support-close { border-radius: var(--radius-pill); }
+.drawer-back { border-right: 0; }
+.drawer-back:hover, .drawer-close:hover, .support-close:hover { background: var(--section-wash); }
+.hero .text-cta {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 16px 24px;
+}
+.hero .text-cta--primary { border-color: var(--ink); }
+.hero-contact { border-radius: var(--radius-pill); padding-inline: 20px; }
+.hero-contact:hover { background: var(--section-wash); }
+.short-rule, .main-nav a::after, .language-toggle span::after { border-radius: var(--radius-pill); }
+
+.project-list, .project-featured-duo { gap: var(--surface-gap); }
+.project-list { margin-top: var(--surface-gap); }
+.project-entry, .project-featured-duo .project-entry--featured {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+}
+.project-entry::before, .project-entry .project-background { border-radius: inherit; }
+.project-entry--system { margin-top: var(--surface-gap); }
+.project-access-link, .note-card--featured .note-card-read, .article-back, .about-contact {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 10px 18px;
+}
+.about-contact { border-color: rgba(215, 164, 85, .58); }
+.note-card--featured .note-card-read { width: fit-content; }
+.note-card--archive .note-card-read {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-pill);
+  background: var(--section-wash);
+}
+.note-card::after { border-radius: inherit; }
+.note-card:focus-visible { outline-offset: 3px; }
+
+.article-body > blockquote {
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--section-wash);
+}
+.article-toc { border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--section-wash); }
+.article-toc summary { padding: 20px 24px; border-radius: var(--radius-card); }
+.article-toc nav { padding: 0 14px 14px; }
+.article-toc nav a { padding: 10px; border-radius: var(--radius-small); }
+.article-toc nav a:hover { background: var(--section-wash); }
+.article-related {
+  padding: 28px 60px 28px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--section-wash);
+}
+.article-related > svg { right: 24px; }
+.article-next-actions { gap: 12px; }
+.article-next-actions a, .article-next-actions button, .article-status button, .wechat-actions a, .missing-page a {
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+}
+.article-end { border-radius: var(--radius-card); border: 1px solid var(--line); padding-inline: 24px; }
+.article-end a { border-radius: var(--radius-small); }
+
+.site-drawer {
+  top: 12px;
+  right: 12px;
+  bottom: 12px;
+  height: calc(100% - 24px);
+  min-height: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+}
+.drawer-primary-nav, .life-path, .ambient-sound-list { border: 0; gap: 10px; }
+.drawer-primary-nav a, .drawer-primary-nav a:nth-child(even), .drawer-primary-nav a:nth-child(n + 3),
+.life-path div, .life-path div:nth-child(even), .life-path div:nth-child(n + 3),
+.ambient-sound-list > button {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--section-wash);
+}
+.drawer-utilities, .contact-list { border: 0; display: grid; gap: 10px; }
+.drawer-utility-row, .contact-list a, .contact-list button {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--section-wash);
+}
+.contact-list a, .contact-list button { grid-template-columns: minmax(0, 1fr) auto auto; }
+.contact-list strong { overflow-wrap: anywhere; }
+.life-principles article, .ambient-yixiu-cta { border-radius: var(--radius-control); }
+.life-philosophy blockquote { padding: 24px 18px; border: 1px solid var(--line); border-radius: var(--radius-card); }
+.support-dialog, .video-dialog { border-radius: var(--radius-panel); }
+.support-dialog img, .video-dialog img { border-radius: var(--radius-control); }
+.wechat-actions { gap: 10px; }
+
 @media (max-width: 760px) {
   .note-card--archive .note-card-meta { position: static; margin-top: 14px; }
   .note-card--archive .note-card-copy { padding-right: 42px; }
 }
 @media (max-width: 560px) {
+  :root {
+    --radius-small: 12px;
+    --radius-control: 18px;
+    --radius-card: 24px;
+    --radius-panel: 28px;
+    --radius-section: 36px;
+    --surface-gap: 12px;
+  }
+  .site-drawer { width: calc(100% - 16px); inset: 8px; height: calc(100% - 16px); }
+  .drawer-primary-nav a, .drawer-primary-nav a:nth-child(even), .drawer-primary-nav a:nth-child(n + 3) { padding: 16px 12px; }
+  .drawer-primary-nav a strong { font-size: 20px; }
+  .drawer-utility-row, .contact-list a, .contact-list button { padding: 14px 12px; gap: 8px; }
+  .article-toc summary { padding: 18px; }
+  .article-related { padding: 24px 48px 24px 22px; }
+  .article-related > svg { right: 18px; }
   .header-actions { gap: 3px; }
   .notes-heading h2 { font-size: 36px; }
   .hero .hero-ctas { margin-top: 32px; }

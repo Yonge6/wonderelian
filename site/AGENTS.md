@@ -1,5 +1,7 @@
 # Prototype Instructions
 
+September 23, 2026 follow-up: the user wants all interface corners soft and rounded, “圆润 如水”. Use the shared responsive radius tokens for cards, images, buttons, drawers and dialogs. Portfolio content and arrangement remain unchanged; rounded frames and spacing now apply there too. Remove the secondary Notes introduction in both languages; keep the Notes title.
+
 September 23, 2026: the user explicitly deferred the portfolio/case-study improvement. Preserve the current works layout, project copy and artwork while implementing the reading, navigation, contact, localization and publishing improvements. Do not apply older layout proposals to this scope.
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.

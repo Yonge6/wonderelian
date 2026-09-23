@@ -440,7 +440,6 @@ function NotesSection({ language }) {
           <p className="eyebrow">{language === "zh" ? "片刻随记" : "FIELD NOTES"}</p>
           <h2 id="notes-title">{language === "zh" ? "写下此刻，也留给以后。" : "Notes from the present, kept for what comes next."}</h2>
         </div>
-        <p>{language === "zh" ? "关于设计、AI、产品与生活。这里会慢慢收录更多文章。" : "Essays on design, AI, products, and life. More will gather here over time."}</p>
       </div>
 
       {featuredArticle && (

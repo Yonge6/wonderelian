@@ -1,3 +1,18 @@
+# Rounded website release — 2026-09-23
+
+- Production: https://wonderelian.com/zh/#notes
+- Active release: `/srv/wonderelian/releases/20260923-rounded-water`.
+- Rollback: `/srv/wonderelian/releases/20260923-reading-bilingual-contact`.
+- Applied the user’s “圆润 如水” direction across cards, image frames, actions, menus, reading surfaces, drawers and QR/support dialogs using responsive radius tokens. Notes rows and existing project cards have breathing room between rounded surfaces. Portfolio copy, assets, order and JSX remain unchanged.
+- Removed the Notes introductory paragraph in Chinese and English; the heading remains.
+- Existing 18 automated checks passed. Desktop, 390px and 320px layouts inspected, including English, night mode, contact and QR dialogs; no horizontal overflow observed. QR original unchanged and loaded at natural width 888.
+- 245 staged files checksum-verified, privacy and domain verification preserved, Nginx checks passed, release symlink switched atomically with rollback trap.
+- Eight public pages/assets match local build SHA-256. Live Notes shows seven essays, the removed paragraph is absent, and the rounded card styles are applied.
+- JS: `index-QtDIXB6_.js`; CSS: `index-DRM18CGV.css`.
+- QA: `/Users/yongyuan/Documents/WonderElian/qa/2026-09-23-rounded/`.
+
+---
+
 # WonderElian website — 2026-09-23
 
 - Production: https://wonderelian.com/zh/#notes · English: https://wonderelian.com/en/
