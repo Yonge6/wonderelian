@@ -1,3 +1,16 @@
+# Connected Notes archive with covers — 2026-09-23
+
+- Production: https://wonderelian.com/zh/#notes
+- Active release: `/srv/wonderelian/releases/20260923-notes-cover-archive`.
+- Rollback: `/srv/wonderelian/releases/20260923-two-essays-refinement`.
+- Every archived note now shows its real cover as a compact thumbnail. The eight rows share one rounded outer module with zero gaps and thin internal dividers; individual archive rows no longer have rounded outer cards.
+- Mobile archive excerpts are hidden and titles are limited to two lines, while topic, title, date and reading time remain visible. At 390px, all eight Chinese and English rows measured about 133px with no horizontal overflow.
+- Build, seven content checks and twelve Sites checks passed. The staged 285-file release passed SHA-256 verification; privacy and domain verification files match the previous release; Nginx passed before and after the atomic switch.
+- Public Chinese/English home pages and hashed CSS/JS match the local build exactly. Live DOM shows eight archive cover images, a zero-gap archive and one rounded outer container.
+- JS `index-DbOX0hi5.js`; CSS `index-BFLWZ87H.css`.
+
+---
+
 # Two bilingual essays and visual refinements — 2026-09-23
 
 - Production: https://wonderelian.com/zh/#notes
