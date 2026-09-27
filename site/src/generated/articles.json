@@ -1,5 +1,145 @@
 [
   {
+    "slug": "human-value-after-ai",
+    "number": "15",
+    "date": "2026-09-26",
+    "order": 0,
+    "topic": "life",
+    "related": "ai-employees-digital-team",
+    "product": "wendao",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 7 分钟",
+      "en": "7 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-26-human-value-after-ai/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "当AI能写代码、做设计、搞运营，普通互联网人还剩下什么？",
+      "excerpt": "AI 正在抹平执行力的差距，却在放大判断力的差距。真正值钱的，是发现问题、做出取舍、理解人，并愿意为结果负责。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/human-value-after-ai/zh-762d40b830ae.json"
+    },
+    "en": {
+      "label": "FIELD NOTES",
+      "title": "When AI Can Code, Design, and Run Operations, What Is Left for Ordinary Internet Professionals?",
+      "excerpt": "AI is narrowing the gap in execution while widening the gap in judgment. Value now lies in finding problems, making choices, understanding people, and owning outcomes.",
+      "read": "Read article",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/human-value-after-ai/en-d03e788cf374.json"
+    }
+  },
+  {
+    "slug": "ai-employees-digital-team",
+    "number": "14",
+    "date": "2026-09-25",
+    "order": 1,
+    "topic": "opc",
+    "related": "conversational-ads",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 9 分钟",
+      "en": "9 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-25-ai-digital-team/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "AI员工终于开始上班了：一人公司第一次拥有了自己的数字团队",
+      "excerpt": "一人公司真正扩大的不是人数，而是一个人可以管理的工作跨度。AI 负责执行，创作者继续掌握方向、品味、共情与最终责任。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/ai-employees-digital-team/zh-5b437c64adaa.json"
+    },
+    "en": {
+      "label": "FIELD NOTES",
+      "title": "AI Employees Have Started Work: A One-Person Company Can Finally Have a Digital Team",
+      "excerpt": "A one-person company expands through the range of work one person can direct. AI executes; the creator keeps direction, taste, empathy, and responsibility.",
+      "read": "Read article",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/ai-employees-digital-team/en-3266d9adbd20.json"
+    }
+  },
+  {
+    "slug": "conversational-ads",
+    "number": "13",
+    "date": "2026-09-24",
+    "order": 2,
+    "topic": "product",
+    "related": "siri-ai-callable-apps",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 8 分钟",
+      "en": "8 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-24-conversational-ads/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "以后最好的广告，可能不是一张图，而是一个会聊天的销售",
+      "excerpt": "当广告开始听懂空间、预算、偏好和顾虑，成交不再只靠一句口号。新的机会，是把产品知识变成一场诚实的对话。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/conversational-ads/zh-2e3d66ded666.json"
+    },
+    "en": {
+      "label": "FIELD NOTES",
+      "title": "The Best Ad May No Longer Be an Image, but a Salesperson You Can Talk To",
+      "excerpt": "When an ad can understand space, budget, preferences, and doubts, the opportunity is to turn product knowledge into an honest conversation.",
+      "read": "Read article",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/conversational-ads/en-154090cf7bb5.json"
+    }
+  },
+  {
+    "slug": "siri-ai-callable-apps",
+    "number": "12",
+    "date": "2026-09-23",
+    "order": 3,
+    "topic": "product",
+    "related": "xiazi-100-issues-1800-posters",
+    "product": "yixiu",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 7 分钟",
+      "en": "7 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-23-siri-ai-callable-apps/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "新Siri来了：AI不会杀死App，但会淘汰一种App",
+      "excerpt": "以后用户可能不会打开你的 App，却仍在使用它。新 Siri 真正改变的，是 App 从一个入口变成一组可以被 AI 理解和调用的能力。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/siri-ai-callable-apps/zh-79dad7169642.json"
+    },
+    "en": {
+      "label": "FIELD NOTES",
+      "title": "The New Siri Is Here: AI Will Not Kill Apps, but It Will Eliminate One Kind of App",
+      "excerpt": "People may stop opening your app while continuing to use its value. Siri is turning apps from destinations into capabilities AI can understand and call.",
+      "read": "Read article",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/siri-ai-callable-apps/en-bb33a8a18382.json"
+    }
+  },
+  {
     "slug": "from-proving-to-becoming",
     "featured": true,
     "date": "2026-08-15",
@@ -29,7 +169,7 @@
       "dataPath": "/content/from-proving-to-becoming/en-615f7fd58645.json"
     },
     "status": "published",
-    "order": 0,
+    "order": 4,
     "topic": "life",
     "related": "odyssey-the-long-way-home",
     "product": "yixiu"
@@ -38,7 +178,7 @@
     "slug": "xiazi-100-issues-1800-posters",
     "number": "11",
     "date": "2026-09-22",
-    "order": 1,
+    "order": 5,
     "topic": "product",
     "related": "justin-welsh-small-by-design",
     "product": "xiazi",
@@ -73,7 +213,7 @@
     "slug": "justin-welsh-small-by-design",
     "number": "10",
     "date": "2026-09-21",
-    "order": 2,
+    "order": 6,
     "topic": "opc",
     "related": "xiazi-100-issues-1800-posters",
     "product": "yixiu",
@@ -134,7 +274,7 @@
       "dataPath": "/content/apple-shared-subscriptions-one-person-company/en-8cd516d02a27.json"
     },
     "status": "published",
-    "order": 3,
+    "order": 7,
     "topic": "opc",
     "related": "ai-era-opc-opportunity",
     "product": "yixiu"
@@ -169,7 +309,7 @@
       "dataPath": "/content/ai-era-opc-opportunity/en-de8c328c28aa.json"
     },
     "status": "published",
-    "order": 4,
+    "order": 8,
     "topic": "opc",
     "related": "ai-first-product-what-to-fix-next",
     "product": "wendao"
@@ -204,7 +344,7 @@
       "dataPath": "/content/ai-homepage-beautiful-but-unclear/en-b7b4c45891c2.json"
     },
     "status": "published",
-    "order": 5,
+    "order": 9,
     "topic": "product",
     "related": "ai-first-product-what-to-fix-next",
     "product": "yixiu"
@@ -239,7 +379,7 @@
       "dataPath": "/content/ai-first-product-what-to-fix-next/en-cdd8e25eb9ca.json"
     },
     "status": "published",
-    "order": 6,
+    "order": 10,
     "topic": "product",
     "related": "ai-homepage-beautiful-but-unclear",
     "product": "yixiu"
@@ -274,7 +414,7 @@
       "dataPath": "/content/odyssey-the-long-way-home/en-7671f41ae5f0.json"
     },
     "status": "published",
-    "order": 7,
+    "order": 11,
     "topic": "life",
     "related": "from-proving-to-becoming",
     "product": "wendao"
@@ -308,7 +448,7 @@
       "dataPath": "/content/wendao-1-0-app-store/en-9b88702b61e3.json"
     },
     "status": "published",
-    "order": 8,
+    "order": 12,
     "topic": "product",
     "related": "from-proving-to-becoming",
     "product": "wendao"

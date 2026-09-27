@@ -75,8 +75,11 @@ test("deferred portfolio section and project definitions remain exactly unchange
 
 test("publishes both supplied essays in date order with complete translations and original illustrations",()=>{
   const archive=articles.filter(a=>!a.featured);
-  assert.deepEqual(archive.slice(0,3).map(a=>a.slug),['xiazi-100-issues-1800-posters','justin-welsh-small-by-design','apple-shared-subscriptions-one-person-company']);
-  const [milestone,profile]=archive;
+  assert.deepEqual(archive.slice(0,7).map(a=>a.slug),[
+    'human-value-after-ai','ai-employees-digital-team','conversational-ads','siri-ai-callable-apps',
+    'xiazi-100-issues-1800-posters','justin-welsh-small-by-design','apple-shared-subscriptions-one-person-company'
+  ]);
+  const milestone=archive[4],profile=archive[5];
   assert.equal(milestone.date,'2026-09-22');
   assert.equal(profile.date,'2026-09-21');
   for(const [article,chapterCount,imageCount] of [[milestone,5,3],[profile,6,4]])for(const lang of ['zh','en']) {
@@ -88,4 +91,25 @@ test("publishes both supplied essays in date order with complete translations an
   assert.match(profile.en.content,/have not been independently audited/);
   assert.match(profile.zh.content,/并非 Justin Welsh 肖像/);
   assert.match(profile.en.content,/not a portrait of Justin Welsh/);
+});
+
+test("publishes the four September 23–26 notes with complete bilingual bodies and local illustrations",()=>{
+  const expected=[
+    ['human-value-after-ai','2026-09-26',8,5],
+    ['ai-employees-digital-team','2026-09-25',8,4],
+    ['conversational-ads','2026-09-24',7,3],
+    ['siri-ai-callable-apps','2026-09-23',6,3],
+  ];
+  for(const [slug,date,chapterCount,imageCount] of expected){
+    const article=articles.find(a=>a.slug===slug);
+    assert.ok(article);
+    assert.equal(article.date,date);
+    assert.match(article.cover,/^\/assets\/notes\//);
+    for(const lang of ['zh','en']){
+      assert.equal(chapters(article[lang].content).length,chapterCount);
+      assert.equal([...article[lang].content.matchAll(/!\[/g)].length,imageCount);
+      assert.doesNotMatch(article[lang].content,/\{\{|LET’S MAKE IT REAL|喜欢作者|二维码/);
+      assert.ok(article[lang].content.length>2500);
+    }
+  }
 });

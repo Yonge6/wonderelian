@@ -1,4 +1,322 @@
 {
+  "/assets/notes/2026-09-26-human-value-after-ai/cover.png": {
+    "src": "/assets/reading/93240bc8299f-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/93240bc8299f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/93240bc8299f-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/93240bc8299f-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/93240bc8299f-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-26-human-value-after-ai/execution.png": {
+    "src": "/assets/reading/0712ae94240d-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/0712ae94240d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/0712ae94240d-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/0712ae94240d-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/0712ae94240d-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-26-human-value-after-ai/judgment.png": {
+    "src": "/assets/reading/3b34774b05b5-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/3b34774b05b5-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/3b34774b05b5-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/3b34774b05b5-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/3b34774b05b5-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-26-human-value-after-ai/direction.png": {
+    "src": "/assets/reading/97e5602a8400-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/97e5602a8400-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/97e5602a8400-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/97e5602a8400-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/97e5602a8400-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-25-ai-digital-team/cover.png": {
+    "src": "/assets/reading/8bb6273be0a3-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/8bb6273be0a3-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/8bb6273be0a3-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/8bb6273be0a3-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/8bb6273be0a3-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-25-ai-digital-team/chat-vs-agent.png": {
+    "src": "/assets/reading/82801a0fe94c-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/82801a0fe94c-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/82801a0fe94c-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/82801a0fe94c-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/82801a0fe94c-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-25-ai-digital-team/digital-team.png": {
+    "src": "/assets/reading/4e830d36dcf2-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/4e830d36dcf2-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/4e830d36dcf2-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/4e830d36dcf2-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/4e830d36dcf2-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-25-ai-digital-team/human-review.png": {
+    "src": "/assets/reading/00b102227de5-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/00b102227de5-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/00b102227de5-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/00b102227de5-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/00b102227de5-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-24-conversational-ads/cover.png": {
+    "src": "/assets/reading/148cadb32601-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/148cadb32601-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/148cadb32601-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/148cadb32601-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/148cadb32601-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-24-conversational-ads/shift.png": {
+    "src": "/assets/reading/2dbd0c76dba3-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/2dbd0c76dba3-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/2dbd0c76dba3-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/2dbd0c76dba3-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/2dbd0c76dba3-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-24-conversational-ads/knowledge.png": {
+    "src": "/assets/reading/8eec34b19c42-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/8eec34b19c42-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/8eec34b19c42-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/8eec34b19c42-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/8eec34b19c42-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-23-siri-ai-callable-apps/cover.png": {
+    "src": "/assets/reading/8f3f50e7b2ab-1586.webp",
+    "width": 1586,
+    "height": 992,
+    "variants": [
+      {
+        "src": "/assets/reading/8f3f50e7b2ab-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/8f3f50e7b2ab-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/8f3f50e7b2ab-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/8f3f50e7b2ab-1586.webp",
+        "width": 1586
+      }
+    ]
+  },
+  "/assets/notes/2026-09-23-siri-ai-callable-apps/apple-siri.jpg": {
+    "src": "/assets/reading/e1d61b4ab4df-1306.webp",
+    "width": 1306,
+    "height": 1633,
+    "variants": [
+      {
+        "src": "/assets/reading/e1d61b4ab4df-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/e1d61b4ab4df-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/e1d61b4ab4df-1306.webp",
+        "width": 1306
+      }
+    ]
+  },
+  "/assets/notes/2026-09-23-siri-ai-callable-apps/capability.png": {
+    "src": "/assets/reading/6a9545110085-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/6a9545110085-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/6a9545110085-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/6a9545110085-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/6a9545110085-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
   "/assets/notes/2026-08-15-proving-to-becoming/image-01.jpg": {
     "src": "/assets/reading/63d0627b2eed-1080.webp",
     "width": 1080,
