@@ -450,9 +450,6 @@ function NotesSection({ language }) {
 
       {archiveArticles.length > 0 && (
         <div className="notes-archive">
-          <div className="section-label notes-archive-label">
-            <span>{language === "zh" ? "更多随记" : "MORE NOTES"}</span>
-          </div>
           <div className="notes-grid">
             {archiveArticles.map((article) => renderArticleCard(article))}
           </div>
