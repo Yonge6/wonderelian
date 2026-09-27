@@ -1,6 +1,6 @@
 # Prototype Instructions
 
-September 27, 2026 refinement: keep the three hero actions visually equal and understated. Present them as three unframed text actions with consistent typography, spacing and arrow behavior; do not wrap them in a shared panel, add row borders, or promote one action with a filled treatment. Article-body figures use square image corners at every breakpoint, while homepage cards and other interface surfaces keep their established radii.
+September 27, 2026 refinement: keep the three hero actions visually equal and understated. Present them as three unframed text actions with consistent typography and spacing; do not wrap them in a shared panel, add row borders, or promote one action with a filled treatment. Use a subtle staggered arrow nudge to invite clicks, with long pauses and `prefers-reduced-motion` support. Article-body figures use square image corners at every breakpoint, while homepage cards and other interface surfaces keep their established radii.
 
 September 23, 2026 refinement: keep the full-width site header, hero (`#world`) and About section (`#about`) square. Their containers must not get border radii at any breakpoint. Internal cards, buttons, image frames and dialogs retain the rounded treatment.
 
