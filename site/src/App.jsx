@@ -790,7 +790,7 @@ export function App() {
             <p className="hero-spirit"><RichTextLines text={c.heroSpirit} /></p>
 
             <div className="hero-ctas">
-              <a className="text-cta text-cta--primary" href="#now">
+              <a className="text-cta" href="#now">
                 <span>{c.enterNow}</span>
                 <span>{c.enterNowAlt}</span>
                 <ArrowRight size={19} weight="light" aria-hidden="true" />

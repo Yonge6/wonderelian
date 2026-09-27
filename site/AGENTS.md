@@ -1,5 +1,7 @@
 # Prototype Instructions
 
+September 27, 2026 refinement: keep the three hero actions visually equal and understated. Present them as one connected rounded group with consistent rows, separators, typography and arrow behavior; do not promote one action with a filled treatment. Article-body figures use square image corners at every breakpoint, while homepage cards and other interface surfaces keep their established radii.
+
 September 23, 2026 refinement: keep the full-width site header, hero (`#world`) and About section (`#about`) square. Their containers must not get border radii at any breakpoint. Internal cards, buttons, image frames and dialogs retain the rounded treatment.
 
 About actions “联系 Elian” and “沿途所作” are plain text with arrows, without a rectangular/pill border. Preserve their interactive behavior and keyboard focus indication.
