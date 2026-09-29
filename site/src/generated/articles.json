@@ -1,9 +1,44 @@
 [
   {
+    "slug": "manus-cue-agent-identity",
+    "number": "16",
+    "date": "2026-09-29",
+    "order": 0,
+    "topic": "product",
+    "related": "human-value-after-ai",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 8 分钟",
+      "en": "8 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-09-29-manus-cue/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "当Agent有了手机号和钱包，它就不再只是聊天框：Manus Cue把AI送进现实世界",
+      "excerpt": "AI 真正进入现实世界，靠的不只是更聪明的模型，而是电话、邮箱、钱包、电脑，以及清楚的授权和责任边界。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/manus-cue-agent-identity/zh-e4521302bc94.json"
+    },
+    "en": {
+      "label": "FIELD NOTES",
+      "title": "When an Agent Has a Phone Number and a Wallet, It Is No Longer Just a Chat Box: Manus Cue Enters the Physical World",
+      "excerpt": "For AI to enter the physical world, it needs more than a smarter model: a phone, email, wallet, computer, and clear boundaries for permission and responsibility.",
+      "read": "Read article",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/manus-cue-agent-identity/en-86522e173a64.json"
+    }
+  },
+  {
     "slug": "human-value-after-ai",
     "number": "15",
     "date": "2026-09-26",
-    "order": 0,
+    "order": 1,
     "topic": "life",
     "related": "ai-employees-digital-team",
     "product": "wendao",
@@ -38,7 +73,7 @@
     "slug": "ai-employees-digital-team",
     "number": "14",
     "date": "2026-09-25",
-    "order": 1,
+    "order": 2,
     "topic": "opc",
     "related": "conversational-ads",
     "product": "xiazi",
@@ -73,7 +108,7 @@
     "slug": "conversational-ads",
     "number": "13",
     "date": "2026-09-24",
-    "order": 2,
+    "order": 3,
     "topic": "product",
     "related": "siri-ai-callable-apps",
     "product": "xiazi",
@@ -108,7 +143,7 @@
     "slug": "siri-ai-callable-apps",
     "number": "12",
     "date": "2026-09-23",
-    "order": 3,
+    "order": 4,
     "topic": "product",
     "related": "xiazi-100-issues-1800-posters",
     "product": "yixiu",
@@ -169,7 +204,7 @@
       "dataPath": "/content/from-proving-to-becoming/en-615f7fd58645.json"
     },
     "status": "published",
-    "order": 4,
+    "order": 5,
     "topic": "life",
     "related": "odyssey-the-long-way-home",
     "product": "yixiu"
@@ -178,7 +213,7 @@
     "slug": "xiazi-100-issues-1800-posters",
     "number": "11",
     "date": "2026-09-22",
-    "order": 5,
+    "order": 6,
     "topic": "product",
     "related": "justin-welsh-small-by-design",
     "product": "xiazi",
@@ -213,7 +248,7 @@
     "slug": "justin-welsh-small-by-design",
     "number": "10",
     "date": "2026-09-21",
-    "order": 6,
+    "order": 7,
     "topic": "opc",
     "related": "xiazi-100-issues-1800-posters",
     "product": "yixiu",
@@ -274,7 +309,7 @@
       "dataPath": "/content/apple-shared-subscriptions-one-person-company/en-8cd516d02a27.json"
     },
     "status": "published",
-    "order": 7,
+    "order": 8,
     "topic": "opc",
     "related": "ai-era-opc-opportunity",
     "product": "yixiu"
@@ -309,7 +344,7 @@
       "dataPath": "/content/ai-era-opc-opportunity/en-de8c328c28aa.json"
     },
     "status": "published",
-    "order": 8,
+    "order": 9,
     "topic": "opc",
     "related": "ai-first-product-what-to-fix-next",
     "product": "wendao"
@@ -344,7 +379,7 @@
       "dataPath": "/content/ai-homepage-beautiful-but-unclear/en-b7b4c45891c2.json"
     },
     "status": "published",
-    "order": 9,
+    "order": 10,
     "topic": "product",
     "related": "ai-first-product-what-to-fix-next",
     "product": "yixiu"
@@ -379,7 +414,7 @@
       "dataPath": "/content/ai-first-product-what-to-fix-next/en-cdd8e25eb9ca.json"
     },
     "status": "published",
-    "order": 10,
+    "order": 11,
     "topic": "product",
     "related": "ai-homepage-beautiful-but-unclear",
     "product": "yixiu"
@@ -414,7 +449,7 @@
       "dataPath": "/content/odyssey-the-long-way-home/en-7671f41ae5f0.json"
     },
     "status": "published",
-    "order": 11,
+    "order": 12,
     "topic": "life",
     "related": "from-proving-to-becoming",
     "product": "wendao"
@@ -448,7 +483,7 @@
       "dataPath": "/content/wendao-1-0-app-store/en-9b88702b61e3.json"
     },
     "status": "published",
-    "order": 12,
+    "order": 13,
     "topic": "product",
     "related": "from-proving-to-becoming",
     "product": "wendao"

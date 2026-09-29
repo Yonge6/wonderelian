@@ -75,11 +75,11 @@ test("deferred portfolio section and project definitions remain exactly unchange
 
 test("publishes both supplied essays in date order with complete translations and original illustrations",()=>{
   const archive=articles.filter(a=>!a.featured);
-  assert.deepEqual(archive.slice(0,7).map(a=>a.slug),[
-    'human-value-after-ai','ai-employees-digital-team','conversational-ads','siri-ai-callable-apps',
+  assert.deepEqual(archive.slice(0,8).map(a=>a.slug),[
+    'manus-cue-agent-identity','human-value-after-ai','ai-employees-digital-team','conversational-ads','siri-ai-callable-apps',
     'xiazi-100-issues-1800-posters','justin-welsh-small-by-design','apple-shared-subscriptions-one-person-company'
   ]);
-  const milestone=archive[4],profile=archive[5];
+  const milestone=archive[5],profile=archive[6];
   assert.equal(milestone.date,'2026-09-22');
   assert.equal(profile.date,'2026-09-21');
   for(const [article,chapterCount,imageCount] of [[milestone,5,3],[profile,6,4]])for(const lang of ['zh','en']) {
@@ -91,6 +91,21 @@ test("publishes both supplied essays in date order with complete translations an
   assert.match(profile.en.content,/have not been independently audited/);
   assert.match(profile.zh.content,/并非 Justin Welsh 肖像/);
   assert.match(profile.en.content,/not a portrait of Justin Welsh/);
+});
+
+test("publishes the Manus Cue note first with a complete translation and four original illustrations",()=>{
+  const article=articles.find(a=>a.slug==='manus-cue-agent-identity');
+  assert.ok(article);
+  assert.equal(article.date,'2026-09-29');
+  assert.equal(articles.filter(a=>!a.featured)[0].slug,article.slug);
+  for(const lang of ['zh','en']){
+    assert.equal(chapters(article[lang].content).length,6);
+    assert.equal([...article[lang].content.matchAll(/!\[/g)].length,4);
+    assert.doesNotMatch(article[lang].content,/\{\{|喜欢作者|扫一扫.*添加我|LET’S MAKE IT REAL/);
+    assert.ok(article[lang].content.length>3000);
+  }
+  assert.match(article.zh.content,/并不等于给 Agent 开了一个不受约束的个人银行账户/);
+  assert.match(article.en.content,/does not mean an agent receives an unrestricted personal bank account/);
 });
 
 test("publishes the four September 23–26 notes with complete bilingual bodies and local illustrations",()=>{

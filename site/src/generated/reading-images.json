@@ -1,4 +1,96 @@
 {
+  "/assets/notes/2026-09-29-manus-cue/cover.png": {
+    "src": "/assets/reading/e251aba04ef5-1920.webp",
+    "width": 1922,
+    "height": 818,
+    "variants": [
+      {
+        "src": "/assets/reading/e251aba04ef5-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/e251aba04ef5-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/e251aba04ef5-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/e251aba04ef5-1920.webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/assets/notes/2026-09-29-manus-cue/identity.png": {
+    "src": "/assets/reading/3d1572283fc2-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/3d1572283fc2-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/3d1572283fc2-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/3d1572283fc2-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/3d1572283fc2-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-29-manus-cue/team.png": {
+    "src": "/assets/reading/38e9f4887815-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/38e9f4887815-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/38e9f4887815-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/38e9f4887815-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/38e9f4887815-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/notes/2026-09-29-manus-cue/control.png": {
+    "src": "/assets/reading/d292c19c233b-1536.webp",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "/assets/reading/d292c19c233b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/d292c19c233b-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/d292c19c233b-1440.webp",
+        "width": 1440
+      },
+      {
+        "src": "/assets/reading/d292c19c233b-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
   "/assets/notes/2026-09-26-human-value-after-ai/cover.png": {
     "src": "/assets/reading/93240bc8299f-1536.webp",
     "width": 1536,
