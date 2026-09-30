@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
+  ArrowDown,
   ArrowLeft,
   ArrowRight,
   Check,
@@ -400,9 +401,14 @@ const topics = {
   life: { zh: "生活与成长", en: "LIFE & GROWTH" },
 };
 
+const NOTES_PAGE_SIZE = 10;
+
 function NotesSection({ language }) {
+  const [visibleCount, setVisibleCount] = useState(NOTES_PAGE_SIZE);
   const featuredArticle = articles.find((article) => article.featured) ?? articles[0];
   const archiveArticles = articles.filter((article) => article !== featuredArticle);
+  const visibleArticles = archiveArticles.slice(0, visibleCount);
+  const hasMoreArticles = visibleCount < archiveArticles.length;
 
   const renderArticleCard = (article, isFeatured = false) => {
     const item = article[language] ?? article.zh;
@@ -450,8 +456,19 @@ function NotesSection({ language }) {
 
       {archiveArticles.length > 0 && (
         <div className="notes-archive">
-          <div className="notes-grid">
-            {archiveArticles.map((article) => renderArticleCard(article))}
+          <div className="notes-grid" id="notes-grid">
+            {visibleArticles.map((article) => renderArticleCard(article))}
+            {hasMoreArticles && (
+              <button
+                className="notes-load-more"
+                type="button"
+                aria-controls="notes-grid"
+                onClick={() => setVisibleCount((count) => Math.min(count + NOTES_PAGE_SIZE, archiveArticles.length))}
+              >
+                <span>{language === "zh" ? "加载更多" : "Load more"}</span>
+                <ArrowDown size={18} weight="light" aria-hidden="true" />
+              </button>
+            )}
           </div>
         </div>
       )}

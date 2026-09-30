@@ -824,6 +824,43 @@ section[id] {
   margin-top: 30px;
 }
 
+.notes-load-more {
+  width: 100%;
+  min-height: 62px;
+  padding: 16px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 500 14px/1.5 var(--serif);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.notes-load-more:hover,
+.notes-load-more:focus-visible {
+  color: var(--amber);
+  background: var(--section-wash);
+}
+
+.notes-load-more:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: -4px;
+}
+
+.notes-load-more svg {
+  transition: transform 180ms ease;
+}
+
+.notes-load-more:hover svg,
+.notes-load-more:focus-visible svg {
+  transform: translateY(3px);
+}
+
 .note-card {
   min-height: 360px;
   position: relative;
@@ -2953,6 +2990,7 @@ section[id] {
   .article-related > svg { right: 18px; }
   .header-actions { gap: 3px; }
   .notes-heading h2 { font-size: 36px; }
+  .notes-load-more { min-height: 56px; padding-block: 14px; }
   .hero .hero-ctas { margin-top: 32px; }
   .hero .hero-ctas { width: fit-content; max-width: calc(100vw - 36px); }
   .note-card--archive .note-card-copy { padding-block: 14px; }
