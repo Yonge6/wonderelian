@@ -1,4 +1,95 @@
 {
+  "/assets/notes/2026-09-30-openai-dots/cover.png": {
+    "src": "/assets/reading/de043210d4ff-1080.webp",
+    "width": 1080,
+    "height": 459,
+    "variants": [
+      {
+        "src": "/assets/reading/de043210d4ff-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/de043210d4ff-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/de043210d4ff-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-30-openai-dots/source-poster.png": {
+    "src": "/assets/reading/4a91aec9bafe-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/4a91aec9bafe-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/4a91aec9bafe-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-09-30-openai-dots/ongoing-work.png": {
+    "src": "/assets/reading/7d097a0bfb3b-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/7d097a0bfb3b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/7d097a0bfb3b-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/7d097a0bfb3b-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-30-openai-dots/three-agents.png": {
+    "src": "/assets/reading/36ea0adfca49-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/36ea0adfca49-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/36ea0adfca49-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/36ea0adfca49-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-09-30-openai-dots/boundaries.png": {
+    "src": "/assets/reading/b3705f5dabef-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/b3705f5dabef-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/b3705f5dabef-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/b3705f5dabef-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
   "/assets/notes/2026-09-29-manus-cue/cover.png": {
     "src": "/assets/reading/e251aba04ef5-1920.webp",
     "width": 1922,
