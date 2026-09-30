@@ -789,12 +789,10 @@ export function App() {
             <div className="hero-ctas">
               <a className="text-cta" href="#now">
                 <span>{c.enterNow}</span>
-                <span>{c.enterNowAlt}</span>
                 <ArrowRight size={19} weight="light" aria-hidden="true" />
               </a>
               <a className="text-cta" href="#notes">
                 <span>{c.enterNotes}</span>
-                <span>{c.enterNotesAlt}</span>
                 <ArrowRight size={19} weight="light" aria-hidden="true" />
               </a>
               <button className="hero-contact" type="button" onClick={openContact}>{language === "zh" ? "聊聊你的产品想法" : "Talk about your product idea"}<ArrowRight size={18} aria-hidden="true" /></button>

@@ -2718,13 +2718,13 @@ section[id] {
   cursor: pointer;
 }
 .hero .hero-ctas {
-  width: min(100%, 334px);
+  width: fit-content;
   margin-top: 38px;
   gap: 2px;
 }
 .hero .text-cta,
 .hero .hero-contact {
-  width: 100%;
+  width: fit-content;
   min-width: 0;
   min-height: 42px;
   margin: 0;
@@ -2733,13 +2733,14 @@ section[id] {
   border-radius: 0;
   background: transparent;
   color: var(--ink);
+  gap: 8px;
   font: 400 14px/1.5 var(--serif);
   transition: color 180ms ease, opacity 180ms ease;
 }
 .hero .text-cta::after { display: none; }
 .hero .text-cta svg,
 .hero .hero-contact svg {
-  margin-left: auto;
+  margin-left: 0;
   color: var(--amber);
   opacity: 0.76;
   animation: none;
@@ -2953,7 +2954,7 @@ section[id] {
   .header-actions { gap: 3px; }
   .notes-heading h2 { font-size: 36px; }
   .hero .hero-ctas { margin-top: 32px; }
-  .hero .hero-ctas { width: min(306px, calc(100vw - 36px)); }
+  .hero .hero-ctas { width: fit-content; max-width: calc(100vw - 36px); }
   .note-card--archive .note-card-copy { padding-block: 14px; }
   .note-card--archive .note-card-number { top: 14px; }
   .note-card--archive .note-card-topic { margin-bottom: 5px; }
