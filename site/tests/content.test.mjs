@@ -80,11 +80,11 @@ test("portfolio layout and other projects stay unchanged after the approved Buer
 
 test("publishes both supplied essays in date order with complete translations and original illustrations",()=>{
   const archive=articles.filter(a=>!a.featured);
-  assert.deepEqual(archive.slice(0,9).map(a=>a.slug),[
-    'openai-dots-less-to-worry-about','manus-cue-agent-identity','human-value-after-ai','ai-employees-digital-team','conversational-ads','siri-ai-callable-apps',
+  assert.deepEqual(archive.slice(0,10).map(a=>a.slug),[
+    'wendao-first-payments','openai-dots-less-to-worry-about','manus-cue-agent-identity','human-value-after-ai','ai-employees-digital-team','conversational-ads','siri-ai-callable-apps',
     'xiazi-100-issues-1800-posters','justin-welsh-small-by-design','apple-shared-subscriptions-one-person-company'
   ]);
-  const milestone=archive[6],profile=archive[7];
+  const milestone=articles.find(a=>a.slug==='xiazi-100-issues-1800-posters'),profile=articles.find(a=>a.slug==='justin-welsh-small-by-design');
   assert.equal(milestone.date,'2026-09-22');
   assert.equal(profile.date,'2026-09-21');
   for(const [article,chapterCount,imageCount] of [[milestone,5,3],[profile,6,4]])for(const lang of ['zh','en']) {
@@ -102,7 +102,7 @@ test("publishes the Manus Cue note after Dots with a complete translation and fo
   const article=articles.find(a=>a.slug==='manus-cue-agent-identity');
   assert.ok(article);
   assert.equal(article.date,'2026-09-29');
-  assert.equal(articles.filter(a=>!a.featured)[1].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[2].slug,article.slug);
   for(const lang of ['zh','en']){
     assert.equal(chapters(article[lang].content).length,6);
     assert.equal([...article[lang].content.matchAll(/!\[/g)].length,4);
@@ -113,11 +113,11 @@ test("publishes the Manus Cue note after Dots with a complete translation and fo
   assert.match(article.en.content,/does not mean an agent receives an unrestricted personal bank account/);
 });
 
-test("publishes the bilingual OpenAI Dots note first with five source illustrations",()=>{
+test("publishes the bilingual OpenAI Dots note with five source illustrations",()=>{
   const article=articles.find(a=>a.slug==='openai-dots-less-to-worry-about');
   assert.ok(article);
   assert.equal(article.date,'2026-09-30');
-  assert.equal(articles.filter(a=>!a.featured)[0].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[1].slug,article.slug);
   assert.equal(article.related,'manus-cue-agent-identity');
   for(const lang of ['zh','en']){
     assert.equal(chapters(article[lang].content).length,5);
@@ -148,4 +148,22 @@ test("publishes the four September 23–26 notes with complete bilingual bodies 
       assert.ok(article[lang].content.length>2500);
     }
   }
+});
+
+
+test("publishes the first-payments essay with source figures, original comic and English dialogue",()=>{
+  const article=articles.find(a=>a.slug==='wendao-first-payments');
+  assert.equal(articles.filter(a=>!a.featured)[0].slug,article.slug);
+  assert.equal(article.date,'2026-10-01');
+  assert.equal(article.product,'wendao');
+  for(const lang of ['zh','en']) {
+    assert.equal(chapters(article[lang].content).length,5);
+    assert.equal([...article[lang].content.matchAll(/!\[/g)].length,3);
+    assert.doesNotMatch(article[lang].content,/喜欢作者|LET’S MAKE IT REAL|奔奔王国|阅读原文/);
+    assert.match(article[lang].content,/11\.41/);
+  }
+  assert.match(article.zh.content,/销量为交易笔数，不等于独立付费用户数/);
+  assert.match(article.en.content,/not the same as a final payout or profit/);
+  assert.match(article.en.content,/not a list of work already completed/);
+  assert.equal([...article.en.content.matchAll(/\*\*\d{2} · /g)].length,12);
 });

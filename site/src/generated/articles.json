@@ -1,5 +1,40 @@
 [
   {
+    "slug": "wendao-first-payments",
+    "number": "18",
+    "date": "2026-10-01",
+    "order": -2,
+    "topic": "opc",
+    "related": "wendao-1-0-app-store",
+    "product": "wendao",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 6 分钟",
+      "en": "8 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-01-wendao-first-payments/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "我的 App 开始有人付费了。钱不多，但我很开心",
+      "excerpt": "2 笔交易，估计收入 11.41 元。一个很小的开始，也值得开心；继续把自己愿意用的产品，慢慢做好。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/wendao-first-payments/zh-c0f174993260.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "People Are Paying for My App. Not Much Money, but I’m Happy.",
+      "excerpt": "Two transactions and CNY 11.41 in estimated revenue. A small beginning worth celebrating—and a reason to keep improving something I use myself.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/wendao-first-payments/en-e9f02966eec1.json"
+    }
+  },
+  {
     "slug": "openai-dots-less-to-worry-about",
     "number": "17",
     "date": "2026-09-30",

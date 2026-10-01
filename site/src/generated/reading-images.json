@@ -1,4 +1,57 @@
 {
+  "/assets/notes/2026-10-01-wendao-first-payments/cover.png": {
+    "src": "/assets/reading/161495ba0c4a-1080.webp",
+    "width": 1080,
+    "height": 459,
+    "variants": [
+      {
+        "src": "/assets/reading/161495ba0c4a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/161495ba0c4a-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/161495ba0c4a-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-10-01-wendao-first-payments/september-report.png": {
+    "src": "/assets/reading/5b1015f54b79-670.webp",
+    "width": 670,
+    "height": 265,
+    "variants": [
+      {
+        "src": "/assets/reading/5b1015f54b79-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/5b1015f54b79-670.webp",
+        "width": 670
+      }
+    ]
+  },
+  "/assets/notes/2026-10-01-wendao-first-payments/chapter-32-comic.png": {
+    "src": "/assets/reading/8bec72d6f826-1024.webp",
+    "width": 1024,
+    "height": 3336,
+    "variants": [
+      {
+        "src": "/assets/reading/8bec72d6f826-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/8bec72d6f826-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/8bec72d6f826-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
   "/assets/notes/2026-09-30-openai-dots/cover.png": {
     "src": "/assets/reading/de043210d4ff-1080.webp",
     "width": 1080,
