@@ -39,18 +39,18 @@ const projects = [
   },
   {
     number: "02",
-    href: "https://human-design.wonderelian.com",
+    href: "https://buer.wonderelian.com/",
     image: "assets/project-human-design-image2.webp",
-    icon: "assets/app-icon-human-design.png",
+    icon: "assets/app-icon-buer-doudoulong.png",
     zh: {
-      title: "不二 认识自己",
-      kicker: "Human Design",
-      description: "理解能量与选择，寻找更接近自己、也更适合自己的生活节奏。",
+      title: "不二见己",
+      kicker: "AI 成长伙伴",
+      description: "从日常对话到成长档案，陪你认识自己、理清方向，把想法变成下一步行动。",
     },
     en: {
-      title: "Know Yourself",
-      kicker: "Human Design",
-      description: "A gentler way to understand your energy, choices, and the rhythm that fits your life.",
+      title: "Buer Within",
+      kicker: "AI Growth Companion",
+      description: "From everyday conversations to a personal growth profile, get to know yourself, find direction, and turn reflection into your next step.",
     },
   },
   {

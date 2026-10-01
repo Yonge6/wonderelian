@@ -64,11 +64,16 @@ test("homepage bundle carries summaries, not article bodies or removed essays",(
   for(const removedText of ['不要先问买哪台机器。先问卖什么、赚多少、多久回本。','Graphic Brutalism','Want a Laser or 3D-Printing Side Business?'])assert.ok(!bundle.includes(removedText));
   for(const asset of ['2026-08-21-maker-business-lab','2026-08-20-graphic-brutalism'])assert.equal(existsSync(new URL(`../dist/client/assets/notes/${asset}`,import.meta.url)),false);
 });
-test("deferred portfolio section and project definitions remain exactly unchanged",()=>{
+test("portfolio layout and other projects stay unchanged after the approved Buer refresh",()=>{
   const old=execFileSync('git',['show','54d5e1a:site/src/App.jsx'],{encoding:'utf8'});
   const current=read('../src/App.jsx');
   const projects=source=>source.slice(source.indexOf('const projects'),source.indexOf('const copy'));
-  assert.equal(projects(current),projects(old));
+  const withoutBuer=source=>projects(source).replace(/  \{\n    number: "02",[\s\S]*?(?=  \{\n    number: "03",)/, '');
+  assert.equal(withoutBuer(current),withoutBuer(old));
+  const buer=projects(current).match(/  \{\n    number: "02",[\s\S]*?(?=  \{\n    number: "03",)/)[0];
+  assert.ok(buer.includes('href: "https://buer.wonderelian.com/"'));
+  for(const text of ['不二见己','Buer Within','AI 成长伙伴','AI Growth Companion','app-icon-buer-doudoulong.png'])assert.ok(buer.includes(text));
+  assert.ok(existsSync(new URL('../public/assets/app-icon-buer-doudoulong.png',import.meta.url)));
   const section=source=>source.slice(source.indexOf('<section className="now-section"'),source.indexOf('<NotesSection language={language} />'));
   assert.equal(section(current),section(old));
 });
