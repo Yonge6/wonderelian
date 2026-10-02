@@ -26,14 +26,45 @@ test("analytics contract accepts only known events and controlled fields", () =>
     site_id: "site-wonderelian",
   });
   assert.equal(event("revenue", { value: 99 }), null);
-  const native = event("article_view", { content_id: "openai-dots-less-to-worry-about" }, true);
-  assert.equal(native.name, "wonder_ios_v1_article_view");
-  assert.deepEqual({ ...native.parameters }, {
-    content_id: "openai-dots-less-to-worry-about",
-    surface: "ios",
-    schema_version: 1,
-    site_id: "app-wonderelian-ios",
-  });
+});
+
+test("native iOS disables Google Analytics and the website consent prompt", () => {
+  const storage = new Map([["wonderelian.app.analyticsConsent.v1", "granted"]]);
+  const appended = [];
+  const dispatched = [];
+  const document = {
+    cookie: "_ga=legacy; _ga_HDHST6WKKB=legacy",
+    readyState: "complete",
+    documentElement: { lang: "en" },
+    head: { appendChild: node => appended.push(node) },
+    body: { appendChild: node => appended.push(node) },
+    addEventListener() {},
+    createElement: tagName => ({ tagName }),
+  };
+  const window = {
+    document,
+    Capacitor: { isNativePlatform: () => true, getPlatform: () => "ios" },
+    localStorage: {
+      getItem: key => storage.get(key) || null,
+      setItem: (key, value) => storage.set(key, value),
+      removeItem: key => storage.delete(key),
+    },
+    dispatchEvent: event => dispatched.push(event),
+  };
+  class CustomEvent {
+    constructor(type, init) { this.type = type; this.detail = init.detail; }
+  }
+
+  vm.runInNewContext(source, { window, URLSearchParams, CustomEvent });
+
+  assert.equal(storage.has("wonderelian.app.analyticsConsent.v1"), false);
+  assert.equal(window.WonderElianAnalytics.surface, "ios");
+  assert.equal(window.WonderElianAnalytics.isEnabled(), false);
+  assert.equal(window.WonderElianAnalytics.track("visit"), false);
+  assert.equal(appended.length, 0);
+  assert.deepEqual(dispatched.map(event => [event.type, event.detail.enabled]), [
+    ["wonderelian:analytics-consent", false],
+  ]);
 });
 
 test("duration contract rejects invalid values and active clock excludes idle gaps", () => {
@@ -57,5 +88,7 @@ test("site exposes a persistent privacy control and default-off disclosure", asy
   assert.match(app, /role="switch"/);
   assert.match(app, /wonderelian\.analyticsConsent\.v1/);
   assert.match(privacy, /使用统计默认关闭/);
-  assert.match(privacy, /Usage statistics are off by default/);
+  assert.match(privacy, /Website usage statistics are off by default/);
+  assert.match(privacy, /iOS App 不加载 Google Analytics/);
+  assert.match(privacy, /iOS App does not load Google Analytics/);
 });

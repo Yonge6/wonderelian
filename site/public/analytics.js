@@ -5,7 +5,6 @@
   const appConsentKey = "wonderelian.app.analyticsConsent.v1";
   const measurementId = "G-HDHST6WKKB";
   const webPrefix = "wonder_v1_";
-  const appPrefix = "wonder_ios_v1_";
   const names = new Set([
     "visit", "active_time", "section_view", "article_view", "article_reading_time",
     "reading_progress", "note_open", "project_open", "load_more", "language_switch",
@@ -16,7 +15,7 @@
     "content_id", "section_id", "product_id", "placement", "language", "progress", "value",
   ]);
 
-  function event(name, fields = {}, nativeIOS = false) {
+  function event(name, fields = {}) {
     if (!names.has(name)) return null;
     const safe = {};
     for (const [key, value] of Object.entries(fields)) {
@@ -25,12 +24,12 @@
       if (typeof value === "string" && /^[a-zA-Z0-9_-]{1,100}$/.test(value)) safe[key] = value;
     }
     return {
-      name: `${nativeIOS ? appPrefix : webPrefix}${name}`,
+      name: `${webPrefix}${name}`,
       parameters: {
         ...safe,
-        surface: nativeIOS ? "ios" : "h5",
+        surface: "h5",
         schema_version: 1,
-        site_id: nativeIOS ? "app-wonderelian-ios" : "site-wonderelian",
+        site_id: "site-wonderelian",
       },
     };
   }
@@ -54,10 +53,38 @@
 
   const doc = root.document;
   const nativeIOS = Boolean(root.Capacitor?.isNativePlatform?.() && root.Capacitor?.getPlatform?.() === "ios");
-  const storageKey = nativeIOS ? appConsentKey : consentKey;
+
+  // The public website offers optional browser analytics. The iOS shell does
+  // not load Google Analytics, create analytics cookies, or expose a consent
+  // prompt. App usage is intentionally left to App Store Connect analytics.
+  if (nativeIOS) {
+    try { root.localStorage.removeItem(appConsentKey); } catch {}
+    for (const part of doc.cookie.split(";")) {
+      const name = part.trim().split("=")[0];
+      if (!/^_ga(?:_|$)/.test(name)) continue;
+      for (const domain of ["", "; domain=wonderelian.com", "; domain=.wonderelian.com"]) {
+        doc.cookie = `${name}=; Max-Age=0; path=/${domain}`;
+      }
+    }
+    const disabledAnalytics = {
+      track: () => false,
+      consent: () => false,
+      isEnabled: () => false,
+      surface: "ios",
+    };
+    root.WonderElianAnalytics = disabledAnalytics;
+    const notifyDisabled = () => root.dispatchEvent(
+      new CustomEvent("wonderelian:analytics-consent", { detail: { enabled: false } }),
+    );
+    if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", notifyDisabled, { once: true });
+    else notifyDisabled();
+    return;
+  }
+
+  const storageKey = consentKey;
   const query = new URLSearchParams(root.location.search);
-  const eligible = (nativeIOS || (["wonderelian.com", "www.wonderelian.com"].includes(root.location.hostname)
-    && root.location.protocol === "https:"))
+  const eligible = (["wonderelian.com", "www.wonderelian.com"].includes(root.location.hostname)
+    && root.location.protocol === "https:")
     && !root.navigator.webdriver
     && query.get("analytics") !== "off"
     && !query.has("preview");
@@ -85,7 +112,7 @@
   });
 
   function track(name, fields = {}) {
-    const value = event(name, { language: language(), ...fields }, nativeIOS);
+    const value = event(name, { language: language(), ...fields });
     if (!enabled || !value) return false;
     root.gtag("event", value.name, value.parameters);
     return true;
@@ -175,11 +202,11 @@
     const zh = language() === "zh";
     panel.hidden = choice !== null;
     panel.querySelector("strong").textContent = zh
-      ? `帮助改进 WonderElian${nativeIOS ? " App" : ""}`
-      : `Help improve WonderElian${nativeIOS ? " App" : ""}`;
+      ? "帮助改进 WonderElian"
+      : "Help improve WonderElian";
     panel.querySelector("p").textContent = zh
-      ? `可选使用统计会向 Google Analytics 发送内容编号、操作结果与前台活跃时长${nativeIOS ? "，并与网站数据分开统计" : ""}；不上传姓名、联系方式、文章内容或声音，可随时关闭。`
-      : `Optional statistics send content IDs, action outcomes and foreground active time to Google Analytics${nativeIOS ? " in a separate App dataset" : ""}. No names, contact details, article text or audio. Turn off at any time.`;
+      ? "可选使用统计会向 Google Analytics 发送内容编号、操作结果与前台活跃时长；不上传姓名、联系方式、文章内容或声音，可随时关闭。"
+      : "Optional statistics send content IDs, action outcomes and foreground active time to Google Analytics. No names, contact details, article text or audio. Turn off at any time.";
     panel.querySelector('[data-consent="yes"]').textContent = zh ? "允许统计" : "Allow";
     panel.querySelector('[data-consent="no"]').textContent = zh ? "暂不允许" : "Not now";
   }
@@ -270,7 +297,7 @@
     root.setInterval(sample, 5000);
   }
 
-  root.WonderElianAnalytics = { track, consent, isEnabled: () => enabled, surface: nativeIOS ? "ios" : "h5" };
+  root.WonderElianAnalytics = { track, consent, isEnabled: () => enabled, surface: "h5" };
   if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", mount, { once: true });
   else mount();
 })(typeof window === "undefined" ? null : window);
