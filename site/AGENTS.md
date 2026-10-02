@@ -1,5 +1,7 @@
 # Prototype Instructions
 
+October 2, 2026 analytics boundary: WonderElian usage statistics are optional and off by default. Collect only allowlisted content IDs, action outcomes and foreground duration after explicit consent; never collect article text, contact values, audio or private input. Keep historic aggregate traffic separate from the `wonder_v1_*` product event schema, and expose a persistent bilingual consent control in the footer.
+
 September 27, 2026 copy refinement: keep the Notes section heading concise enough to remain one line on a 390px phone. Use “写下此刻。” in Chinese and “Notes for now.” in English. Do not show a separate “更多随记 / More Notes” label between the featured note and the connected archive list.
 
 September 27, 2026 refinement: keep the three hero actions visually equal and understated. Present them as three unframed text actions with consistent typography and spacing; do not wrap them in a shared panel, add row borders, or promote one action with a filled treatment. Use a subtle staggered arrow nudge to invite clicks, with long pauses and `prefers-reduced-motion` support. Article-body figures use square image corners at every breakpoint, while homepage cards and other interface surfaces keep their established radii.

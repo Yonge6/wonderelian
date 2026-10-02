@@ -1,56 +1,260 @@
-(function () {
+(function (root) {
   "use strict";
 
-  if (!["wonderelian.com", "www.wonderelian.com"].includes(window.location.hostname)) return;
-
+  const consentKey = "wonderelian.analyticsConsent.v1";
   const measurementId = "G-HDHST6WKKB";
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
-  window.gtag("js", new Date());
-  window.gtag("config", measurementId, {
-    allow_google_signals: false,
-    allow_ad_personalization_signals: false,
-  });
+  const names = new Set([
+    "visit", "active_time", "section_view", "article_view", "article_reading_time",
+    "reading_progress", "note_open", "project_open", "load_more", "language_switch",
+    "audio_start", "audio_listen_time", "audio_error", "contact_click",
+  ]);
+  const keys = new Set([
+    "content_id", "section_id", "product_id", "placement", "language", "progress", "value",
+  ]);
 
-  const loader = document.createElement("script");
-  loader.async = true;
-  loader.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-  document.head.appendChild(loader);
-
-  const campaignSource = new URLSearchParams(window.location.search).get("utm_source");
-  const referrerHost = (() => {
-    try { return document.referrer ? new URL(document.referrer).hostname : ""; }
-    catch { return ""; }
-  })();
-  const aiSources = ["chatgpt.com", "perplexity.ai", "copilot.microsoft.com", "claude.ai", "gemini.google.com"];
-  const aiSource = aiSources.find((source) => campaignSource === source || referrerHost === source || referrerHost.endsWith(`.${source}`));
-  if (aiSource) {
-    window.gtag("event", "geo_referral_view", {
-      site_id: "site-wonderelian",
-      source: aiSource,
-      page_path: window.location.pathname,
-    });
+  function event(name, fields = {}) {
+    if (!names.has(name)) return null;
+    const safe = {};
+    for (const [key, value] of Object.entries(fields)) {
+      if (!keys.has(key)) continue;
+      if (typeof value === "number" && Number.isFinite(value) && value >= 0 && value <= 100000) safe[key] = value;
+      if (typeof value === "string" && /^[a-zA-Z0-9_-]{1,100}$/.test(value)) safe[key] = value;
+    }
+    return { name: `wonder_v1_${name}`, parameters: { ...safe, surface: "h5", schema_version: 1, site_id: "site-wonderelian" } };
   }
 
-  document.addEventListener("click", (event) => {
-    const noteLink = event.target.closest?.("a.note-card[href]");
-    if (noteLink) {
-      window.gtag("event", "content_discovery", {
-        site_id: "site-wonderelian",
-        destination_path: new URL(noteLink.href, window.location.href).pathname,
-        page_path: window.location.pathname,
-      });
+  function activeClock() {
+    let previous = null;
+    return {
+      reset() { previous = null; },
+      sample(now, isActive) {
+        const before = previous;
+        previous = isActive ? now : null;
+        if (!isActive || before === null) return 0;
+        const seconds = (now - before) / 1000;
+        return seconds > 0 && seconds <= 35 ? seconds : 0;
+      },
+    };
+  }
+
+  if (typeof module !== "undefined") module.exports = { event, activeClock, consentKey };
+  if (!root?.document) return;
+
+  const doc = root.document;
+  const query = new URLSearchParams(root.location.search);
+  const eligible = ["wonderelian.com", "www.wonderelian.com"].includes(root.location.hostname)
+    && root.location.protocol === "https:"
+    && !root.navigator.webdriver
+    && query.get("analytics") !== "off"
+    && !query.has("preview");
+  const language = () => doc.documentElement.lang.startsWith("zh") ? "zh" : "en";
+  const articleId = () => root.location.pathname.match(/^\/(?:zh|en)\/notes\/([a-z0-9-]+)\/?$/i)?.[1] || null;
+  const safeId = value => String(value || "").toLowerCase().replace(/^www\./, "").replace(/[^a-z0-9_-]+/g, "-").replace(/^-|-$/g, "").slice(0, 100);
+  let choice = null;
+  try { choice = root.localStorage.getItem(consentKey); } catch {}
+  let enabled = eligible && choice === "granted";
+  let loaded = false;
+  let configured = false;
+  let activeSeconds = 0;
+  let readingSeconds = 0;
+  let audioSeconds = 0;
+  let lastInteraction = root.performance.now();
+  const active = activeClock();
+  const audio = activeClock();
+  const milestones = new Set();
+  let panel = null;
+
+  root.dataLayer = root.dataLayer || [];
+  root.gtag = root.gtag || function () { root.dataLayer.push(arguments); };
+  root.gtag("consent", "default", {
+    analytics_storage: "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied",
+  });
+
+  function track(name, fields = {}) {
+    const value = event(name, { language: language(), ...fields });
+    if (!enabled || !value) return false;
+    root.gtag("event", value.name, value.parameters);
+    return true;
+  }
+
+  function loadGoogle() {
+    if (loaded) return;
+    loaded = true;
+    const loader = doc.createElement("script");
+    loader.async = true;
+    loader.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    doc.head.appendChild(loader);
+  }
+
+  function start() {
+    if (!enabled) return;
+    loadGoogle();
+    root.gtag("consent", "update", { analytics_storage: "granted" });
+    if (!configured) {
+      configured = true;
+      root.gtag("js", new Date());
+      root.gtag("config", measurementId, { allow_google_signals: false, allow_ad_personalization_signals: false });
+    }
+    lastInteraction = root.performance.now();
+    active.reset();
+    audio.reset();
+    track("visit");
+    const contentId = articleId();
+    if (contentId) track("article_view", { content_id: contentId });
+  }
+
+  function deleteAnalyticsCookies() {
+    for (const part of doc.cookie.split(";")) {
+      const name = part.trim().split("=")[0];
+      if (!/^_ga(?:_|$)/.test(name)) continue;
+      for (const domain of ["", "; domain=wonderelian.com", "; domain=.wonderelian.com"]) doc.cookie = `${name}=; Max-Age=0; path=/${domain}`;
+    }
+  }
+
+  function audioElement() { return doc.querySelector("audio"); }
+  function audioId() {
+    const src = audioElement()?.currentSrc || audioElement()?.getAttribute("src") || "";
+    return safeId(src.split("/").pop()?.replace(/\.[a-z0-9]+$/i, "") || "ambient");
+  }
+
+  function flush() {
+    if (activeSeconds >= 0.1) track("active_time", { value: Math.round(activeSeconds * 100) / 100 });
+    if (readingSeconds >= 0.1) track("article_reading_time", { content_id: articleId(), value: Math.round(readingSeconds * 100) / 100 });
+    if (audioSeconds >= 0.1) track("audio_listen_time", { content_id: audioId(), value: Math.round(audioSeconds * 100) / 100 });
+    activeSeconds = 0;
+    readingSeconds = 0;
+    audioSeconds = 0;
+  }
+
+  function stop() {
+    enabled = false;
+    activeSeconds = 0;
+    readingSeconds = 0;
+    audioSeconds = 0;
+    active.reset();
+    audio.reset();
+    root.gtag("consent", "update", { analytics_storage: "denied" });
+    deleteAnalyticsCookies();
+  }
+
+  function consent(value) {
+    choice = value ? "granted" : "denied";
+    try { root.localStorage.setItem(consentKey, choice); } catch {}
+    if (value && eligible) { enabled = true; start(); } else stop();
+    renderPanel();
+    root.dispatchEvent(new CustomEvent("wonderelian:analytics-consent", { detail: { enabled } }));
+  }
+
+  function sample() {
+    const now = root.performance.now();
+    const foreground = enabled && doc.visibilityState === "visible" && now - lastInteraction < 60000;
+    const seconds = active.sample(now, foreground);
+    activeSeconds += seconds;
+    if (articleId()) readingSeconds += seconds;
+    const player = audioElement();
+    audioSeconds += audio.sample(now, foreground && player && !player.paused && !player.ended);
+    if (activeSeconds >= 30 || readingSeconds >= 30 || audioSeconds >= 30) flush();
+  }
+
+  function renderPanel() {
+    if (!panel) return;
+    const zh = language() === "zh";
+    panel.hidden = choice !== null;
+    panel.querySelector("strong").textContent = zh ? "帮助改进 WonderElian" : "Help improve WonderElian";
+    panel.querySelector("p").textContent = zh
+      ? "可选使用统计会向 Google Analytics 发送内容编号、操作结果与前台活跃时长；不上传姓名、联系方式、文章内容或声音，可随时关闭。"
+      : "Optional statistics send content IDs, action outcomes and foreground active time to Google Analytics. No names, contact details, article text or audio. Turn off at any time.";
+    panel.querySelector('[data-consent="yes"]').textContent = zh ? "允许统计" : "Allow";
+    panel.querySelector('[data-consent="no"]').textContent = zh ? "暂不允许" : "Not now";
+  }
+
+  function mountPanel() {
+    const css = doc.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "/analytics.css?v=20261002";
+    doc.head.appendChild(css);
+    panel = doc.createElement("section");
+    panel.className = "wonder-usage-consent";
+    panel.setAttribute("aria-label", "Optional usage statistics");
+    panel.innerHTML = '<strong></strong><p></p><div><button type="button" data-consent="no"></button><button type="button" data-consent="yes"></button></div>';
+    panel.querySelectorAll("button").forEach(button => button.addEventListener("click", () => consent(button.dataset.consent === "yes")));
+    doc.body.appendChild(panel);
+    renderPanel();
+  }
+
+  function productId(link) {
+    try { return safeId(new URL(link.href, root.location.href).hostname.replace(".wonderelian.com", "") || "external"); }
+    catch { return "external"; }
+  }
+
+  function contentFromHref(href) {
+    try { return new URL(href, root.location.href).pathname.match(/\/notes\/([a-z0-9-]+)/i)?.[1] || "note"; }
+    catch { return "note"; }
+  }
+
+  function contactKind(target) {
+    const link = target.closest("a[href]");
+    if (link?.href.startsWith("mailto:")) return "email";
+    if (target.closest(".wechat-contact")) return "wechat";
+    if (target.closest(".hero-contact,.about-contact")) return "product-idea";
+    try { return link ? safeId(new URL(link.href, root.location.href).hostname) : "contact"; }
+    catch { return "contact"; }
+  }
+
+  function bindInteractions() {
+    doc.addEventListener("click", click => {
+      const target = click.target;
+      const note = target.closest?.("a.note-card[href]");
+      if (note) track("note_open", { content_id: contentFromHref(note.href), placement: note.classList.contains("note-card--featured") ? "featured" : "archive" });
+      const project = target.closest?.("a.project-entry[href],a[data-product-referral][href]");
+      if (project && !new URL(project.href, root.location.href).hostname.startsWith("ops.")) track("project_open", { product_id: productId(project), placement: project.dataset.productReferral || "project-card" });
+      if (target.closest?.(".notes-load-more")) track("load_more", { section_id: "notes" });
+      if (target.closest?.(".language-toggle")) track("language_switch", { language: language() === "zh" ? "en" : "zh" });
+      if (target.closest?.(".hero-contact,.about-contact,.contact-list a,.contact-list button")) track("contact_click", { placement: contactKind(target) });
+    });
+
+    const sections = [...doc.querySelectorAll("main > section[id]")];
+    if ("IntersectionObserver" in root) {
+      const seen = new Set();
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (!entry.isIntersecting || entry.intersectionRatio < 0.35 || seen.has(entry.target.id)) return;
+        seen.add(entry.target.id);
+        track("section_view", { section_id: safeId(entry.target.id) });
+      }), { threshold: [0.35] });
+      sections.forEach(section => observer.observe(section));
     }
 
-    const link = event.target.closest?.("a.project-entry[href], a[data-product-referral][href]");
-    if (!link) return;
-    const destination = new URL(link.href, window.location.href);
-    if (destination.hostname === "ops.wonderelian.com") return;
-    window.gtag("event", "product_discovery", {
-      site_id: "site-wonderelian",
-      product_host: destination.hostname,
-      placement: link.dataset.productReferral || "project_card",
-      page_path: window.location.pathname,
-    });
-  });
-}());
+    const player = audioElement();
+    player?.addEventListener("play", () => track("audio_start", { content_id: audioId() }));
+    player?.addEventListener("error", () => track("audio_error", { content_id: audioId() }));
+
+    root.addEventListener("scroll", () => {
+      sample();
+      lastInteraction = root.performance.now();
+      const body = doc.querySelector(".article-body");
+      if (!body || !articleId()) return;
+      const rect = body.getBoundingClientRect();
+      const available = Math.max(1, body.offsetHeight - root.innerHeight * 0.4);
+      const progress = Math.max(0, Math.min(100, Math.round((-rect.top + root.innerHeight * 0.55) / available * 100)));
+      for (const point of [25, 50, 75, 90]) if (progress >= point && !milestones.has(point)) {
+        milestones.add(point);
+        track("reading_progress", { content_id: articleId(), progress: point });
+      }
+    }, { passive: true });
+    for (const name of ["pointerdown", "keydown"]) root.addEventListener(name, () => { sample(); lastInteraction = root.performance.now(); }, { passive: true });
+    doc.addEventListener("visibilitychange", () => { sample(); flush(); active.reset(); audio.reset(); });
+    root.addEventListener("pagehide", () => { sample(); flush(); active.reset(); audio.reset(); });
+  }
+
+  function mount() {
+    mountPanel();
+    bindInteractions();
+    new MutationObserver(renderPanel).observe(doc.documentElement, { attributes: true, attributeFilter: ["lang"] });
+    if (enabled) start();
+    root.setInterval(sample, 5000);
+  }
+
+  root.WonderElianAnalytics = { track, consent, isEnabled: () => enabled };
+  if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", mount, { once: true });
+  else mount();
+})(typeof window === "undefined" ? null : window);

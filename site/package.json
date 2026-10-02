@@ -8,6 +8,7 @@
     "build": "node scripts/optimize-reading-images.mjs && node scripts/prepare-content.mjs && vite build && node scripts/prerender-seo.mjs && node scripts/prepare-sites-build.mjs",
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
+    "test:analytics": "node --test tests/analytics.test.mjs",
     "predev": "node scripts/optimize-reading-images.mjs && node scripts/prepare-content.mjs",
     "images": "node scripts/optimize-reading-images.mjs",
     "test:content": "node --test tests/content.test.mjs"

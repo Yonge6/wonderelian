@@ -119,7 +119,8 @@ test("ships two attributable Yixiu acquisition paths", async () => {
   assert.match(app, /Continue listening in Yixiu/);
   assert.match(app, /scene: "falls"/);
   assert.match(analytics, /a\[data-product-referral\]\[href\]/);
-  assert.match(analytics, /placement: link\.dataset\.productReferral \|\| "project_card"/);
+  assert.match(analytics, /wonder_v1_/);
+  assert.match(analytics, /placement: project\.dataset\.productReferral \|\| "project-card"/);
 });
 
 test("publishes the complete bilingual AI product note above Odyssey", async () => {

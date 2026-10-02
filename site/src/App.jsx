@@ -254,6 +254,11 @@ const copy = {
     publicReadonly: "公开只读",
     aboutKicker: "ABOUT ELIAN",
     footerLine: "Design · AI · Products · Life",
+    usageStatistics: "使用统计",
+    usageOn: "已开启",
+    usageOff: "已关闭",
+    usageToggle: "切换可选使用统计",
+    privacyPolicy: "隐私说明",
     icpLabel: "京ICP备19022034号-4",
     backToTop: "回到开始",
     drawerTitle: "向内认识自己，向外如水而行。",
@@ -329,6 +334,11 @@ const copy = {
     publicReadonly: "Public read-only",
     aboutKicker: "ABOUT ELIAN",
     footerLine: "Design · AI · Products · Life",
+    usageStatistics: "Usage statistics",
+    usageOn: "On",
+    usageOff: "Off",
+    usageToggle: "Toggle optional usage statistics",
+    privacyPolicy: "Privacy",
     icpLabel: "京ICP备19022034号-4",
     backToTop: "Back to the beginning",
     drawerTitle: "Know yourself within. Move like water through the world.",
@@ -573,6 +583,10 @@ export function App() {
   const [supportOpen, setSupportOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
   const [wechatOpen,setWechatOpen] = useState(false);
+  const [analyticsEnabled, setAnalyticsEnabled] = useState(() => {
+    try { return window.localStorage.getItem("wonderelian.analyticsConsent.v1") === "granted"; }
+    catch { return false; }
+  });
   const [ambientPlaying, setAmbientPlaying] = useState(false);
   const [ambientSound, setAmbientSound] = useState("morning-birds");
   const ambientAudioRef = useRef(null);
@@ -656,6 +670,12 @@ export function App() {
 
   useEffect(() => {
     if (ambientAudioRef.current) ambientAudioRef.current.volume = 0.34;
+  }, []);
+
+  useEffect(() => {
+    const update = (event) => setAnalyticsEnabled(Boolean(event.detail?.enabled));
+    window.addEventListener("wonderelian:analytics-consent", update);
+    return () => window.removeEventListener("wonderelian:analytics-consent", update);
   }, []);
 
   useEffect(() => {
@@ -967,6 +987,18 @@ export function App() {
       <footer className="site-footer">
         <Wordmark label={c.homeLabel} text="Wonder Elian" href={homeHref} />
         <p>{c.footerLine}</p>
+        <div className="footer-privacy-controls">
+          <button
+            type="button"
+            role="switch"
+            aria-checked={analyticsEnabled}
+            aria-label={c.usageToggle}
+            onClick={() => window.WonderElianAnalytics?.consent(!analyticsEnabled)}
+          >
+            {c.usageStatistics} · {analyticsEnabled ? c.usageOn : c.usageOff}
+          </button>
+          <a href="/privacy.html">{c.privacyPolicy}</a>
+        </div>
         <a className="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
           {c.icpLabel}
         </a>
