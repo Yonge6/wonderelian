@@ -2,17 +2,21 @@
   "use strict";
 
   const consentKey = "wonderelian.analyticsConsent.v1";
+  const appConsentKey = "wonderelian.app.analyticsConsent.v1";
   const measurementId = "G-HDHST6WKKB";
+  const webPrefix = "wonder_v1_";
+  const appPrefix = "wonder_ios_v1_";
   const names = new Set([
     "visit", "active_time", "section_view", "article_view", "article_reading_time",
     "reading_progress", "note_open", "project_open", "load_more", "language_switch",
     "audio_start", "audio_listen_time", "audio_error", "contact_click",
+    "native_share_start", "native_share_success", "native_share_error", "deep_link_open",
   ]);
   const keys = new Set([
     "content_id", "section_id", "product_id", "placement", "language", "progress", "value",
   ]);
 
-  function event(name, fields = {}) {
+  function event(name, fields = {}, nativeIOS = false) {
     if (!names.has(name)) return null;
     const safe = {};
     for (const [key, value] of Object.entries(fields)) {
@@ -20,7 +24,15 @@
       if (typeof value === "number" && Number.isFinite(value) && value >= 0 && value <= 100000) safe[key] = value;
       if (typeof value === "string" && /^[a-zA-Z0-9_-]{1,100}$/.test(value)) safe[key] = value;
     }
-    return { name: `wonder_v1_${name}`, parameters: { ...safe, surface: "h5", schema_version: 1, site_id: "site-wonderelian" } };
+    return {
+      name: `${nativeIOS ? appPrefix : webPrefix}${name}`,
+      parameters: {
+        ...safe,
+        surface: nativeIOS ? "ios" : "h5",
+        schema_version: 1,
+        site_id: nativeIOS ? "app-wonderelian-ios" : "site-wonderelian",
+      },
+    };
   }
 
   function activeClock() {
@@ -37,13 +49,15 @@
     };
   }
 
-  if (typeof module !== "undefined") module.exports = { event, activeClock, consentKey };
+  if (typeof module !== "undefined") module.exports = { event, activeClock, consentKey, appConsentKey };
   if (!root?.document) return;
 
   const doc = root.document;
+  const nativeIOS = Boolean(root.Capacitor?.isNativePlatform?.() && root.Capacitor?.getPlatform?.() === "ios");
+  const storageKey = nativeIOS ? appConsentKey : consentKey;
   const query = new URLSearchParams(root.location.search);
-  const eligible = ["wonderelian.com", "www.wonderelian.com"].includes(root.location.hostname)
-    && root.location.protocol === "https:"
+  const eligible = (nativeIOS || (["wonderelian.com", "www.wonderelian.com"].includes(root.location.hostname)
+    && root.location.protocol === "https:"))
     && !root.navigator.webdriver
     && query.get("analytics") !== "off"
     && !query.has("preview");
@@ -51,7 +65,7 @@
   const articleId = () => root.location.pathname.match(/^\/(?:zh|en)\/notes\/([a-z0-9-]+)\/?$/i)?.[1] || null;
   const safeId = value => String(value || "").toLowerCase().replace(/^www\./, "").replace(/[^a-z0-9_-]+/g, "-").replace(/^-|-$/g, "").slice(0, 100);
   let choice = null;
-  try { choice = root.localStorage.getItem(consentKey); } catch {}
+  try { choice = root.localStorage.getItem(storageKey); } catch {}
   let enabled = eligible && choice === "granted";
   let loaded = false;
   let configured = false;
@@ -71,7 +85,7 @@
   });
 
   function track(name, fields = {}) {
-    const value = event(name, { language: language(), ...fields });
+    const value = event(name, { language: language(), ...fields }, nativeIOS);
     if (!enabled || !value) return false;
     root.gtag("event", value.name, value.parameters);
     return true;
@@ -139,7 +153,7 @@
 
   function consent(value) {
     choice = value ? "granted" : "denied";
-    try { root.localStorage.setItem(consentKey, choice); } catch {}
+    try { root.localStorage.setItem(storageKey, choice); } catch {}
     if (value && eligible) { enabled = true; start(); } else stop();
     renderPanel();
     root.dispatchEvent(new CustomEvent("wonderelian:analytics-consent", { detail: { enabled } }));
@@ -160,10 +174,12 @@
     if (!panel) return;
     const zh = language() === "zh";
     panel.hidden = choice !== null;
-    panel.querySelector("strong").textContent = zh ? "帮助改进 WonderElian" : "Help improve WonderElian";
+    panel.querySelector("strong").textContent = zh
+      ? `帮助改进 WonderElian${nativeIOS ? " App" : ""}`
+      : `Help improve WonderElian${nativeIOS ? " App" : ""}`;
     panel.querySelector("p").textContent = zh
-      ? "可选使用统计会向 Google Analytics 发送内容编号、操作结果与前台活跃时长；不上传姓名、联系方式、文章内容或声音，可随时关闭。"
-      : "Optional statistics send content IDs, action outcomes and foreground active time to Google Analytics. No names, contact details, article text or audio. Turn off at any time.";
+      ? `可选使用统计会向 Google Analytics 发送内容编号、操作结果与前台活跃时长${nativeIOS ? "，并与网站数据分开统计" : ""}；不上传姓名、联系方式、文章内容或声音，可随时关闭。`
+      : `Optional statistics send content IDs, action outcomes and foreground active time to Google Analytics${nativeIOS ? " in a separate App dataset" : ""}. No names, contact details, article text or audio. Turn off at any time.`;
     panel.querySelector('[data-consent="yes"]').textContent = zh ? "允许统计" : "Allow";
     panel.querySelector('[data-consent="no"]').textContent = zh ? "暂不允许" : "Not now";
   }
@@ -254,7 +270,7 @@
     root.setInterval(sample, 5000);
   }
 
-  root.WonderElianAnalytics = { track, consent, isEnabled: () => enabled };
+  root.WonderElianAnalytics = { track, consent, isEnabled: () => enabled, surface: nativeIOS ? "ios" : "h5" };
   if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", mount, { once: true });
   else mount();
 })(typeof window === "undefined" ? null : window);

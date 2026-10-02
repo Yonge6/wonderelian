@@ -6,10 +6,11 @@ import { readFile } from "node:fs/promises";
 const source = await readFile(new URL("../public/analytics.js", import.meta.url), "utf8");
 const sandbox = { module: { exports: {} }, window: null, URLSearchParams };
 vm.runInNewContext(source, sandbox);
-const { event, activeClock, consentKey } = sandbox.module.exports;
+const { event, activeClock, consentKey, appConsentKey } = sandbox.module.exports;
 
 test("analytics contract accepts only known events and controlled fields", () => {
   assert.equal(consentKey, "wonderelian.analyticsConsent.v1");
+  assert.equal(appConsentKey, "wonderelian.app.analyticsConsent.v1");
   const value = event("article_view", {
     content_id: "openai-dots-less-to-worry-about",
     language: "zh",
@@ -25,6 +26,14 @@ test("analytics contract accepts only known events and controlled fields", () =>
     site_id: "site-wonderelian",
   });
   assert.equal(event("revenue", { value: 99 }), null);
+  const native = event("article_view", { content_id: "openai-dots-less-to-worry-about" }, true);
+  assert.equal(native.name, "wonder_ios_v1_article_view");
+  assert.deepEqual({ ...native.parameters }, {
+    content_id: "openai-dots-less-to-worry-about",
+    surface: "ios",
+    schema_version: 1,
+    site_id: "app-wonderelian-ios",
+  });
 });
 
 test("duration contract rejects invalid values and active clock excludes idle gaps", () => {
