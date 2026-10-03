@@ -239,7 +239,7 @@
     const link = target.closest("a[href]");
     if (link?.href.startsWith("mailto:")) return "email";
     if (target.closest(".wechat-contact")) return "wechat";
-    if (target.closest(".hero-contact,.about-contact")) return "product-idea";
+    if (target.closest(".hero-contact,.about-contact:not(.about-details)")) return "product-idea";
     try { return link ? safeId(new URL(link.href, root.location.href).hostname) : "contact"; }
     catch { return "contact"; }
   }
@@ -253,7 +253,7 @@
       if (project && !new URL(project.href, root.location.href).hostname.startsWith("ops.")) track("project_open", { product_id: productId(project), placement: project.dataset.productReferral || "project-card" });
       if (target.closest?.(".notes-load-more")) track("load_more", { section_id: "notes" });
       if (target.closest?.(".language-toggle")) track("language_switch", { language: language() === "zh" ? "en" : "zh" });
-      if (target.closest?.(".hero-contact,.about-contact,.contact-list a,.contact-list button")) track("contact_click", { placement: contactKind(target) });
+      if (target.closest?.(".hero-contact,.about-contact:not(.about-details),.contact-list a,.contact-list button")) track("contact_click", { placement: contactKind(target) });
     });
 
     const sections = [...doc.querySelectorAll("main > section[id]")];

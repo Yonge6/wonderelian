@@ -92,3 +92,8 @@ test("site exposes a persistent privacy control and default-off disclosure", asy
   assert.match(privacy, /iOS App 不加载 Google Analytics/);
   assert.match(privacy, /iOS App does not load Google Analytics/);
 });
+
+test("opening About WonderElian is not recorded as a product-idea contact", () => {
+  assert.match(source, /\.about-contact:not\(\.about-details\)/);
+  assert.doesNotMatch(source, /\.hero-contact,\.about-contact,\.contact-list/);
+});

@@ -10,6 +10,8 @@ September 23, 2026 refinement: keep the full-width site header, hero (`#world`) 
 
 About actions “联系 Elian” and “沿途所作” are plain text with arrows, without a rectangular/pill border. Preserve their interactive behavior and keyboard focus indication.
 
+October 3, 2026: add a third plain-text About action beneath “沿途所作”: “关于 WonderElian” / “About WonderElian”. It opens the existing bilingual About WonderElian drawer view shown in the main menu; keep the same understated arrow treatment as the other About actions.
+
 Notes archive arrows have no circular background; retain the standalone arrow within each rounded card.
 
 Treat the Notes archive as one rounded outer module with connected article rows and thin internal dividers. Do not round every archived row or leave gaps between rows. Show each cover as a compact thumbnail, and keep mobile rows short by omitting the excerpt while preserving topic, title, date and reading time.

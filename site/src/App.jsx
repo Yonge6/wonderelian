@@ -742,6 +742,10 @@ export function App() {
     setDrawerView("contact");
     setDrawerOpen(true);
   };
+  const openAbout = () => {
+    setDrawerView("about");
+    setDrawerOpen(true);
+  };
   const drawerHeading = drawerView === "about"
     ? c.aboutDrawer
     : drawerView === "contact"
@@ -973,6 +977,10 @@ export function App() {
                   <span>{c.viewWork}</span>
                   <ArrowRight size={18} weight="light" aria-hidden="true" />
                 </a>
+                <button className="about-contact about-details" type="button" onClick={openAbout}>
+                  <span>{c.aboutDrawer}</span>
+                  <ArrowRight size={18} weight="light" aria-hidden="true" />
+                </button>
               </div>
             </div>
             <div className="about-copy">

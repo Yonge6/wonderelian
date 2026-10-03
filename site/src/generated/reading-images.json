@@ -1,4 +1,61 @@
 {
+  "/assets/notes/2026-10-02-will-others-pay/cover.png": {
+    "src": "/assets/reading/44e99d137d87-1080.webp",
+    "width": 1080,
+    "height": 459,
+    "variants": [
+      {
+        "src": "/assets/reading/44e99d137d87-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/44e99d137d87-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/44e99d137d87-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-10-02-will-others-pay/value-path.png": {
+    "src": "/assets/reading/3f8ca2030a2d-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/3f8ca2030a2d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/3f8ca2030a2d-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/3f8ca2030a2d-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-10-02-will-others-pay/work-and-life.png": {
+    "src": "/assets/reading/71b341527dec-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/71b341527dec-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/71b341527dec-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/71b341527dec-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
   "/assets/notes/2026-10-01-wendao-first-payments/cover.png": {
     "src": "/assets/reading/161495ba0c4a-1080.webp",
     "width": 1080,

@@ -1,5 +1,40 @@
 [
   {
+    "slug": "will-others-pay-for-what-you-love",
+    "number": "19",
+    "date": "2026-10-02",
+    "order": -3,
+    "topic": "opc",
+    "related": "wendao-first-payments",
+    "product": "wendao",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 7 分钟",
+      "en": "9 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-02-will-others-pay/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "自己很喜欢，别人会买单吗？做产品最难跨过的这一步",
+      "excerpt": "自己的需要可以让产品开始；真正走向市场，还要找到具体的问题、讲清价值，并完成一次真实交易。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/will-others-pay-for-what-you-love/zh-5947732a0d10.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "You Love It. Will Anyone Pay for It? The Hardest Step in Building a Product",
+      "excerpt": "Your own need can start a product. Reaching a market takes a concrete problem, clear value, a small real transaction, and a business you can keep running.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/will-others-pay-for-what-you-love/en-0e7de59a20ad.json"
+    }
+  },
+  {
     "slug": "wendao-first-payments",
     "number": "18",
     "date": "2026-10-01",
