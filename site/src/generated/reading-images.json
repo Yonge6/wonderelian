@@ -1,4 +1,80 @@
 {
+  "/assets/notes/2026-10-03-ai-products-life/cover.png": {
+    "src": "/assets/reading/a5c9356f6318-1080.webp",
+    "width": 1080,
+    "height": 459,
+    "variants": [
+      {
+        "src": "/assets/reading/a5c9356f6318-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a5c9356f6318-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/a5c9356f6318-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-10-03-ai-products-life/moments.png": {
+    "src": "/assets/reading/a956b171ccce-1080.webp",
+    "width": 1080,
+    "height": 1947,
+    "variants": [
+      {
+        "src": "/assets/reading/a956b171ccce-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a956b171ccce-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/a956b171ccce-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-10-03-ai-products-life/chapter-34-zh.png": {
+    "src": "/assets/reading/f9bd4d49f156-1024.webp",
+    "width": 1024,
+    "height": 3336,
+    "variants": [
+      {
+        "src": "/assets/reading/f9bd4d49f156-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/f9bd4d49f156-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/f9bd4d49f156-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/notes/2026-10-03-ai-products-life/chapter-34-en.png": {
+    "src": "/assets/reading/8d77f241a41d-1024.webp",
+    "width": 1024,
+    "height": 3336,
+    "variants": [
+      {
+        "src": "/assets/reading/8d77f241a41d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/8d77f241a41d-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/8d77f241a41d-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
   "/assets/notes/2026-10-02-will-others-pay/cover.png": {
     "src": "/assets/reading/44e99d137d87-1080.webp",
     "width": 1080,

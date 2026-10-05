@@ -1,5 +1,40 @@
 [
   {
+    "slug": "building-the-life-i-want-with-ai",
+    "number": "20",
+    "date": "2026-10-03",
+    "order": -4,
+    "topic": "life",
+    "related": "will-others-pay-for-what-you-love",
+    "product": "wendao",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 7 分钟",
+      "en": "9 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-03-ai-products-life/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "用 AI 做了几个产品，慢慢拼出了自己想过的生活",
+      "excerpt": "从 81 章生活漫画，到看世界、读一章、午间小憩：做出来的产品开始走进日常，也慢慢连成了一种生活方式。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/building-the-life-i-want-with-ai/zh-96643068dfe5.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "I Built a Few Products with AI—and Slowly Pieced Together the Life I Want",
+      "excerpt": "From 81 everyday-life comics to a daily rhythm of seeing the world, reading a chapter, and resting at noon: the products I made are becoming a way of living.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/building-the-life-i-want-with-ai/en-3d72ae5db7de.json"
+    }
+  },
+  {
     "slug": "will-others-pay-for-what-you-love",
     "number": "19",
     "date": "2026-10-02",
