@@ -1,4 +1,42 @@
 {
+  "/assets/notes/2026-10-05-create-at-your-own-pace/cover.png": {
+    "src": "/assets/reading/c6e979391950-1080.webp",
+    "width": 1080,
+    "height": 459,
+    "variants": [
+      {
+        "src": "/assets/reading/c6e979391950-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/c6e979391950-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/c6e979391950-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
+  "/assets/notes/2026-10-05-create-at-your-own-pace/create-discover-use.png": {
+    "src": "/assets/reading/b6740a562a9a-1080.webp",
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      {
+        "src": "/assets/reading/b6740a562a9a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/b6740a562a9a-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/reading/b6740a562a9a-1080.webp",
+        "width": 1080
+      }
+    ]
+  },
   "/assets/notes/2026-10-03-ai-products-life/cover.png": {
     "src": "/assets/reading/a5c9356f6318-1080.webp",
     "width": 1080,

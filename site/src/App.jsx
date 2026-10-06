@@ -20,6 +20,9 @@ import { homeAnchor, pagePath, parseRoute } from "./routes.js";
 import { useDialogFocus, useHashNavigation } from "./usePageNavigation.js";
 import { profileCopy } from "./profile-copy.js";
 
+// Keep the operations project available for a later return without showing it on the homepage.
+const showOpsProject = false;
+
 const projects = [
   {
     number: "01",
@@ -922,7 +925,7 @@ export function App() {
             </div>
           </div>
 
-          <div className="systems-showcase">
+          {showOpsProject ? <div className="systems-showcase">
             <div className="section-label section-label--systems">
               <span>{c.behind}</span>
               <span>{c.behindAlt}</span>
@@ -958,7 +961,7 @@ export function App() {
                 </div>
               </div>
             </a>
-          </div>
+          </div> : null}
         </section>
 
         <NotesSection language={language} />

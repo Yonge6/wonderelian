@@ -1,5 +1,40 @@
 [
   {
+    "slug": "make-what-delights-you-first",
+    "number": "21",
+    "date": "2026-10-05",
+    "order": -5,
+    "topic": "life",
+    "related": "building-the-life-i-want-with-ai",
+    "product": "yixiu",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 6 分钟",
+      "en": "8 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-05-create-at-your-own-pace/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "美女劝我多做颜值视频，但我想先做……",
+      "excerpt": "一件事有价值，自己也擅长，并不意味着现在就要投入最多精力。先做自己愿意反复使用、也愿意继续改好的东西。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/make-what-delights-you-first/zh-088c5965faf3.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "A Friend Told Me to Make More Visually Polished Videos. But First, I Want to...",
+      "excerpt": "Being good at something—and knowing it has value—does not mean it deserves most of your energy right now. Begin with what you still want to use and improve tomorrow.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/make-what-delights-you-first/en-e2828edb532d.json"
+    }
+  },
+  {
     "slug": "building-the-life-i-want-with-ai",
     "number": "20",
     "date": "2026-10-03",
