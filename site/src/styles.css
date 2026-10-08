@@ -422,8 +422,12 @@ section[id] {
 }
 
 .now-section {
-  padding: 36px max(48px, calc((100% - 1320px) / 2)) 78px;
+  padding: 36px max(48px, calc((100% - 1320px) / 2)) 36px;
   background: var(--section-wash);
+}
+
+.now-section > .section-label {
+  border-bottom: 0;
 }
 
 .section-label {
@@ -788,7 +792,7 @@ section[id] {
 }
 
 .notes-section {
-  padding: 78px max(48px, calc((100% - 1320px) / 2));
+  padding: 44px max(48px, calc((100% - 1320px) / 2)) 78px;
   background:
     radial-gradient(circle at 82% 18%, rgba(183, 122, 27, 0.08), transparent 32%),
     var(--paper-light);
@@ -2406,10 +2410,11 @@ section[id] {
 
   .now-section {
     padding-top: 30px;
+    padding-bottom: 32px;
   }
 
   .notes-section {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 60px;
   }
 
