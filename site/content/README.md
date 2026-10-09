@@ -2,7 +2,7 @@
 
 Each `notes/<slug>.json` is the single source for a complete bilingual article.
 Keep `status: "published"`, a unique `order`, `topic` (`product`, `opc`, `life`),
-the related published `slug`, and a relevant `product` (`yixiu`, `wendao`, `xiazi`).
+the related published `slug`, and a relevant `product` (`yixiu`, `wendao`, `xiazi`, `buer`).
 Both `zh` and `en` must provide title, excerpt, label, read, back and content.
 Original artwork lives in `public/assets/notes/`; do not overwrite supplied originals.
 

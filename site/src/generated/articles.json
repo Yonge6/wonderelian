@@ -1,5 +1,40 @@
 [
   {
+    "slug": "tailoring-life-with-ai",
+    "number": "22",
+    "date": "2026-10-08",
+    "order": -6,
+    "topic": "life",
+    "related": "building-the-life-i-want-with-ai",
+    "product": "buer",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 4 分钟",
+      "en": "6 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-08-tailoring-life-with-ai/cover.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "找不到合适的 App，我决定用 AI 给自己的生活“量身定制”",
+      "excerpt": "从自己的需要出发，把工具做得更贴近生活，也重新学习怎样理解身边的人。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/tailoring-life-with-ai/zh-b216601b26ab.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "I Couldn't Find the Right App, So I Used AI to Tailor My Life",
+      "excerpt": "Starting with my own needs, I am making tools that fit daily life more closely—and relearning how to understand the people around me.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/tailoring-life-with-ai/en-f9a81a96d810.json"
+    }
+  },
+  {
     "slug": "make-what-delights-you-first",
     "number": "21",
     "date": "2026-10-05",
