@@ -1,4 +1,139 @@
 {
+  "/assets/notes/2026-10-11-why-bookstores-survive/01-question.png": {
+    "src": "/assets/reading/de1ed28267da-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/de1ed28267da-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/de1ed28267da-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-11-why-bookstores-survive/02-cheaper-elsewhere.png": {
+    "src": "/assets/reading/a71414956a11-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/a71414956a11-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a71414956a11-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-11-why-bookstores-survive/03-purchase-to-stay.png": {
+    "src": "/assets/reading/4e0ddc7ac96e-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/4e0ddc7ac96e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/4e0ddc7ac96e-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-11-why-bookstores-survive/04-unhurried-time.png": {
+    "src": "/assets/reading/11348e4f7a68-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/11348e4f7a68-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/11348e4f7a68-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-11-why-bookstores-survive/05-beyond-algorithm.png": {
+    "src": "/assets/reading/deac1730c568-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/deac1730c568-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/deac1730c568-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-11-why-bookstores-survive/06-third-place.png": {
+    "src": "/assets/reading/f015744b598f-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/f015744b598f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/f015744b598f-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-11-why-bookstores-survive/07-coffee-and-books.png": {
+    "src": "/assets/reading/10f65b8883e6-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/10f65b8883e6-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/10f65b8883e6-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-11-why-bookstores-survive/08-beyond-nostalgia.png": {
+    "src": "/assets/reading/3b5d1d29a90c-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/3b5d1d29a90c-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/3b5d1d29a90c-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-11-why-bookstores-survive/09-slow-light.png": {
+    "src": "/assets/reading/d70fb244af22-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/d70fb244af22-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/d70fb244af22-887.webp",
+        "width": 887
+      }
+    ]
+  },
   "/assets/notes/2026-10-08-tailoring-life-with-ai/cover.png": {
     "src": "/assets/reading/875819fc3276-1080.webp",
     "width": 1080,

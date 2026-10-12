@@ -1,5 +1,40 @@
 [
   {
+    "slug": "why-bookstores-survive-sisyphe",
+    "number": "23",
+    "date": "2026-10-11",
+    "order": -7,
+    "topic": "life",
+    "related": "xiazi-100-issues-1800-posters",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 5 分钟",
+      "en": "7 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-11-why-bookstores-survive/01-question.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "都说没人读书了，书店为什么还活着？西西弗书店是怎么赚钱的？",
+      "excerpt": "咖啡、文创和活动让一次买书变成一次停留；书与空间，则为快世界保留一段不被催促的时间。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/why-bookstores-survive-sisyphe/zh-55a61ef54b52.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "If Nobody Reads Anymore, Why Are Bookstores Still Here? How Does Sisyphe Make Money?",
+      "excerpt": "Coffee, cultural products, and events turn a book purchase into a stay. Books and space preserve unhurried time in a fast world.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/why-bookstores-survive-sisyphe/en-caca887869b6.json"
+    }
+  },
+  {
     "slug": "tailoring-life-with-ai",
     "number": "22",
     "date": "2026-10-08",
