@@ -1,5 +1,40 @@
 [
   {
+    "slug": "zheng-qinwen-victory-low-points",
+    "number": "24",
+    "date": "2026-10-12",
+    "order": -8,
+    "topic": "life",
+    "related": "why-bookstores-survive-sisyphe",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 6 分钟",
+      "en": "8 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-12-zheng-qinwen-victory/01-everyone-loves-winner.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "郑钦文夺冠之后：全世界都爱成功者，但很少有人陪你熬过低谷",
+      "excerpt": "掌声总在结果之后到来。真正支撑一个人的，是无人喝彩时仍愿意认真走下去。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/zheng-qinwen-victory-low-points/zh-9477b3befb43.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "After Zheng Qinwen’s Victory: Everyone Loves a Winner, but Few Stay Through the Low Points",
+      "excerpt": "Applause arrives after the result. What sustains a person is the willingness to keep going seriously when nobody is cheering.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/zheng-qinwen-victory-low-points/en-c09edd707c20.json"
+    }
+  },
+  {
     "slug": "why-bookstores-survive-sisyphe",
     "number": "23",
     "date": "2026-10-11",

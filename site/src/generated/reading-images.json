@@ -1,4 +1,139 @@
 {
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/01-everyone-loves-winner.png": {
+    "src": "/assets/reading/2cef003b30c2-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/2cef003b30c2-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/2cef003b30c2-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/02-after-victory.png": {
+    "src": "/assets/reading/f04b0df9680c-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/f04b0df9680c-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/f04b0df9680c-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/03-longest-journey.png": {
+    "src": "/assets/reading/cc94202a2c8b-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/cc94202a2c8b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/cc94202a2c8b-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/04-see-result.png": {
+    "src": "/assets/reading/a6757444194d-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/a6757444194d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a6757444194d-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/05-certainty.png": {
+    "src": "/assets/reading/3c7e38b6acbb-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/3c7e38b6acbb-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/3c7e38b6acbb-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/06-before-proof.png": {
+    "src": "/assets/reading/72212b4101c0-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/72212b4101c0-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/72212b4101c0-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/07-stay-with-yourself.png": {
+    "src": "/assets/reading/024d86cb9ebc-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/024d86cb9ebc-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/024d86cb9ebc-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/08-applause-or-not.png": {
+    "src": "/assets/reading/b40c4f740774-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/b40c4f740774-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/b40c4f740774-887.webp",
+        "width": 887
+      }
+    ]
+  },
+  "/assets/notes/2026-10-12-zheng-qinwen-victory/09-keep-going.png": {
+    "src": "/assets/reading/79f56e3bb740-887.webp",
+    "width": 887,
+    "height": 1774,
+    "variants": [
+      {
+        "src": "/assets/reading/79f56e3bb740-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/79f56e3bb740-887.webp",
+        "width": 887
+      }
+    ]
+  },
   "/assets/notes/2026-10-11-why-bookstores-survive/01-question.png": {
     "src": "/assets/reading/de1ed28267da-887.webp",
     "width": 887,
