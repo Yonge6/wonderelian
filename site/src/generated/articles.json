@@ -1,5 +1,75 @@
 [
   {
+    "slug": "fastlane-ai-marketing-workflow",
+    "number": "26",
+    "date": "2026-10-14",
+    "order": -10,
+    "topic": "opc",
+    "related": "ai-saves-time-more-busy",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 10 分钟",
+      "en": "14 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-14-fastlane-ai-marketing/01-shipped-six-apps.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "这个一人公司的 AI 每月赚 6.9 万美元！Fastlane 把网址变成宣传短视频，帮你做营销推广",
+      "excerpt": "收入数字来自创始人自报，Fastlane 也是团队项目。更值得研究的，是它怎样把网址、素材、发布与反馈接成持续工作流。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/fastlane-ai-marketing-workflow/zh-15eb68e3536d.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "This AI SaaS Makes $69K a Month: How Fastlane Turns a Website into a Marketing Workflow",
+      "excerpt": "The revenue is founder-reported and Fastlane is a team venture. The useful lesson is how it connects a URL, creative production, publishing, and feedback.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/fastlane-ai-marketing-workflow/en-cee3e4689fe9.json"
+    }
+  },
+  {
+    "slug": "ai-saves-time-more-busy",
+    "number": "25",
+    "date": "2026-10-13",
+    "order": -9,
+    "topic": "life",
+    "related": "tailoring-life-with-ai",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 5 分钟",
+      "en": "7 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-13-ai-saves-time-more-busy/01-time-saved-busier.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "AI 帮我省下了时间，为什么我反而更忙了？",
+      "excerpt": "效率提高了，今天的终点却越来越远。省下来的时间，也应该有一部分重新属于生活。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/ai-saves-time-more-busy/zh-968185fe6f58.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "AI Saves Me Time. Why Am I Busier Than Ever?",
+      "excerpt": "Efficiency improved, but the finish line kept moving. Some of the time AI saves should return to life.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/ai-saves-time-more-busy/en-6059ba638f0d.json"
+    }
+  },
+  {
     "slug": "zheng-qinwen-victory-low-points",
     "number": "24",
     "date": "2026-10-12",

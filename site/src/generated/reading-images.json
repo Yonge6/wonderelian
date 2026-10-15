@@ -1,4 +1,274 @@
 {
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/01-shipped-six-apps.png": {
+    "src": "/assets/reading/9d55ebe66cb3-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/9d55ebe66cb3-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/9d55ebe66cb3-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/02-marketing-bottleneck.png": {
+    "src": "/assets/reading/4b1a8bec6979-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/4b1a8bec6979-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/4b1a8bec6979-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/03-url-to-workflow.png": {
+    "src": "/assets/reading/2006500e2ab7-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/2006500e2ab7-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/2006500e2ab7-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/04-generate-then-choose.png": {
+    "src": "/assets/reading/c9667fd4e85b-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/c9667fd4e85b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/c9667fd4e85b-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/05-recurring-marketing.png": {
+    "src": "/assets/reading/ef182181ba52-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/ef182181ba52-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/ef182181ba52-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/06-real-direction.png": {
+    "src": "/assets/reading/1e66fbe2265a-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/1e66fbe2265a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/1e66fbe2265a-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/07-one-loop.png": {
+    "src": "/assets/reading/f5587c64073d-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/f5587c64073d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/f5587c64073d-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/08-build-one-loop.png": {
+    "src": "/assets/reading/a9dcffb98fc2-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/a9dcffb98fc2-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a9dcffb98fc2-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-14-fastlane-ai-marketing/09-refine-and-share.png": {
+    "src": "/assets/reading/2e41202a4004-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/2e41202a4004-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/2e41202a4004-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/01-time-saved-busier.png": {
+    "src": "/assets/reading/a0d95c85063d-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/a0d95c85063d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a0d95c85063d-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/02-two-hours-left.png": {
+    "src": "/assets/reading/117f26e88ca1-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/117f26e88ca1-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/117f26e88ca1-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/03-three-more-tasks.png": {
+    "src": "/assets/reading/ee0ac95e0a64-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/ee0ac95e0a64-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/ee0ac95e0a64-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/04-more-output.png": {
+    "src": "/assets/reading/cdf6b445c810-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/cdf6b445c810-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/cdf6b445c810-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/05-should-do-more.png": {
+    "src": "/assets/reading/b55fda1db77f-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/b55fda1db77f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/b55fda1db77f-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/06-endless-options.png": {
+    "src": "/assets/reading/04ed16dd40ff-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/04ed16dd40ff-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/04ed16dd40ff-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/07-no-more-effort.png": {
+    "src": "/assets/reading/9eb60d06059e-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/9eb60d06059e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/9eb60d06059e-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/08-define-the-end.png": {
+    "src": "/assets/reading/b71060ee9d95-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/b71060ee9d95-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/b71060ee9d95-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-13-ai-saves-time-more-busy/09-give-time-back.png": {
+    "src": "/assets/reading/6923415f6b04-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/6923415f6b04-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/6923415f6b04-941.webp",
+        "width": 941
+      }
+    ]
+  },
   "/assets/notes/2026-10-12-zheng-qinwen-victory/01-everyone-loves-winner.png": {
     "src": "/assets/reading/2cef003b30c2-887.webp",
     "width": 887,
