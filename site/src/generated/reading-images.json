@@ -1,4 +1,409 @@
 {
+  "/assets/notes/2026-10-17-cal-ai/01-more-than-ai.png": {
+    "src": "/assets/reading/62208a8e4952-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/62208a8e4952-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/62208a8e4952-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-17-cal-ai/02-reaching-people.png": {
+    "src": "/assets/reading/1ed01068a6ff-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/1ed01068a6ff-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/1ed01068a6ff-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-17-cal-ai/03-what-can-it-do.png": {
+    "src": "/assets/reading/367322502cd0-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/367322502cd0-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/367322502cd0-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-17-cal-ai/04-real-moments.png": {
+    "src": "/assets/reading/35afabb71c08-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/35afabb71c08-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/35afabb71c08-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-17-cal-ai/05-creators-own-voice.png": {
+    "src": "/assets/reading/5acfc68599c0-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/5acfc68599c0-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/5acfc68599c0-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-17-cal-ai/06-right-audience.png": {
+    "src": "/assets/reading/92c8e3117f8d-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/92c8e3117f8d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/92c8e3117f8d-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-17-cal-ai/07-attention-not-growth.png": {
+    "src": "/assets/reading/9907316e6c70-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/9907316e6c70-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/9907316e6c70-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-17-cal-ai/08-product-must-deliver.png": {
+    "src": "/assets/reading/4f025f170411-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/4f025f170411-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/4f025f170411-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-17-cal-ai/09-reach-someone.png": {
+    "src": "/assets/reading/3b0a02c3d215-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/3b0a02c3d215-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/3b0a02c3d215-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/01-racing-on-mars.png": {
+    "src": "/assets/reading/a0970c94f7be-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/a0970c94f7be-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a0970c94f7be-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/02-boost-button.png": {
+    "src": "/assets/reading/4bdfc0b98f9e-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/4bdfc0b98f9e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/4bdfc0b98f9e-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/03-different-versions.png": {
+    "src": "/assets/reading/fdfb1d2cbf8f-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/fdfb1d2cbf8f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/fdfb1d2cbf8f-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/04-ceiling-parking.png": {
+    "src": "/assets/reading/74774ed08cb2-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/74774ed08cb2-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/74774ed08cb2-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/05-air-pressure.png": {
+    "src": "/assets/reading/fc3b645673f2-940.webp",
+    "width": 940,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/fc3b645673f2-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/fc3b645673f2-940.webp",
+        "width": 940
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/06-seeing-possible.png": {
+    "src": "/assets/reading/1775367bd520-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/1775367bd520-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/1775367bd520-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/07-roadster-in-space.png": {
+    "src": "/assets/reading/6ff442cde977-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/6ff442cde977-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/6ff442cde977-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/08-reveal-and-reality.png": {
+    "src": "/assets/reading/31ed3e7b1335-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/31ed3e7b1335-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/31ed3e7b1335-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-16-tesla-roadster/09-curiosity-no-deposit.png": {
+    "src": "/assets/reading/795ec7ac1b1d-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/795ec7ac1b1d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/795ec7ac1b1d-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/01-worth-more.jpg": {
+    "src": "/assets/reading/68ff58489677-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/68ff58489677-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/68ff58489677-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/02-early-start.png": {
+    "src": "/assets/reading/c902be923a21-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/c902be923a21-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/c902be923a21-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/03-fear-missing-future.png": {
+    "src": "/assets/reading/0ca2b3ca55d6-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/0ca2b3ca55d6-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/0ca2b3ca55d6-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/04-what-we-choose.png": {
+    "src": "/assets/reading/9e800240325a-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/9e800240325a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/9e800240325a-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/05-little-light.png": {
+    "src": "/assets/reading/bb3ce6fa6668-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/bb3ce6fa6668-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/bb3ce6fa6668-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/06-familiarity.png": {
+    "src": "/assets/reading/259aac68018b-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/259aac68018b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/259aac68018b-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/07-value-after-purchase.png": {
+    "src": "/assets/reading/b56f3b44da33-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/b56f3b44da33-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/b56f3b44da33-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/08-if-no-one-knew.png": {
+    "src": "/assets/reading/9f82530fd452-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/9f82530fd452-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/9f82530fd452-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-15-premium-phone/09-buy-or-wait.png": {
+    "src": "/assets/reading/0ce4d2368f8e-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/0ce4d2368f8e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/0ce4d2368f8e-941.webp",
+        "width": 941
+      }
+    ]
+  },
   "/assets/notes/2026-10-14-fastlane-ai-marketing/01-shipped-six-apps.png": {
     "src": "/assets/reading/9d55ebe66cb3-941.webp",
     "width": 941,

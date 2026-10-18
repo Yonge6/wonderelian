@@ -100,7 +100,7 @@ test("keeps the WonderElian OPS showcase hidden for now",()=>{
 test("publishes supplied essays in date order with complete translations and original illustrations",()=>{
   const archive=articles.filter(a=>!a.featured);
   assert.deepEqual(archive.slice(0,10).map(a=>a.slug),[
-    'fastlane-ai-marketing-workflow','ai-saves-time-more-busy','zheng-qinwen-victory-low-points','why-bookstores-survive-sisyphe','tailoring-life-with-ai','make-what-delights-you-first','building-the-life-i-want-with-ai','will-others-pay-for-what-you-love','wendao-first-payments','openai-dots-less-to-worry-about'
+    'how-cal-ai-got-noticed','tesla-roadster-racing-on-mars','why-people-buy-premium-phones-first','fastlane-ai-marketing-workflow','ai-saves-time-more-busy','zheng-qinwen-victory-low-points','why-bookstores-survive-sisyphe','tailoring-life-with-ai','make-what-delights-you-first','building-the-life-i-want-with-ai'
   ]);
   const milestone=articles.find(a=>a.slug==='xiazi-100-issues-1800-posters'),profile=articles.find(a=>a.slug==='justin-welsh-small-by-design');
   assert.equal(milestone.date,'2026-09-22');
@@ -120,7 +120,7 @@ test("publishes the Manus Cue note after Dots with a complete translation and fo
   const article=articles.find(a=>a.slug==='manus-cue-agent-identity');
   assert.ok(article);
   assert.equal(article.date,'2026-09-29');
-  assert.equal(articles.filter(a=>!a.featured)[10].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[13].slug,article.slug);
   for(const lang of ['zh','en']){
     assert.equal(chapters(article[lang].content).length,6);
     assert.equal([...article[lang].content.matchAll(/!\[/g)].length,4);
@@ -135,7 +135,7 @@ test("publishes the bilingual OpenAI Dots note with five source illustrations",(
   const article=articles.find(a=>a.slug==='openai-dots-less-to-worry-about');
   assert.ok(article);
   assert.equal(article.date,'2026-09-30');
-  assert.equal(articles.filter(a=>!a.featured)[9].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[12].slug,article.slug);
   assert.equal(article.related,'manus-cue-agent-identity');
   for(const lang of ['zh','en']){
     assert.equal(chapters(article[lang].content).length,5);
@@ -171,7 +171,7 @@ test("publishes the four September 23–26 notes with complete bilingual bodies 
 
 test("publishes the first-payments essay with source figures, original comic and English dialogue",()=>{
   const article=articles.find(a=>a.slug==='wendao-first-payments');
-  assert.equal(articles.filter(a=>!a.featured)[8].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[11].slug,article.slug);
   assert.equal(article.date,'2026-10-01');
   assert.equal(article.product,'wendao');
   for(const lang of ['zh','en']) {
@@ -189,7 +189,7 @@ test("publishes the first-payments essay with source figures, original comic and
 test("publishes the bilingual willingness-to-pay essay with all three source illustrations",()=>{
   const article=articles.find(a=>a.slug==='will-others-pay-for-what-you-love');
   assert.ok(article);
-  assert.equal(articles.filter(a=>!a.featured)[7].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[10].slug,article.slug);
   assert.equal(article.date,'2026-10-02');
   assert.equal(article.topic,'opc');
   assert.equal(article.related,'wendao-first-payments');
@@ -206,7 +206,7 @@ test("publishes the bilingual willingness-to-pay essay with all three source ill
 test("publishes the bilingual AI-products-and-life essay with localized Chapter 34 artwork",()=>{
   const article=articles.find(a=>a.slug==='building-the-life-i-want-with-ai');
   assert.ok(article);
-  assert.equal(articles.filter(a=>!a.featured)[6].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[9].slug,article.slug);
   assert.equal(article.number,'20');
   assert.equal(article.date,'2026-10-03');
   assert.equal(article.topic,'life');
@@ -227,7 +227,7 @@ test("publishes the bilingual AI-products-and-life essay with localized Chapter 
 test("publishes the bilingual create-at-your-own-pace essay with only editorial artwork",()=>{
   const article=articles.find(a=>a.slug==='make-what-delights-you-first');
   assert.ok(article);
-  assert.equal(articles.filter(a=>!a.featured)[5].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[8].slug,article.slug);
   assert.equal(article.number,'21');
   assert.equal(article.date,'2026-10-05');
   assert.equal(article.topic,'life');
@@ -245,7 +245,7 @@ test("publishes the bilingual create-at-your-own-pace essay with only editorial 
 test("publishes the bilingual tailored-life essay with only its two editorial images",()=>{
   const article=articles.find(a=>a.slug==='tailoring-life-with-ai');
   assert.ok(article);
-  assert.equal(articles.filter(a=>!a.featured)[4].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[7].slug,article.slug);
   assert.equal(article.number,'22');
   assert.equal(article.date,'2026-10-08');
   assert.equal(article.topic,'life');
@@ -264,7 +264,7 @@ test("publishes the bilingual tailored-life essay with only its two editorial im
 test("publishes the bilingual bookstore essay with all nine source posters",()=>{
   const article=articles.find(a=>a.slug==='why-bookstores-survive-sisyphe');
   assert.ok(article);
-  assert.equal(articles.filter(a=>!a.featured)[3].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[6].slug,article.slug);
   assert.equal(article.number,'23');
   assert.equal(article.date,'2026-10-11');
   assert.equal(article.topic,'life');
@@ -283,7 +283,7 @@ test("publishes the bilingual bookstore essay with all nine source posters",()=>
 test("publishes the bilingual Zheng Qinwen essay with all nine source posters",()=>{
   const article=articles.find(a=>a.slug==='zheng-qinwen-victory-low-points');
   assert.ok(article);
-  assert.equal(articles.filter(a=>!a.featured)[2].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[5].slug,article.slug);
   assert.equal(article.number,'24');
   assert.equal(article.date,'2026-10-12');
   assert.equal(article.topic,'life');
@@ -302,7 +302,7 @@ test("publishes the bilingual Zheng Qinwen essay with all nine source posters",(
 test("publishes the bilingual AI-time essay with all nine source posters",()=>{
   const article=articles.find(a=>a.slug==='ai-saves-time-more-busy');
   assert.ok(article);
-  assert.equal(articles.filter(a=>!a.featured)[1].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[4].slug,article.slug);
   assert.equal(article.number,'25');
   assert.equal(article.date,'2026-10-13');
   assert.equal(article.topic,'life');
@@ -320,7 +320,7 @@ test("publishes the bilingual AI-time essay with all nine source posters",()=>{
 test("publishes the bilingual Fastlane essay with evidence boundaries and all nine source posters",()=>{
   const article=articles.find(a=>a.slug==='fastlane-ai-marketing-workflow');
   assert.ok(article);
-  assert.equal(articles.filter(a=>!a.featured)[0].slug,article.slug);
+  assert.equal(articles.filter(a=>!a.featured)[3].slug,article.slug);
   assert.equal(article.number,'26');
   assert.equal(article.date,'2026-10-14');
   assert.equal(article.topic,'opc');
@@ -334,4 +334,40 @@ test("publishes the bilingual Fastlane essay with evidence boundaries and all ni
   assert.match(article.zh.content,/这是创始人自报数据，不等于净利润/);
   assert.match(article.en.content,/These are founder-reported figures\. They are not net profit/);
   assert.match(article.en.content,/Fastlane is a team venture/);
+});
+
+
+test("publishes three consecutive bilingual notes with all source posters and careful evidence boundaries",()=>{
+  const expected=[
+    ['how-cal-ai-got-noticed','29','2026-10-17','opc','fastlane-ai-marketing-workflow'],
+    ['tesla-roadster-racing-on-mars','28','2026-10-16','product','why-people-buy-premium-phones-first'],
+    ['why-people-buy-premium-phones-first','27','2026-10-15','life','zheng-qinwen-victory-low-points'],
+  ];
+  const archive=articles.filter(a=>!a.featured);
+  for(const [index,[slug,number,date,topic,related]] of expected.entries()){
+    const article=articles.find(a=>a.slug===slug);
+    assert.ok(article);
+    assert.equal(archive[index].slug,slug);
+    assert.equal(article.number,number);
+    assert.equal(article.date,date);
+    assert.equal(article.topic,topic);
+    assert.equal(article.product,'xiazi');
+    assert.equal(article.related,related);
+    for(const lang of ['zh','en']){
+      assert.equal(chapters(article[lang].content).length,8);
+      assert.equal([...article[lang].content.matchAll(/!\[/g)].length,9);
+      assert.doesNotMatch(article[lang].content,/喜欢作者|写留言|阅读原文|上一[篇条]|进入小游戏|立即试玩/);
+      assert.ok(article[lang].content.length>(lang==='zh'?1800:4500));
+    }
+  }
+  const cal=articles.find(a=>a.slug==='how-cal-ai-got-noticed');
+  assert.match(cal.zh.content,/创始人自述，不是今天的实时数据/);
+  assert.match(cal.en.content,/founder-reported at the time/);
+  assert.match(cal.en.content,/revenue is not the same as profit/);
+  const tesla=articles.find(a=>a.slug==='tesla-roadster-racing-on-mars');
+  assert.match(tesla.zh.content,/海报均为 AI 艺术演绎/);
+  assert.match(tesla.en.content,/not photographs from the event/);
+  const phone=articles.find(a=>a.slug==='why-people-buy-premium-phones-first');
+  assert.match(phone.zh.content,/不会因为你晚买一部手机/);
+  assert.match(phone.en.content,/will not shut us out because we bought one phone later/);
 });

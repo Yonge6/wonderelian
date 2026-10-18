@@ -1,5 +1,110 @@
 [
   {
+    "slug": "how-cal-ai-got-noticed",
+    "number": "29",
+    "date": "2026-10-17",
+    "order": -13,
+    "topic": "opc",
+    "related": "fastlane-ai-marketing-workflow",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 6 分钟",
+      "en": "8 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-17-cal-ai/01-more-than-ai.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "Cal AI 是怎么火起来的？它做对的，不只是 AI",
+      "excerpt": "AI 是基础，传播来自一条更完整的路径：用途容易看懂，内容适合创作者，受众相关，产品体验还能接住注意力。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/how-cal-ai-got-noticed/zh-dec4549f92e7.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "How Did Cal AI Get Noticed? It Got More Right Than AI",
+      "excerpt": "AI was the foundation. Distribution came from a clearer path: an understandable use, creator-fit content, relevant audiences, and a product experience that held attention.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/how-cal-ai-got-noticed/en-b6ce62b41d05.json"
+    }
+  },
+  {
+    "slug": "tesla-roadster-racing-on-mars",
+    "number": "28",
+    "date": "2026-10-16",
+    "order": -12,
+    "topic": "product",
+    "related": "why-people-buy-premium-phones-first",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 5 分钟",
+      "en": "7 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-16-tesla-roadster/01-racing-on-mars.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "特斯拉这是准备去火星飙车？赛博皮卡越野，Roadster 负责起飞",
+      "excerpt": "推进、下压力与倒挂演示把赛车游戏般的想象带进现实。发布会负责点燃好奇，真正的交付还要靠工程。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/tesla-roadster-racing-on-mars/zh-79d3e5af1cd5.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "Is Tesla Preparing to Race on Mars? Cybertruck Explores, Roadster Takes Off",
+      "excerpt": "Propulsion, fan downforce, and an upside-down demonstration bring racing-game imagination into reality. A reveal sparks curiosity; engineering still has to deliver.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/tesla-roadster-racing-on-mars/en-59b8deec49ed.json"
+    }
+  },
+  {
+    "slug": "why-people-buy-premium-phones-first",
+    "number": "27",
+    "date": "2026-10-15",
+    "order": -11,
+    "topic": "life",
+    "related": "zheng-qinwen-victory-low-points",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 5 分钟",
+      "en": "7 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-15-premium-phone/01-worth-more.jpg",
+    "zh": {
+      "label": "片刻随记",
+      "title": "15,999 元的手机，为什么总有人愿意第一时间买？",
+      "excerpt": "有人买功能，有人买时间差，也有人买喜欢、熟悉与对未来的想象。消费没有统一答案，选择只需要对自己的生活诚实。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/why-people-buy-premium-phones-first/zh-c24b89dc748b.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "Why Are Some People Always First to Buy a RMB 15,999 Phone?",
+      "excerpt": "Some buy features, some buy a head start, and others buy pleasure, familiarity, or a picture of the future. The honest measure is the life the purchase enters.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/why-people-buy-premium-phones-first/en-0a946077fcc3.json"
+    }
+  },
+  {
     "slug": "fastlane-ai-marketing-workflow",
     "number": "26",
     "date": "2026-10-14",
