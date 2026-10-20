@@ -1,4 +1,139 @@
 {
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/01-ideas-at-scale.png": {
+    "src": "/assets/reading/d31d5ac49b49-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/d31d5ac49b49-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/d31d5ac49b49-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/02-start-with-signals.png": {
+    "src": "/assets/reading/74e414ec8073-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/74e414ec8073-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/74e414ec8073-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/03-problem-capability-change.png": {
+    "src": "/assets/reading/f5ab2abaf175-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/f5ab2abaf175-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/f5ab2abaf175-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/04-beyond-a-clever-sentence.png": {
+    "src": "/assets/reading/d8b7ebebe1cf-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/d8b7ebebe1cf-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/d8b7ebebe1cf-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/05-free-starting-point.png": {
+    "src": "/assets/reading/a14848279e4f-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/a14848279e4f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/a14848279e4f-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/06-fit-for-you.png": {
+    "src": "/assets/reading/250802fee920-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/250802fee920-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/250802fee920-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/07-hypothesis-not-payment.png": {
+    "src": "/assets/reading/deb554ed6b41-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/deb554ed6b41-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/deb554ed6b41-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/08-one-small-test.png": {
+    "src": "/assets/reading/4a79d7545eb2-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/4a79d7545eb2-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/4a79d7545eb2-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/assets/notes/2026-10-19-idealab-ideas-to-evidence/09-judgment-remains-yours.png": {
+    "src": "/assets/reading/3b3f47bd591c-941.webp",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/assets/reading/3b3f47bd591c-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/reading/3b3f47bd591c-941.webp",
+        "width": 941
+      }
+    ]
+  },
   "/assets/notes/2026-10-17-cal-ai/01-more-than-ai.png": {
     "src": "/assets/reading/62208a8e4952-941.webp",
     "width": 941,

@@ -1,5 +1,40 @@
 [
   {
+    "slug": "idealab-ai-from-ideas-to-evidence",
+    "number": "30",
+    "date": "2026-10-19",
+    "order": -14,
+    "topic": "opc",
+    "related": "how-cal-ai-got-noticed",
+    "product": "xiazi",
+    "status": "published",
+    "readingTime": {
+      "zh": "约 5 分钟",
+      "en": "6 min read"
+    },
+    "author": {
+      "zh": "永歌 Elian",
+      "en": "Elian Yong"
+    },
+    "cover": "/assets/notes/2026-10-19-idealab-ideas-to-evidence/01-ideas-at-scale.png",
+    "zh": {
+      "label": "片刻随记",
+      "title": "120 万个商业创意，AI 开始批量生成创业点子：一人公司真正稀缺的是什么？",
+      "excerpt": "点子越来越容易得到，真正稀缺的是理解具体问题、接近真实客户，以及把一个小判断交给现实检验的耐心。",
+      "read": "阅读全文",
+      "back": "返回片刻随记",
+      "dataPath": "/content/idealab-ai-from-ideas-to-evidence/zh-44dff83631e8.json"
+    },
+    "en": {
+      "label": "Field Notes",
+      "title": "1.2 Million Business Ideas: As AI Generates Startup Concepts at Scale, What Does a Solo Company Really Need?",
+      "excerpt": "When ideas become abundant, the scarce resources are understanding a specific problem, reaching real customers, and patiently testing one small judgment.",
+      "read": "Read the essay",
+      "back": "Back to Field Notes",
+      "dataPath": "/content/idealab-ai-from-ideas-to-evidence/en-6211ed80e7a3.json"
+    }
+  },
+  {
     "slug": "how-cal-ai-got-noticed",
     "number": "29",
     "date": "2026-10-17",
