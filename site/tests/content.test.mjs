@@ -66,7 +66,7 @@ test("homepage bundle carries summaries, not article bodies or removed essays",(
 });
 test("portfolio layout and other projects stay unchanged after the approved Buer refresh",()=>{
   const old=execFileSync('git',['show','54d5e1a:site/src/App.jsx'],{encoding:'utf8'});
-  const current=read('../src/App.jsx');
+  const current=read('../src/App.jsx').replace('const opsProject = {',read('../src/project-copy.js').replace(/^export const /gm,'const ')+'const opsProject = {');
   const projects=source=>source.slice(source.indexOf('const projects'),source.indexOf('const copy'));
   const withoutBuer=source=>projects(source).replace(/  \{\n    number: "02",[\s\S]*?(?=  \{\n    number: "03",)/, '');
   assert.equal(withoutBuer(current),withoutBuer(old));

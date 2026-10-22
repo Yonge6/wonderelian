@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { articles } from "../src/articles.js";
 import { profileCopy } from "../src/profile-copy.js";
+import { projects, featuredProjects } from "../src/project-copy.js";
 import { escapeHtml as e, inlineHtml, markdownHtml, chapters } from "../src/markdown.js";
 import { pagePath } from "../src/routes.js";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
@@ -58,10 +59,10 @@ function page({language,article=null,body,missing=false}) {
   return html;
 }
 function save(route,html) { const file=path.join(output,route); mkdirSync(path.dirname(file),{recursive:true}); writeFileSync(file,html); }
-const products=[['Yixiu Meditation','一休冥想','yixiu.wonderelian.com'],["Buer Within","不二见己","buer.wonderelian.com"],['Wendao','三慢问道','wendao.wonderelian.com'],['Xiazi','虾子曰','xiazishuo.com'],['Style Atlas','艺术风格图鉴','style-atlas.wonderelian.com'],['OneLaser','OneLaser','onelaser.wonderelian.com'],['Maker Business Lab','Maker Business Lab','maker.wonderelian.com']];
+const products=[...projects,...featuredProjects];
 for(const language of ['zh','en']) {
   const zh=language==='zh', home=pagePath(language);
-  const body=`<main data-seo-fallback><header id="world"><h1>WonderElian — Designing things. Exploring life.</h1><p>${inlineHtml(profileCopy[language].heroSpirit)}</p></header><section id="now"><h2>${zh?'沿途所作':'Along the Way'}</h2><ul>${products.map(p=>`<li><a href="https://${p[2]}/">${e(p[zh?1:0])}</a></li>`).join('')}</ul></section><section id="notes"><h2>${zh?'片刻随记':'Field Notes'}</h2><ul>${articles.map(a=>`<li><a href="${pagePath(language,a.slug)}">${e(a[language].title)}</a><p>${e(a[language].excerpt)}</p></li>`).join('')}</ul></section><section id="about"><h2>${zh?'关于永歌':'About Elian'}</h2><p>${inlineHtml(profileCopy[language].aboutTitle)}</p>${profileCopy[language].aboutParagraphs.map(p=>`<p>${e(p)}</p>`).join('')}<a href="mailto:hustyy986@gmail.com">${zh?'联系 Elian':'Contact Elian'}</a></section></main>`;
+  const body=`<main data-seo-fallback><header id="world"><h1>WonderElian — Designing things. Exploring life.</h1><p>${inlineHtml(profileCopy[language].heroSpirit)}</p></header><section id="now"><h2>${zh?'沿途所作':'Along the Way'}</h2><ul>${products.map(p=>`<li><a href="${e(new URL(p.href).origin+'/')}">${e(p[language].title)}</a><p>${e(p[language].description)}</p></li>`).join('')}</ul></section><section id="notes"><h2>${zh?'片刻随记':'Field Notes'}</h2><ul>${articles.map(a=>`<li><a href="${pagePath(language,a.slug)}">${e(a[language].title)}</a><p>${e(a[language].excerpt)}</p></li>`).join('')}</ul></section><section id="about"><h2>${zh?'关于永歌':'About Elian'}</h2><p>${inlineHtml(profileCopy[language].aboutTitle)}</p>${profileCopy[language].aboutParagraphs.map(p=>`<p>${e(p)}</p>`).join('')}<a href="mailto:hustyy986@gmail.com">${zh?'联系 Elian':'Contact Elian'}</a></section></main>`;
   const homeHtml=page({language,body});
   save(`${language}/index.html`,homeHtml);
   if(!zh)save('index.html',homeHtml);
