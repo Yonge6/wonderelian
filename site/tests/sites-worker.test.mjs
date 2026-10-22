@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 import worker from "../worker/index.js";
+import { projects } from "../src/project-copy.js";
 
 test("serves existing static assets without a fallback", async () => {
   const calls = [];
@@ -113,7 +114,7 @@ test("ships two attributable Yixiu acquisition paths", async () => {
     readFile(new URL("../public/analytics.js", import.meta.url), "utf8"),
   ]);
 
-  assert.match(app, /utm_content=project_card/);
+  assert.equal(new URL(projects.find(project => project.number === "01").href).searchParams.get("utm_content"), "project_card");
   assert.match(app, /utm_content=ambient_drawer/);
   assert.match(app, /data-product-referral="ambient_drawer"/);
   assert.match(app, /Continue listening in Yixiu/);
